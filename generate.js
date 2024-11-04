@@ -24,6 +24,33 @@ const brownsLosses = data.filter(
 const chargersRecord = `${chargersWins}-${chargersLosses}`;
 const brownsRecord = `${brownsWins}-${brownsLosses}`;
 
+const chargersTotalPoints = data.reduce((acc, { chargers }) => {
+  if (chargers.score) {
+    return acc + parseInt(chargers.score.split("-")[0], 10);
+  }
+  return acc;
+}, 0);
+const chargersOpponentsTotalPoints = data.reduce((acc, { chargers }) => {
+  if (chargers.score) {
+    return acc + parseInt(chargers.score.split("-")[1], 10);
+  }
+  return acc;
+}, 0);
+
+const brownsTotalPoints = data.reduce((acc, { browns }) => {
+  if (browns.score) {
+    return acc + parseInt(browns.score.split("-")[0], 10);
+  }
+  return acc;
+}, 0);
+
+const brownsOpponentsTotalPoints = data.reduce((acc, { browns }) => {
+  if (browns.score) {
+    return acc + parseInt(browns.score.split("-")[1], 10);
+  }
+  return acc;
+}, 0);
+
 const html = `
 <!doctype html>
 <html lang="en">
@@ -85,6 +112,25 @@ const html = `
             .join("")}
             </tbody>
         </table>
+      </div>
+      
+      <div id="total-points">
+          <h3>Total Points</h3>
+      ${teams
+        .map(({ name }) => {
+          const totalPoints =
+            name === "Chargers" ? chargersTotalPoints : brownsTotalPoints;
+          const opponentsTotalPoints =
+            name === "Chargers"
+              ? chargersOpponentsTotalPoints
+              : brownsOpponentsTotalPoints;
+          return `
+          <ul>
+            <li>${name}: ${totalPoints} / ${opponentsTotalPoints}</li>
+          </ul>
+        `;
+        })
+        .join("")}
       </div>
 
       <div id="rosters">

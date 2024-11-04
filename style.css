@@ -78,6 +78,18 @@ h3 {
   margin-right: 15px;
 }
 
+#players {
+  font-size: 0.85em;
+}
+#players ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#players li {
+  margin-right: 15px;
+}
+
 #rosters {
   display: flex;
   font-size: 0.85em;

@@ -1,5 +1,5 @@
 const fs = require("fs");
-const { teams, data } = require("./data");
+const { teams, data, players } = require("./data");
 
 const chargersWins = data.filter(
   ({ chargers }) =>
@@ -129,6 +129,22 @@ const html = `
             <li>${name}: ${totalPoints} / ${opponentsTotalPoints}</li>
           </ul>
         `;
+        })
+        .join("")}
+      </div>
+
+      <div id="players">
+      ${Object.entries(players)
+        .map(([name, stats]) => {
+          return `
+          <div>
+            <h3>${name}</h3>
+            <ul>
+              <li>Catches: ${stats.catches}</li>
+              <li>Touchdowns: ${stats.touchdowns}</li>
+              <li>Interceptions: ${stats.interceptions}</li>
+            </ul>
+          </div>`;
         })
         .join("")}
       </div>

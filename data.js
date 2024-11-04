@@ -138,4 +138,17 @@ const data = [
   },
 ];
 
-module.exports = { teams, data };
+const players = {
+  Austin: {
+    catches: 1,
+    touchdowns: 0,
+    interceptions: 0,
+  },
+  Jason: {
+    catches: 2,
+    touchdowns: 1,
+    interceptions: 1,
+  },
+};
+
+module.exports = { teams, data, players };

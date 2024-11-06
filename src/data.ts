@@ -1,0 +1,158 @@
+import { Player, Team, Week } from "./types";
+
+const teams: Team[] = [
+  {
+    name: "Chargers",
+    city: "Los Angeles",
+    colors: ["blue", "yellow"],
+    players: [
+      "Austin",
+      "Jaxon",
+      "Cooper",
+      "Oliver",
+      "Boone",
+      "Beckett",
+      "Michael",
+    ],
+  },
+  {
+    name: "Browns",
+    city: "Cleveland",
+    colors: ["orange", "brown"],
+    players: [
+      "Jason",
+      "Tyler",
+      "Jacob",
+      "Ben",
+      "Brooks",
+      "Aiden",
+      "Joel",
+      "Vladimir",
+      "Andrey",
+    ],
+  },
+];
+
+const season: Week[] = [
+  {
+    date: "Oct 26",
+    Chargers: {
+      opponent: "Broncos",
+      home: false,
+      score: "19-40",
+    },
+    Browns: {
+      opponent: "Dolphins",
+      home: true,
+      score: "52-32",
+    },
+  },
+  {
+    date: "Nov 2",
+    Chargers: {
+      opponent: "Bengals",
+      home: true,
+      score: "18-38",
+    },
+    Browns: {
+      opponent: "Raiders",
+      home: false,
+      score: "32-30",
+    },
+  },
+  {
+    date: "Nov 9",
+    Chargers: {
+      time: "3:00",
+      opponent: "Steelers",
+      home: false,
+    },
+    Browns: {
+      time: "2:00",
+      opponent: "Broncos",
+      home: true,
+    },
+  },
+  {
+    date: "Nov 16",
+    Chargers: {
+      time: "12:00",
+      opponent: "Steelers",
+      home: true,
+    },
+    Browns: {
+      time: "1:00",
+      opponent: "Bills",
+      home: false,
+    },
+  },
+  {
+    date: "Nov 23",
+    Chargers: {
+      time: "5:00",
+      opponent: "Ravens",
+      home: true,
+    },
+    Browns: {
+      time: "12:00",
+      opponent: "Steelers",
+      home: false,
+    },
+  },
+  {
+    date: "Nov 30",
+    Chargers: {
+      time: "5:00",
+      opponent: "Broncos",
+      home: true,
+    },
+    Browns: {
+      time: "4:00",
+      opponent: "Patriots",
+      home: true,
+    },
+  },
+  {
+    date: "Dec 7",
+    Chargers: {
+      time: "3:00",
+      opponent: "Browns",
+      home: true,
+    },
+    Browns: {
+      time: "3:00",
+      opponent: "Chargers",
+      home: false,
+    },
+  },
+  {
+    date: "Dec 14",
+    Chargers: {
+      time: "4:00",
+      opponent: "Bills",
+      home: true,
+    },
+    Browns: {
+      time: "3:00",
+      opponent: "Chiefs",
+      home: false,
+    },
+  },
+];
+
+const players: Player[] = [
+  {
+    name: "Austin",
+    catches: 1,
+    touchdowns: 0,
+    interceptions: 0,
+  },
+  {
+    name: "Jason",
+    catches: 2,
+    touchdowns: 1,
+    interceptions: 1,
+  },
+];
+
+export { teams, season, players };

@@ -1,8 +1,10 @@
 import { expect, test } from "vitest";
-import { useStats } from "./useStats";
+import { useSeason } from "./useSeason";
 
 test("empty array", () => {
-  const { wins, losses, ties, record, forPoints, againstPoints } = useStats([]);
+  const { wins, losses, ties, record, forPoints, againstPoints } = useSeason(
+    [],
+  );
   expect(wins).toEqual(0);
   expect(losses).toEqual(0);
   expect(ties).toEqual(0);
@@ -12,7 +14,7 @@ test("empty array", () => {
 });
 
 test("one score", () => {
-  const { wins, losses, ties, record, forPoints, againstPoints } = useStats([
+  const { wins, losses, ties, record, forPoints, againstPoints } = useSeason([
     "1-0",
   ]);
   expect(wins).toEqual(1);
@@ -24,7 +26,7 @@ test("one score", () => {
 });
 
 test("many scores", () => {
-  const { wins, losses, ties, record, forPoints, againstPoints } = useStats([
+  const { wins, losses, ties, record, forPoints, againstPoints } = useSeason([
     "10-20",
     "20-40",
     "30-60",
@@ -40,7 +42,7 @@ test("many scores", () => {
 });
 
 test("only ties", () => {
-  const { wins, losses, ties, record, forPoints, againstPoints } = useStats([
+  const { wins, losses, ties, record, forPoints, againstPoints } = useSeason([
     "0-0",
     "5-5",
     "100-100",

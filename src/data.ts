@@ -1,6 +1,6 @@
 import { Player, Team, Week } from "./types";
 
-const teams: Team[] = [
+export const teams: Team[] = [
   {
     name: "Chargers",
     city: "Los Angeles",
@@ -33,15 +33,17 @@ const teams: Team[] = [
   },
 ];
 
-const season: Week[] = [
+export const season: Week[] = [
   {
     date: "Oct 26",
     Chargers: {
+      time: "3:00",
       opponent: "Broncos",
       home: false,
       score: "19-40",
     },
     Browns: {
+      time: "12:00",
       opponent: "Dolphins",
       home: true,
       score: "52-32",
@@ -50,11 +52,13 @@ const season: Week[] = [
   {
     date: "Nov 2",
     Chargers: {
+      time: "4:00",
       opponent: "Bengals",
       home: true,
       score: "18-38",
     },
     Browns: {
+      time: "1:00",
       opponent: "Raiders",
       home: false,
       score: "32-30",
@@ -140,7 +144,7 @@ const season: Week[] = [
   },
 ];
 
-const players: Player[] = [
+export const players: Player[] = [
   {
     name: "Austin",
     catches: 1,
@@ -155,4 +159,17 @@ const players: Player[] = [
   },
 ];
 
-export { teams, season, players };
+export const links = [
+  {
+    name: "Chargers",
+    url: "https://en.wikipedia.org/wiki/Los_Angeles_Chargers",
+  },
+  {
+    name: "Browns",
+    url: "https://en.wikipedia.org/wiki/Cleveland_Browns",
+  },
+  {
+    name: "xlapex.com (tracysss@yahoo.com-1414Du)",
+    url: "https://www.xlapex.com/",
+  },
+];

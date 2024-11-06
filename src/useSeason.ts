@@ -1,4 +1,4 @@
-export const useStats = (scores: (string | undefined)[]) => {
+export const useSeason = (scores: (string | undefined)[]) => {
   const [wins, losses, ties] = scores.reduce(
     ([wins, losses, ties], score) => {
       const [forPoints, againstPoints] = score?.split("-").map(Number) ?? [

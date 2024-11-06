@@ -1,5 +1,5 @@
-import { players, season, teams } from "./data";
-import { useStats } from "./useStats";
+import { links, players, season, teams } from "./data";
+import { useSeason } from "./useSeason";
 import "./App.scss";
 
 const App = () => {
@@ -7,12 +7,18 @@ const App = () => {
     record: chargersRecord,
     forPoints: chargersTotalForPoints,
     againstPoints: chargersTotalAgainstPoints,
-  } = useStats(season.map(({ Chargers }) => Chargers.score));
+  } = useSeason(season.map(({ Chargers }) => Chargers.score));
   const {
     record: brownsRecord,
     forPoints: brownsTotalForPoints,
     againstPoints: brownsTotalAgainstPoints,
-  } = useStats(season.map(({ Browns }) => Browns.score));
+  } = useSeason(season.map(({ Browns }) => Browns.score));
+
+  // TODO: move this to useSeason
+  const [chargersPointsBreakdown, brownsPointsBreakdown] = [
+    `${chargersTotalForPoints} / ${chargersTotalAgainstPoints}`,
+    `${brownsTotalForPoints} / ${brownsTotalAgainstPoints}`,
+  ];
 
   return (
     <div>
@@ -23,171 +29,101 @@ const App = () => {
             <thead>
               <tr>
                 <th></th>
-                {teams.map(({ name }) => (
-                  <th key={name}>
-                    {name}{" "}
-                    <span className="record">
-                      ({name === "Chargers" ? chargersRecord : brownsRecord})
-                    </span>
-                  </th>
-                ))}
+                {teams
+                  .map((team) => ({
+                    record:
+                      team.name === "Chargers" ? chargersRecord : brownsRecord,
+                    ...team,
+                  }))
+                  .map(({ name, record }) => (
+                    <th key={name}>
+                      {name} <span className="record">({record})</span>
+                    </th>
+                  ))}
               </tr>
             </thead>
             <tbody>
-              {season.map(({ date, Chargers, Browns }) => {
-                const {
-                  score: chargersScore,
-                  opponent: chargersOpponent,
-                  home: chargersHome,
-                  time: chargersTime,
-                } = Chargers;
-                const {
-                  score: brownsScore,
-                  opponent: brownsOpponent,
-                  home: brownsHome,
-                  time: brownsTime,
-                } = Browns;
-                if (chargersScore && brownsScore) {
-                  const chargersPoints = chargersScore.split("-")[0];
-                  const chargersOpponentsPoints = chargersScore.split("-")[1];
-                  const brownsPoints = brownsScore.split("-")[0];
-                  const brownsOpponentsPoints = brownsScore.split("-")[1];
-                  const chargersWinLoss =
-                    chargersPoints > chargersOpponentsPoints ? "W" : "L";
-                  const brownsWinLoss =
-                    brownsPoints > brownsOpponentsPoints ? "W" : "L";
-                  return (
-                    <tr key={date}>
-                      <th>{date}</th>
-                      <td>
-                        {chargersHome ? (
-                          <strong>{chargersOpponent}</strong>
+              {season.map(({ date, Chargers, Browns }) => (
+                <tr key={date}>
+                  <th>{date}</th>
+                  {[Chargers, Browns].map((team) => {
+                    const { score = "1000-0", home, opponent, time } = team;
+                    const [forPoints, againstPoints] = score.split("-");
+                    const win = forPoints > againstPoints;
+                    return (
+                      <td key={`${opponent}-${time}-${score}`}>
+                        {home ? <strong>{opponent}</strong> : opponent}{" "}
+                        {score === "1000-0" ? (
+                          time
                         ) : (
-                          chargersOpponent
-                        )}{" "}
-                        <span
-                          className={`record ${
-                            chargersPoints > chargersOpponentsPoints
-                              ? "win"
-                              : "loss"
-                          }`}
-                        >
-                          ({chargersWinLoss} {chargersScore})
-                        </span>
+                          <span className={`record ${win ? "win" : "loss"}`}>
+                            ({win ? "W" : "L"} {score})
+                          </span>
+                        )}
                       </td>
-                      <td>
-                        {brownsHome ? (
-                          <strong>{brownsOpponent}</strong>
-                        ) : (
-                          brownsOpponent
-                        )}{" "}
-                        <span
-                          className={`record ${
-                            brownsPoints > brownsOpponentsPoints
-                              ? "win"
-                              : "loss"
-                          }`}
-                        >
-                          ({brownsWinLoss} {brownsScore})
-                        </span>
-                      </td>
-                    </tr>
-                  );
-                } else {
-                  return (
-                    <tr key={date}>
-                      <th>{date}</th>
-                      <td>
-                        {chargersHome ? (
-                          <strong>{chargersOpponent}</strong>
-                        ) : (
-                          chargersOpponent
-                        )}{" "}
-                        {chargersTime}
-                      </td>
-                      <td>
-                        {brownsHome ? (
-                          <strong>{brownsOpponent}</strong>
-                        ) : (
-                          brownsOpponent
-                        )}{" "}
-                        {brownsTime}
-                      </td>
-                    </tr>
-                  );
-                }
-              })}
+                    );
+                  })}
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
 
         <div id="total-points">
           <h3>Total Points</h3>
-          {teams.map(({ name }) => {
-            const totalPoints =
-              name === "Chargers"
-                ? chargersTotalForPoints
-                : brownsTotalForPoints;
-            const opponentsTotalPoints =
-              name === "Chargers"
-                ? chargersTotalAgainstPoints
-                : brownsTotalAgainstPoints;
-            return (
-              <ul key={name}>
-                <li>
-                  {name}: {totalPoints} / {opponentsTotalPoints}
-                </li>
-              </ul>
-            );
-          })}
+          <ul>
+            <li>Chargers: {chargersPointsBreakdown}</li>
+            <li>Browns: {brownsPointsBreakdown}</li>
+          </ul>
         </div>
 
         <div id="players">
-          {players.map(({ name, ...stats }) => {
-            return (
-              <div key={name}>
-                <h3>{name}</h3>
-                <ul>
-                  <li>Catches: {stats.catches}</li>
-                  <li>Touchdowns: {stats.touchdowns}</li>
-                  <li>Interceptions: {stats.interceptions}</li>
-                </ul>
-              </div>
-            );
-          })}
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                {players.map(({ name }) => (
+                  <th key={name}>{name}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {(["catches", "touchdowns", "interceptions"] as const).map(
+                (stat) => (
+                  <tr>
+                    <th>{stat}</th>
+                    {players.map((player) => (
+                      <td key={`${player.name}-${player[stat]}`}>
+                        {player[stat]}
+                      </td>
+                    ))}
+                  </tr>
+                ),
+              )}
+            </tbody>
+          </table>
         </div>
 
         <div id="rosters">
-          {teams.map(({ name, players }) => {
-            return (
-              <div key={name}>
-                <h3>{name}</h3>
-                <ul>
-                  {players.map((player) => (
-                    <li key={player}>{player}</li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
+          {teams.map(({ name, players }) => (
+            <div key={name}>
+              <h3>{name}</h3>
+              <ul>
+                {players.map((player) => (
+                  <li key={player}>{player}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
+
         <div id="footer">
           <ul>
-            <li>
-              <a href="https://en.wikipedia.org/wiki/Los_Angeles_Chargers">
-                Chargers
-              </a>
-            </li>
-            <li>
-              <a href="https://en.wikipedia.org/wiki/Cleveland_Browns">
-                Browns
-              </a>
-            </li>
-            <li>
-              <a href="https://www.xlapex.com/">
-                xlapex.com <span>(tracysss@yahoo.com-1414Du)</span>
-              </a>
-            </li>
+            {links.map(({ name, url }) => (
+              <li key={name}>
+                <a href={url}>{name}</a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

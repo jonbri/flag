@@ -20,7 +20,7 @@ export type TeamResult = {
   opponent: string;
   home: boolean;
   score?: string;
-  time?: string;
+  time: string;
 };
 export type Week = {
   date: string;
@@ -28,9 +28,11 @@ export type Week = {
   Browns: TeamResult;
 };
 
-export interface Player {
-  name: string;
+export interface Stats {
   catches: number;
   touchdowns: number;
   interceptions: number;
+}
+export interface Player extends Stats {
+  name: string;
 }

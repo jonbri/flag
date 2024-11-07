@@ -12,7 +12,7 @@ export const useSeason = (scores: (string | undefined)[]) => {
           ]
         : [wins, losses, ties];
     },
-    [0, 0, 0],
+    [0, 0, 0]
   );
 
   const [forPoints, againstPoints] = scores.reduce(
@@ -23,16 +23,54 @@ export const useSeason = (scores: (string | undefined)[]) => {
             againstPoints + parseInt(score.split("-")[1]),
           ]
         : [forPoints, againstPoints],
-    [0, 0],
+    [0, 0]
   );
 
+  const reversedScores = scores.slice().reverse().filter(Boolean);
+  let strk = "";
+  if (reversedScores[0]) {
+    const [lastPointsFor, lastPointsAgainst] = reversedScores[0]
+      .split("-")
+      .map(Number);
+    if (lastPointsFor > lastPointsAgainst) {
+      strk = "W1";
+    } else if (lastPointsFor < lastPointsAgainst) {
+      strk = "L1";
+    } else {
+      strk = "T1";
+    }
+    for (const score of reversedScores.slice(1)) {
+      if (!score) break;
+      const [pf, pa] = score.split("-").map(Number);
+      if (strk[0] === "W" && pf > pa) {
+        strk = `W${parseInt(strk.slice(1)) + 1}`;
+      } else if (strk[0] === "L" && pf < pa) {
+        strk = `L${parseInt(strk.slice(1)) + 1}`;
+      } else if (strk[0] === "T" && pf === pa) {
+        strk = `T${parseInt(strk.slice(1)) + 1}`;
+      } else {
+        break;
+      }
+    }
+  }
+
+  let winningPercentage = "1.000";
+  if (wins + losses + ties > 0) {
+    winningPercentage = (wins / (wins + losses + ties)).toFixed(3);
+    if (winningPercentage[0] === "0") {
+      winningPercentage = winningPercentage.slice(1);
+    }
+  }
+
   return {
-    wins,
-    losses,
-    ties,
-    forPoints,
-    againstPoints,
+    w: wins,
+    l: losses,
+    t: ties,
+    pct: winningPercentage,
+    pf: forPoints,
+    pa: againstPoints,
     record: `${wins}-${losses}${ties > 0 ? `-${ties}` : ""}`,
-    breakdown: `${forPoints} / ${againstPoints}`,
+    diff: forPoints - againstPoints,
+    strk,
   };
 };

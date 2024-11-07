@@ -3,11 +3,16 @@ import { useSeason } from "./useSeason";
 import "./App.scss";
 
 const App = () => {
-  const { record: chargersRecord, breakdown: chargersPointsBreakdown } =
-    useSeason(season.map(({ Chargers }) => Chargers.score));
-  const { record: brownsRecord, breakdown: brownsPointsBreakdown } = useSeason(
-    season.map(({ Browns }) => Browns.score),
-  );
+  const [chargersSeason, brownsSeason] = [
+    {
+      team: "Chargers",
+      ...useSeason(season.map(({ Chargers }) => Chargers.score)),
+    },
+    {
+      team: "Browns",
+      ...useSeason(season.map(({ Browns }) => Browns.score)),
+    },
+  ];
 
   return (
     <div>
@@ -21,7 +26,9 @@ const App = () => {
                 {teams
                   .map((team) => ({
                     record:
-                      team.name === "Chargers" ? chargersRecord : brownsRecord,
+                      team.name === "Chargers"
+                        ? chargersSeason.record
+                        : brownsSeason.record,
                     ...team,
                   }))
                   .map(({ name, record }) => (
@@ -51,7 +58,7 @@ const App = () => {
                           )}
                         </td>
                       );
-                    },
+                    }
                   )}
                 </tr>
               ))}
@@ -60,36 +67,61 @@ const App = () => {
         </div>
 
         <div id="total-points">
-          <h3>Total Points</h3>
-          <ul>
-            <li>Chargers: {chargersPointsBreakdown}</li>
-            <li>Browns: {brownsPointsBreakdown}</li>
-          </ul>
-        </div>
-
-        <div id="players">
+          <h3>Team Stats</h3>
           <table>
             <thead>
               <tr>
                 <th></th>
-                {players.map(({ name }) => (
-                  <th key={name}>{name}</th>
-                ))}
+                <th>W</th>
+                <th>L</th>
+                <th>T</th>
+                <th>PCT</th>
+                <th>PF</th>
+                <th>PA</th>
+                <th>DIFF</th>
+                <th>STRK</th>
               </tr>
             </thead>
             <tbody>
-              {(["catches", "touchdowns", "interceptions"] as const).map(
-                (stat) => (
-                  <tr key={stat}>
-                    <th>{stat}</th>
-                    {players.map((player) => (
-                      <td key={`${player.name}-${player[stat]}`}>
-                        {player[stat]}
-                      </td>
-                    ))}
+              {[chargersSeason, brownsSeason].map(
+                ({ team, w, l, t, pct, pf, pa, diff, strk }, i) => (
+                  <tr key={`${diff}-${i}`}>
+                    <th>{team}</th>
+                    <td>{w}</td>
+                    <td>{l}</td>
+                    <td>{t}</td>
+                    <td>{pct}</td>
+                    <td>{pf}</td>
+                    <td>{pa}</td>
+                    <td>{diff}</td>
+                    <td>{strk}</td>
                   </tr>
-                ),
+                )
               )}
+            </tbody>
+          </table>
+        </div>
+
+        <div id="players">
+          <h3>Player Stats</h3>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>REC</th>
+                <th>TD</th>
+                <th>INT</th>
+              </tr>
+            </thead>
+            <tbody>
+              {players.map(({ name, catches, touchdowns, interceptions }) => (
+                <tr key={name}>
+                  <th>{name}</th>
+                  <td>{catches}</td>
+                  <td>{touchdowns}</td>
+                  <td>{interceptions}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>

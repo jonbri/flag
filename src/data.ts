@@ -171,7 +171,7 @@ export const links = [
     url: "https://en.wikipedia.org/wiki/Cleveland_Browns",
   },
   {
-    name: "xlapex.com (tracysss@yahoo.com-1414Du)",
+    name: "xlapex.com",
     url: "https://www.xlapex.com/",
   },
 ];

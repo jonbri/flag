@@ -30,8 +30,9 @@ export const useSeason = (scores: (string | undefined)[]) => {
     wins,
     losses,
     ties,
-    record: `${wins}-${losses}${ties > 0 ? `-${ties}` : ""}`,
     forPoints,
     againstPoints,
+    record: `${wins}-${losses}${ties > 0 ? `-${ties}` : ""}`,
+    breakdown: `${forPoints} / ${againstPoints}`,
   };
 };

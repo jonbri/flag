@@ -3,22 +3,11 @@ import { useSeason } from "./useSeason";
 import "./App.scss";
 
 const App = () => {
-  const {
-    record: chargersRecord,
-    forPoints: chargersTotalForPoints,
-    againstPoints: chargersTotalAgainstPoints,
-  } = useSeason(season.map(({ Chargers }) => Chargers.score));
-  const {
-    record: brownsRecord,
-    forPoints: brownsTotalForPoints,
-    againstPoints: brownsTotalAgainstPoints,
-  } = useSeason(season.map(({ Browns }) => Browns.score));
-
-  // TODO: move this to useSeason
-  const [chargersPointsBreakdown, brownsPointsBreakdown] = [
-    `${chargersTotalForPoints} / ${chargersTotalAgainstPoints}`,
-    `${brownsTotalForPoints} / ${brownsTotalAgainstPoints}`,
-  ];
+  const { record: chargersRecord, breakdown: chargersPointsBreakdown } =
+    useSeason(season.map(({ Chargers }) => Chargers.score));
+  const { record: brownsRecord, breakdown: brownsPointsBreakdown } = useSeason(
+    season.map(({ Browns }) => Browns.score),
+  );
 
   return (
     <div>
@@ -46,23 +35,24 @@ const App = () => {
               {season.map(({ date, Chargers, Browns }) => (
                 <tr key={date}>
                   <th>{date}</th>
-                  {[Chargers, Browns].map((team) => {
-                    const { score = "1000-0", home, opponent, time } = team;
-                    const [forPoints, againstPoints] = score.split("-");
-                    const win = forPoints > againstPoints;
-                    return (
-                      <td key={`${opponent}-${time}-${score}`}>
-                        {home ? <strong>{opponent}</strong> : opponent}{" "}
-                        {score === "1000-0" ? (
-                          time
-                        ) : (
-                          <span className={`record ${win ? "win" : "loss"}`}>
-                            ({win ? "W" : "L"} {score})
-                          </span>
-                        )}
-                      </td>
-                    );
-                  })}
+                  {[Chargers, Browns].map(
+                    ({ score = "1000-0", home, opponent, time }) => {
+                      const [forPoints, againstPoints] = score.split("-");
+                      const win = forPoints > againstPoints;
+                      return (
+                        <td key={`${opponent}-${time}-${score}`}>
+                          {home ? <strong>{opponent}</strong> : opponent}{" "}
+                          {score === "1000-0" ? (
+                            time
+                          ) : (
+                            <span className={`record ${win ? "win" : "loss"}`}>
+                              ({win ? "W" : "L"} {score})
+                            </span>
+                          )}
+                        </td>
+                      );
+                    },
+                  )}
                 </tr>
               ))}
             </tbody>
@@ -90,7 +80,7 @@ const App = () => {
             <tbody>
               {(["catches", "touchdowns", "interceptions"] as const).map(
                 (stat) => (
-                  <tr>
+                  <tr key={stat}>
                     <th>{stat}</th>
                     {players.map((player) => (
                       <td key={`${player.name}-${player[stat]}`}>

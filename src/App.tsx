@@ -134,7 +134,14 @@ const App = () => {
               <h3>{name}</h3>
               <ul>
                 {players.map((player) => (
-                  <li key={player}>{player}</li>
+                  <li
+                    key={player}
+                    className={
+                      ["Austin", "Jason"].includes(player) ? "brink" : ""
+                    }
+                  >
+                    {player}
+                  </li>
                 ))}
               </ul>
             </div>

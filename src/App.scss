@@ -22,7 +22,13 @@ h1 {
 #layout {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+}
+
+table {
+  border: 1px solid silver;
+  padding: 2px;
+  min-width: 400px;
 }
 
 #schedule {
@@ -35,6 +41,10 @@ h1 {
       }
     }
     tbody {
+      th {
+        text-align: left;
+        font-size: 0.9em;
+      }
       tr:nth-child(odd) {
         background-color: #f0f0f0;
       }
@@ -62,8 +72,16 @@ h1 {
     font-family: "Courier New", Courier, monospace;
     th,
     td {
-      padding: 2px;
+      padding: 4px;
       text-align: center;
+    }
+    tbody {
+      th {
+        text-align: left;
+      }
+      tr:nth-child(odd) {
+        background-color: #f0f0f0;
+      }
     }
   }
 }
@@ -86,6 +104,9 @@ h1 {
   }
   li {
     padding-right: 20px;
+  }
+  .brink {
+    font-weight: bold;
   }
 }
 

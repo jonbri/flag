@@ -12,7 +12,7 @@ export const useSeason = (scores: (string | undefined)[]) => {
           ]
         : [wins, losses, ties];
     },
-    [0, 0, 0]
+    [0, 0, 0],
   );
 
   const [forPoints, againstPoints] = scores.reduce(
@@ -23,7 +23,7 @@ export const useSeason = (scores: (string | undefined)[]) => {
             againstPoints + parseInt(score.split("-")[1]),
           ]
         : [forPoints, againstPoints],
-    [0, 0]
+    [0, 0],
   );
 
   const reversedScores = scores.slice().reverse().filter(Boolean);

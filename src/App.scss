@@ -19,105 +19,83 @@ h1 {
   display: none;
 }
 
-h3 {
-  font-size: 0.95em;
-}
-
 #layout {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-#layout th:first-child {
-  text-align: left;
+
+#schedule {
+  table {
+    thead {
+      th {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 1.3em;
+      }
+    }
+    tbody {
+      tr:nth-child(odd) {
+        background-color: #f0f0f0;
+      }
+      td {
+        padding: 4px;
+      }
+    }
+  }
+  .record {
+    font-size: 0.8em;
+  }
+  .win {
+    color: green;
+    font-style: italic;
+    font-weight: bold;
+  }
+  .loss {
+    color: red;
+    font-style: italic;
+  }
 }
 
-#schedule td {
-  padding: 2px;
+.stats {
+  table {
+    font-family: "Courier New", Courier, monospace;
+    th,
+    td {
+      padding: 2px;
+      text-align: center;
+    }
+  }
 }
 
-#schedule thead th {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 1.3em;
-}
-#schedule thead tr {
-  background-color: inherit !important;
-}
-
-#schedule table tr:nth-child(odd) {
-  background-color: #f0f0f0;
-}
-
-#schedule th:first-child {
-  font-weight: normal;
-  font-size: 0.9em;
-}
-
-.record {
-  font-size: 0.8em;
-}
-.win {
-  color: green;
-  font-style: italic;
-  font-weight: bold;
-}
-.loss {
-  color: red;
-  font-style: italic;
-}
-
-#total-points {
+#team-stats,
+#player-stats,
+#rosters {
   font-size: 0.85em;
-}
-#total-points ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-#total-points li {
-  margin-right: 15px;
-}
-
-#players {
-  font-size: 0.85em;
-}
-#players th,
-td {
-  text-align: center;
-}
-#players th {
-  text-transform: capitalize;
 }
 
 #rosters {
   display: flex;
-  font-size: 0.85em;
-}
-#rosters ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-#rosters li {
-  margin-right: 15px;
+  h3 {
+    margin-right: 10px;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    padding-right: 20px;
+  }
 }
 
 #footer {
   margin-top: 20px;
   border-top: 1px solid #ccc;
   padding: 5px 0;
-}
-#footer > div {
-  font-size: 0.8em;
-}
-#footer ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-#footer li a {
-  margin-right: 15px;
-  > span {
-    font-size: 0.8em;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
   }
 }

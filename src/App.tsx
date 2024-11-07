@@ -58,7 +58,7 @@ const App = () => {
                           )}
                         </td>
                       );
-                    }
+                    },
                   )}
                 </tr>
               ))}
@@ -66,7 +66,7 @@ const App = () => {
           </table>
         </div>
 
-        <div id="total-points">
+        <div id="team-stats" className="stats">
           <h3>Team Stats</h3>
           <table>
             <thead>
@@ -96,13 +96,13 @@ const App = () => {
                     <td>{diff}</td>
                     <td>{strk}</td>
                   </tr>
-                )
+                ),
               )}
             </tbody>
           </table>
         </div>
 
-        <div id="players">
+        <div id="player-stats" className="stats">
           <h3>Player Stats</h3>
           <table>
             <thead>
@@ -111,15 +111,17 @@ const App = () => {
                 <th>REC</th>
                 <th>TD</th>
                 <th>INT</th>
+                <th>SACK</th>
               </tr>
             </thead>
             <tbody>
-              {players.map(({ name, catches, touchdowns, interceptions }) => (
+              {players.map(({ name, rec, td, int, sack }) => (
                 <tr key={name}>
                   <th>{name}</th>
-                  <td>{catches}</td>
-                  <td>{touchdowns}</td>
-                  <td>{interceptions}</td>
+                  <td>{rec}</td>
+                  <td>{td}</td>
+                  <td>{int}</td>
+                  <td>{sack}</td>
                 </tr>
               ))}
             </tbody>

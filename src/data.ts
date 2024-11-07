@@ -147,15 +147,17 @@ export const season: Week[] = [
 export const players: Player[] = [
   {
     name: "Austin",
-    catches: 1,
-    touchdowns: 0,
-    interceptions: 0,
+    rec: 1,
+    td: 0,
+    int: 0,
+    sack: 0,
   },
   {
     name: "Jason",
-    catches: 2,
-    touchdowns: 1,
-    interceptions: 1,
+    rec: 2,
+    td: 1,
+    int: 1,
+    sack: 0,
   },
 ];
 

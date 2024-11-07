@@ -5,17 +5,6 @@ export interface Team {
   players: string[];
 }
 
-// export type Week = {
-//   [indexof in "Chargers" | "Browns"]: {
-//     opponent: string;
-//     home: boolean;
-//     score?: string;
-//     time?: string;
-//   };
-// } & {
-//   date: string;
-// };
-
 export type TeamResult = {
   opponent: string;
   home: boolean;
@@ -29,9 +18,10 @@ export type Week = {
 };
 
 export interface Stats {
-  catches: number;
-  touchdowns: number;
-  interceptions: number;
+  rec: number;
+  td: number;
+  int: number;
+  sack: number;
 }
 export interface Player extends Stats {
   name: string;

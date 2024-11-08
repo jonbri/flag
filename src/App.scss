@@ -75,6 +75,7 @@ table {
 .stats {
   table {
     font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
     th,
     td {
       padding: 4px;
@@ -83,6 +84,8 @@ table {
     tbody {
       th {
         text-align: left;
+        /* all caps */
+        text-transform: uppercase;
       }
       tr:nth-child(odd) {
         background-color: #f0f0f0;

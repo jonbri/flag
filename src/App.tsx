@@ -16,7 +16,9 @@ const App = () => {
 
   return (
     <div>
-      <h1>Fall 2024</h1>
+      <h1>
+        <a href="./">Fall 2024</a>
+      </h1>
       <div id="layout">
         <div id="schedule">
           <table>

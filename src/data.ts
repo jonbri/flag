@@ -1,11 +1,19 @@
 import { Player, Team, Week } from "./types";
 
+const colors = {
+  powderBlue: "#0080C6",
+  sunshineGold: "#FFC20E",
+  darkBrown: "#311D00",
+  orange: "#FF3C00",
+  white: "#FFFFFF",
+};
+
 export const teams: Team[] = [
   {
     name: "Chargers",
     city: "Los Angeles",
-    color: "blue",
-    secondaryColor: "gold",
+    color: colors.powderBlue,
+    secondaryColor: colors.sunshineGold,
     brink: "Austin",
     players: [
       "Austin",
@@ -20,8 +28,8 @@ export const teams: Team[] = [
   {
     name: "Browns",
     city: "Cleveland",
-    color: "orange",
-    secondaryColor: "white",
+    color: colors.darkBrown,
+    secondaryColor: colors.orange,
     brink: "Jason",
     players: [
       "Jason",

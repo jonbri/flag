@@ -33,8 +33,15 @@ const App = () => {
                         : brownsSeason.record,
                     ...team,
                   }))
-                  .map(({ name, city, record }) => (
-                    <th key={name} title={`${city} ${name}`}>
+                  .map(({ name, city, record, color, secondaryColor }) => (
+                    <th
+                      key={name}
+                      title={`${city} ${name}`}
+                      style={{
+                        backgroundColor: color,
+                        color: secondaryColor,
+                      }}
+                    >
                       {name} <span className="record">({record})</span>
                     </th>
                   ))}

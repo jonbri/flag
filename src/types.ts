@@ -1,7 +1,9 @@
 export interface Team {
   name: "Chargers" | "Browns";
   city: string;
-  colors: string[];
+  color: string;
+  secondaryColor: string;
+  brink: "Austin" | "Jason";
   players: string[];
 }
 

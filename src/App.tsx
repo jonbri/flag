@@ -131,17 +131,12 @@ const App = () => {
         </div>
 
         <div id="rosters">
-          {teams.map(({ name, players }) => (
+          {teams.map(({ name, players, brink }) => (
             <div key={name}>
               <h3>{name}</h3>
               <ul>
                 {players.map((player) => (
-                  <li
-                    key={player}
-                    className={
-                      ["Austin", "Jason"].includes(player) ? "brink" : ""
-                    }
-                  >
+                  <li key={player} className={player === brink ? "brink" : ""}>
                     {player}
                   </li>
                 ))}

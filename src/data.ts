@@ -4,7 +4,9 @@ export const teams: Team[] = [
   {
     name: "Chargers",
     city: "Los Angeles",
-    colors: ["blue", "yellow"],
+    color: "blue",
+    secondaryColor: "gold",
+    brink: "Austin",
     players: [
       "Austin",
       "Jaxon",
@@ -18,7 +20,9 @@ export const teams: Team[] = [
   {
     name: "Browns",
     city: "Cleveland",
-    colors: ["orange", "brown"],
+    color: "orange",
+    secondaryColor: "white",
+    brink: "Jason",
     players: [
       "Jason",
       "Tyler",

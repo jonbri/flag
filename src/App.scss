@@ -39,10 +39,12 @@ table {
   border: 1px solid #ccc;
   padding: 2px;
   min-width: 350px;
+  background-color: white;
 }
 
 #schedule {
   table {
+    border-spacing: 3px;
     thead {
       th {
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
@@ -60,20 +62,20 @@ table {
       }
       td {
         padding: 4px;
+        > span {
+          font-style: italic;
+          font-size: 0.8em;
+          float: right;
+        }
+        .win {
+          color: green;
+          font-weight: bold;
+        }
+        .loss {
+          color: red;
+        }
       }
     }
-  }
-  .record {
-    font-size: 0.8em;
-  }
-  .win {
-    color: green;
-    font-style: italic;
-    font-weight: bold;
-  }
-  .loss {
-    color: red;
-    font-style: italic;
   }
 }
 

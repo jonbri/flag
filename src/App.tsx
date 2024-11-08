@@ -59,15 +59,15 @@ const App = () => {
                         <td key={`${opponent}-${time}-${score}`}>
                           {home ? <strong>{opponent}</strong> : opponent}{" "}
                           {score === "1000-0" ? (
-                            time
+                            <span>{time}</span>
                           ) : (
-                            <span className={`record ${win ? "win" : "loss"}`}>
-                              ({win ? "W" : "L"} {score})
+                            <span className={win ? "win" : "loss"}>
+                              {win ? "W" : "L"} {score}
                             </span>
                           )}
                         </td>
                       );
-                    }
+                    },
                   )}
                 </tr>
               ))}
@@ -105,7 +105,7 @@ const App = () => {
                     <td>{diff}</td>
                     <td>{strk}</td>
                   </tr>
-                )
+                ),
               )}
             </tbody>
           </table>
@@ -159,8 +159,8 @@ const App = () => {
                 <a href={url}>{name}</a>
               </li>
             ))}
-            <div id="login">tracysss@yahoo.com-1414Du</div>
           </ul>
+          <div id="login">tracysss@yahoo.com-1414Du</div>
         </div>
       </div>
     </div>

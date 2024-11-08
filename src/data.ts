@@ -104,19 +104,6 @@ export const season: Week[] = [
     },
   },
   {
-    date: "Nov 30",
-    Chargers: {
-      time: "5:00",
-      opponent: "Broncos",
-      home: true,
-    },
-    Browns: {
-      time: "4:00",
-      opponent: "Patriots",
-      home: true,
-    },
-  },
-  {
     date: "Dec 7",
     Chargers: {
       time: "3:00",
@@ -140,6 +127,19 @@ export const season: Week[] = [
       time: "3:00",
       opponent: "Chiefs",
       home: false,
+    },
+  },
+  {
+    date: "Dec 21",
+    Chargers: {
+      time: "5:00",
+      opponent: "Broncos",
+      home: true,
+    },
+    Browns: {
+      time: "4:00",
+      opponent: "Patriots",
+      home: true,
     },
   },
 ];

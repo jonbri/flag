@@ -7,21 +7,26 @@ body {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   margin: 0;
   padding: 0;
   display: inline;
 }
 
 h1 {
-  font-size: 0.9em;
+  font-size: 1em;
   letter-spacing: 0.2em;
   font-style: italic;
+  font-weight: bolder;
   a {
     text-decoration: none;
     color: black;
   }
+}
+h2 {
+  font-size: 1.2em;
+  font-style: italic;
+  font-weight: bold;
 }
 
 #layout {
@@ -102,7 +107,7 @@ table {
 
 #rosters {
   display: flex;
-  h3 {
+  h2 {
     margin-right: 10px;
   }
   ul {

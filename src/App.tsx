@@ -67,7 +67,7 @@ const App = () => {
                           )}
                         </td>
                       );
-                    },
+                    }
                   )}
                 </tr>
               ))}
@@ -76,7 +76,7 @@ const App = () => {
         </div>
 
         <div id="team-stats" className="stats">
-          <h3>Team Stats</h3>
+          <h2>Team Stats</h2>
           <table>
             <thead>
               <tr>
@@ -105,14 +105,14 @@ const App = () => {
                     <td>{diff}</td>
                     <td>{strk}</td>
                   </tr>
-                ),
+                )
               )}
             </tbody>
           </table>
         </div>
 
         <div id="player-stats" className="stats">
-          <h3>Player Stats</h3>
+          <h2>Player Stats</h2>
           <table>
             <thead>
               <tr>
@@ -140,7 +140,7 @@ const App = () => {
         <div id="rosters">
           {teams.map(({ name, players, brink }) => (
             <div key={name}>
-              <h3>{name}</h3>
+              <h2>{name}</h2>
               <ul>
                 {players.map((player) => (
                   <li key={player} className={player === brink ? "brink" : ""}>

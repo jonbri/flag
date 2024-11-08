@@ -33,8 +33,8 @@ const App = () => {
                         : brownsSeason.record,
                     ...team,
                   }))
-                  .map(({ name, record }) => (
-                    <th key={name}>
+                  .map(({ name, city, record }) => (
+                    <th key={name} title={`${city} ${name}`}>
                       {name} <span className="record">({record})</span>
                     </th>
                   ))}
@@ -74,14 +74,14 @@ const App = () => {
             <thead>
               <tr>
                 <th></th>
-                <th>W</th>
-                <th>L</th>
-                <th>T</th>
-                <th>PCT</th>
-                <th>PF</th>
-                <th>PA</th>
-                <th>DIFF</th>
-                <th>STRK</th>
+                <th title="Wins">W</th>
+                <th title="Losses">L</th>
+                <th title="Ties">T</th>
+                <th title="Winning Percentage">PCT</th>
+                <th title="Total Points For">PF</th>
+                <th title="Total Points Against">PA</th>
+                <th title="Point Differential">DIFF</th>
+                <th title="Current Streak">STRK</th>
               </tr>
             </thead>
             <tbody>
@@ -110,10 +110,10 @@ const App = () => {
             <thead>
               <tr>
                 <th></th>
-                <th>REC</th>
-                <th>TD</th>
-                <th>INT</th>
-                <th>SACK</th>
+                <th title="Receptions (catches)">REC</th>
+                <th title="Touchdowns">TD</th>
+                <th title="Interceptions">INT</th>
+                <th title="Sacks">SACK</th>
               </tr>
             </thead>
             <tbody>

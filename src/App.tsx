@@ -121,16 +121,18 @@ const App = () => {
                 <th title="Touchdowns">TD</th>
                 <th title="Interceptions">INT</th>
                 <th title="Sacks">SACK</th>
+                <th title="Safety">SAFETY</th>
               </tr>
             </thead>
             <tbody>
-              {players.map(({ name, rec, td, int, sack }) => (
+              {players.map(({ name, rec, td, int, sack, safety }) => (
                 <tr key={name}>
                   <th>{name}</th>
                   <td>{rec}</td>
                   <td>{td}</td>
                   <td>{int}</td>
                   <td>{sack}</td>
+                  <td>{safety}</td>
                 </tr>
               ))}
             </tbody>

@@ -82,11 +82,13 @@ export const season: Week[] = [
       time: "3:00",
       opponent: "Steelers",
       home: false,
+      score: "19-28",
     },
     Browns: {
       time: "2:00",
       opponent: "Broncos",
       home: true,
+      score: "28-4",
     },
   },
   {
@@ -163,6 +165,7 @@ export const players: Player[] = [
     td: 0,
     int: 0,
     sack: 0,
+    safety: 0,
   },
   {
     name: "Jason",
@@ -170,6 +173,7 @@ export const players: Player[] = [
     td: 1,
     int: 1,
     sack: 0,
+    safety: 2,
   },
 ];
 

@@ -24,6 +24,7 @@ export interface Stats {
   td: number;
   int: number;
   sack: number;
+  safety: number;
 }
 export interface Player extends Stats {
   name: string;

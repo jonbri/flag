@@ -90,13 +90,17 @@ const App = () => {
                 <th title="Total Points For">PF</th>
                 <th title="Total Points Against">PA</th>
                 <th title="Points Per Game">PPG</th>
+                <th title="Points Against Per Game">PAPG</th>
                 <th title="Point Differential">DIFF</th>
                 <th title="Current Streak">STRK</th>
               </tr>
             </thead>
             <tbody>
               {[chargersSeason, brownsSeason].map(
-                ({ shortName, w, l, t, pct, pf, pa, ppg, diff, strk }, i) => (
+                (
+                  { shortName, w, l, t, pct, pf, pa, ppg, papg, diff, strk },
+                  i,
+                ) => (
                   <tr key={`${diff}-${i}`}>
                     <th>{shortName}</th>
                     <td>{w}</td>
@@ -106,6 +110,7 @@ const App = () => {
                     <td>{pf}</td>
                     <td>{pa}</td>
                     <td>{ppg}</td>
+                    <td>{papg}</td>
                     <td>{diff}</td>
                     <td>{strk}</td>
                   </tr>

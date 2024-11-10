@@ -90,7 +90,7 @@ export const season: Week[] = [
       time: "2:00",
       opponent: "Broncos",
       home: true,
-      score: "28-4",
+      score: "4-28",
     },
   },
   {
@@ -171,7 +171,7 @@ export const players: Player[] = [
   },
   {
     name: "Jason",
-    rec: 2,
+    rec: 5,
     td: 1,
     int: 1,
     sack: 0,

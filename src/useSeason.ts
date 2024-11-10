@@ -69,6 +69,7 @@ export const useSeason = (scores: (string | undefined)[]) => {
     pct: winningPercentage,
     pf: forPoints,
     pa: againstPoints,
+    ppg: 0,
     record: `${wins}-${losses}${ties > 0 ? `-${ties}` : ""}`,
     diff: forPoints - againstPoints,
     strk,

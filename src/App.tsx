@@ -56,7 +56,7 @@ const App = () => {
                   {[Chargers, Browns].map(
                     ({ score = "1000-0", home, opponent, time }) => {
                       const [forPoints, againstPoints] = score.split("-");
-                      const win = forPoints > againstPoints;
+                      const win = parseInt(forPoints) > parseInt(againstPoints);
                       return (
                         <td key={`${opponent}-${time}-${score}`}>
                           {home ? <strong>{opponent}</strong> : opponent}{" "}
@@ -89,13 +89,14 @@ const App = () => {
                 <th title="Winning Percentage">PCT</th>
                 <th title="Total Points For">PF</th>
                 <th title="Total Points Against">PA</th>
+                <th title="Points Per Game">PPG</th>
                 <th title="Point Differential">DIFF</th>
                 <th title="Current Streak">STRK</th>
               </tr>
             </thead>
             <tbody>
               {[chargersSeason, brownsSeason].map(
-                ({ shortName, w, l, t, pct, pf, pa, diff, strk }, i) => (
+                ({ shortName, w, l, t, pct, pf, pa, ppg, diff, strk }, i) => (
                   <tr key={`${diff}-${i}`}>
                     <th>{shortName}</th>
                     <td>{w}</td>
@@ -104,6 +105,7 @@ const App = () => {
                     <td>{pct}</td>
                     <td>{pf}</td>
                     <td>{pa}</td>
+                    <td>{ppg}</td>
                     <td>{diff}</td>
                     <td>{strk}</td>
                   </tr>

@@ -188,8 +188,4 @@ export const links = [
     name: "Browns",
     url: "https://en.wikipedia.org/wiki/Cleveland_Browns",
   },
-  {
-    name: "xlapex.com",
-    url: "https://www.xlapex.com/",
-  },
 ];

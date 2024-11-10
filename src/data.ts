@@ -11,6 +11,7 @@ const colors = {
 export const teams: Team[] = [
   {
     name: "Chargers",
+    shortName: "LA",
     city: "Los Angeles",
     color: colors.powderBlue,
     secondaryColor: colors.sunshineGold,
@@ -27,6 +28,7 @@ export const teams: Team[] = [
   },
   {
     name: "Browns",
+    shortName: "CLE",
     city: "Cleveland",
     color: colors.darkBrown,
     secondaryColor: colors.orange,

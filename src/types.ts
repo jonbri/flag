@@ -1,5 +1,6 @@
 export interface Team {
   name: "Chargers" | "Browns";
+  shortName: string;
   city: string;
   color: string;
   secondaryColor: string;

@@ -5,11 +5,13 @@ import "./App.scss";
 const App = () => {
   const [chargersSeason, brownsSeason] = [
     {
-      team: "Chargers",
+      name: "Chargers",
+      shortName: "LA",
       ...useSeason(season.map(({ Chargers }) => Chargers.score)),
     },
     {
-      team: "Browns",
+      name: "Browns",
+      shortName: "CLE",
       ...useSeason(season.map(({ Browns }) => Browns.score)),
     },
   ];
@@ -93,9 +95,9 @@ const App = () => {
             </thead>
             <tbody>
               {[chargersSeason, brownsSeason].map(
-                ({ team, w, l, t, pct, pf, pa, diff, strk }, i) => (
+                ({ shortName, w, l, t, pct, pf, pa, diff, strk }, i) => (
                   <tr key={`${diff}-${i}`}>
-                    <th>{team}</th>
+                    <th>{shortName}</th>
                     <td>{w}</td>
                     <td>{l}</td>
                     <td>{t}</td>

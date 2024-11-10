@@ -62,6 +62,11 @@ export const useSeason = (scores: (string | undefined)[]) => {
     }
   }
 
+  const gamesPlayed = wins + losses + ties;
+  const ppg = gamesPlayed > 0 ? forPoints / gamesPlayed : 0;
+
+  const roundToTenth = (num: number) => Math.round(num * 10) / 10;
+
   return {
     w: wins,
     l: losses,
@@ -69,7 +74,7 @@ export const useSeason = (scores: (string | undefined)[]) => {
     pct: winningPercentage,
     pf: forPoints,
     pa: againstPoints,
-    ppg: 0,
+    ppg: roundToTenth(ppg),
     record: `${wins}-${losses}${ties > 0 ? `-${ties}` : ""}`,
     diff: forPoints - againstPoints,
     strk,

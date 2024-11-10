@@ -61,7 +61,7 @@ const App = () => {
                         <td key={`${opponent}-${time}-${score}`}>
                           {home ? <strong>{opponent}</strong> : opponent}{" "}
                           {score === "1000-0" ? (
-                            <span>{time}</span>
+                            <span>{`${time}pm`}</span>
                           ) : (
                             <span className={win ? "win" : "loss"}>
                               {win ? "W" : "L"} {score}

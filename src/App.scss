@@ -67,16 +67,20 @@ table {
           font-size: 0.8em;
           float: right;
         }
-        .win {
-          color: green;
-          font-weight: bold;
-        }
-        .loss {
-          color: red;
-        }
       }
     }
   }
+}
+
+.positive {
+  color: green;
+  font-weight: bold;
+}
+.negative {
+  color: red;
+}
+.neutral {
+  color: inherit;
 }
 
 .stats {

@@ -57,14 +57,28 @@ const App = () => {
                     ({ score = "1000-0", home, opponent, time }) => {
                       const [forPoints, againstPoints] = score.split("-");
                       const win = parseInt(forPoints) > parseInt(againstPoints);
+                      const loss =
+                        parseInt(forPoints) < parseInt(againstPoints);
+                      let wlClassName = "neutral";
+                      if (win) {
+                        wlClassName = "positive";
+                      } else if (loss) {
+                        wlClassName = "negative";
+                      }
+                      let wlt = "T";
+                      if (win) {
+                        wlt = "W";
+                      } else if (loss) {
+                        wlt = "L";
+                      }
                       return (
                         <td key={`${opponent}-${time}-${score}`}>
                           {home ? <strong>{opponent}</strong> : opponent}{" "}
                           {score === "1000-0" ? (
                             <span>{`${time}pm`}</span>
                           ) : (
-                            <span className={win ? "win" : "loss"}>
-                              {win ? "W" : "L"} {score}
+                            <span className={wlClassName}>
+                              {wlt} {score}
                             </span>
                           )}
                         </td>
@@ -92,16 +106,24 @@ const App = () => {
             </thead>
             <tbody>
               {[chargersSeason, brownsSeason].map(
-                ({ shortName, w, l, t, pct, diff, strk }, i) => (
-                  <tr key={`${diff}-${i}`}>
-                    <th>{shortName}</th>
-                    <td>{w}</td>
-                    <td>{l}</td>
-                    <td>{t}</td>
-                    <td>{pct}</td>
-                    <td>{strk}</td>
-                  </tr>
-                ),
+                ({ shortName, w, l, t, pct, diff, strk }, i) => {
+                  let strkClassName = "neutral";
+                  if (strk.toLowerCase().startsWith("w")) {
+                    strkClassName = "positive";
+                  } else if (strk.toLowerCase().startsWith("l")) {
+                    strkClassName = "negative";
+                  }
+                  return (
+                    <tr key={`${diff}-${i}`}>
+                      <th>{shortName}</th>
+                      <td>{w}</td>
+                      <td>{l}</td>
+                      <td>{t}</td>
+                      <td>{pct}</td>
+                      <td className={strkClassName}>{strk}</td>
+                    </tr>
+                  );
+                },
               )}
             </tbody>
           </table>
@@ -119,16 +141,24 @@ const App = () => {
             </thead>
             <tbody>
               {[chargersSeason, brownsSeason].map(
-                ({ shortName, pf, pa, ppg, papg, diff }, i) => (
-                  <tr key={`${diff}-${i}`}>
-                    <th>{shortName}</th>
-                    <td>{pf}</td>
-                    <td>{pa}</td>
-                    <td>{ppg}</td>
-                    <td>{papg}</td>
-                    <td>{diff}</td>
-                  </tr>
-                ),
+                ({ shortName, pf, pa, ppg, papg, diff }, i) => {
+                  let diffClassName = "neutral";
+                  if (diff > 0) {
+                    diffClassName = "positive";
+                  } else if (diff < 0) {
+                    diffClassName = "negative";
+                  }
+                  return (
+                    <tr key={`${diff}-${i}`}>
+                      <th>{shortName}</th>
+                      <td>{pf}</td>
+                      <td>{pa}</td>
+                      <td>{ppg}</td>
+                      <td>{papg}</td>
+                      <td className={diffClassName}>{diff}</td>
+                    </tr>
+                  );
+                },
               )}
             </tbody>
           </table>

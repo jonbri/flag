@@ -99,11 +99,13 @@ export const season: Week[] = [
       time: "12:00",
       opponent: "Steelers",
       home: true,
+      score: "15-46",
     },
     Browns: {
       time: "1:00",
       opponent: "Bills",
       home: false,
+      score: "41-25",
     },
   },
   {
@@ -171,8 +173,8 @@ export const players: Player[] = [
   },
   {
     name: "Jason",
-    rec: 5,
-    td: 1,
+    rec: 6,
+    td: 2,
     int: 1,
     sack: 0,
     safety: 2,

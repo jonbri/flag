@@ -52,7 +52,11 @@ const App = () => {
             <tbody>
               {season.map(({ date, Chargers, Browns }) => (
                 <tr key={date}>
-                  <th>{date}</th>
+                  <th
+                    className={Chargers.score === undefined ? "future" : "past"}
+                  >
+                    {date}
+                  </th>
                   {[Chargers, Browns].map(
                     ({ score = "1000-0", home, opponent, time }) => {
                       const [forPoints, againstPoints] = score.split("-");
@@ -83,7 +87,7 @@ const App = () => {
                           )}
                         </td>
                       );
-                    }
+                    },
                   )}
                 </tr>
               ))}
@@ -96,7 +100,7 @@ const App = () => {
           <table>
             <thead>
               <tr>
-                <th style={{ width: "10%" }}></th>
+                <th></th>
                 <th title="Wins">W</th>
                 <th title="Losses">L</th>
                 <th title="Ties">T</th>
@@ -123,7 +127,7 @@ const App = () => {
                       <td className={strkClassName}>{strk}</td>
                     </tr>
                   );
-                }
+                },
               )}
             </tbody>
           </table>
@@ -131,7 +135,7 @@ const App = () => {
           <table>
             <thead>
               <tr>
-                <th style={{ width: "10%" }}></th>
+                <th></th>
                 <th title="Total Points For">PF</th>
                 <th title="Total Points Against">PA</th>
                 <th title="Points Per Game">PPG</th>
@@ -158,7 +162,7 @@ const App = () => {
                       <td className={diffClassName}>{diff}</td>
                     </tr>
                   );
-                }
+                },
               )}
             </tbody>
           </table>
@@ -174,7 +178,7 @@ const App = () => {
                 <th title="Touchdowns">TD</th>
                 <th title="Interceptions">INT</th>
                 <th title="Sacks">SACK</th>
-                <th title="Safety">SAFETY</th>
+                <th title="Safeties">SFTY</th>
               </tr>
             </thead>
             <tbody>

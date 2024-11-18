@@ -83,6 +83,13 @@ table {
   color: inherit;
 }
 
+.future {
+  font-style: bold;
+}
+.past {
+  font-weight: normal;
+}
+
 .stats {
   table {
     font-family: "Courier New", Courier, monospace;
@@ -109,6 +116,17 @@ table {
 #player-stats,
 #rosters {
   font-size: 0.85em;
+}
+
+#team-stats {
+  thead {
+    th:first-child {
+      width: 10%;
+    }
+    th:last-child {
+      width: 20%;
+    }
+  }
 }
 
 #rosters {

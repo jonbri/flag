@@ -83,7 +83,7 @@ const App = () => {
                           )}
                         </td>
                       );
-                    },
+                    }
                   )}
                 </tr>
               ))}
@@ -96,7 +96,7 @@ const App = () => {
           <table>
             <thead>
               <tr>
-                <th></th>
+                <th style={{ width: "10%" }}></th>
                 <th title="Wins">W</th>
                 <th title="Losses">L</th>
                 <th title="Ties">T</th>
@@ -123,7 +123,7 @@ const App = () => {
                       <td className={strkClassName}>{strk}</td>
                     </tr>
                   );
-                },
+                }
               )}
             </tbody>
           </table>
@@ -131,7 +131,7 @@ const App = () => {
           <table>
             <thead>
               <tr>
-                <th></th>
+                <th style={{ width: "10%" }}></th>
                 <th title="Total Points For">PF</th>
                 <th title="Total Points Against">PA</th>
                 <th title="Points Per Game">PPG</th>
@@ -158,7 +158,7 @@ const App = () => {
                       <td className={diffClassName}>{diff}</td>
                     </tr>
                   );
-                },
+                }
               )}
             </tbody>
           </table>

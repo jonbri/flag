@@ -1,5 +1,5 @@
 export interface Team {
-  name: "Chargers" | "Browns";
+  name: string;
   shortName: string;
   city: string;
   color: string;
@@ -9,15 +9,21 @@ export interface Team {
 }
 
 export type TeamResult = {
+  team: string;
   opponent: string;
   home: boolean;
   score?: string;
   time: string;
 };
+export type Season = {
+  name: string;
+  teams: Team[];
+  players: Player[];
+  weeks: Week[];
+};
 export type Week = {
   date: string;
-  Chargers: TeamResult;
-  Browns: TeamResult;
+  teams: TeamResult[];
 };
 
 export interface Stats {

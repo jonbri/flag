@@ -1,4 +1,4 @@
-import { Player, Team, Week } from "./types";
+import { Season } from "./types";
 
 const colors = {
   powderBlue: "#0080C6",
@@ -8,176 +8,204 @@ const colors = {
   white: "#FFFFFF",
 };
 
-export const teams: Team[] = [
+export const seasons: Season[] = [
   {
-    name: "Chargers",
-    shortName: "LA",
-    city: "Los Angeles",
-    color: colors.powderBlue,
-    secondaryColor: colors.sunshineGold,
-    brink: "Austin",
-    players: [
-      "Austin",
-      "Jaxon",
-      "Cooper",
-      "Oliver",
-      "Boone",
-      "Beckett",
-      "Michael",
+    name: "Fall 2024",
+    teams: [
+      {
+        name: "Chargers",
+        shortName: "LA",
+        city: "Los Angeles",
+        color: colors.powderBlue,
+        secondaryColor: colors.sunshineGold,
+        brink: "Austin",
+        players: [
+          "Austin",
+          "Jaxon",
+          "Cooper",
+          "Oliver",
+          "Boone",
+          "Beckett",
+          "Michael",
+        ],
+      },
+      {
+        name: "Browns",
+        shortName: "CLE",
+        city: "Cleveland",
+        color: colors.darkBrown,
+        secondaryColor: colors.orange,
+        brink: "Jason",
+        players: [
+          "Jason",
+          "Tyler",
+          "Jacob",
+          "Ben",
+          "Brooks",
+          "Aiden",
+          "Joel",
+          "Vladimir",
+          "Andrey",
+        ],
+      },
     ],
-  },
-  {
-    name: "Browns",
-    shortName: "CLE",
-    city: "Cleveland",
-    color: colors.darkBrown,
-    secondaryColor: colors.orange,
-    brink: "Jason",
     players: [
-      "Jason",
-      "Tyler",
-      "Jacob",
-      "Ben",
-      "Brooks",
-      "Aiden",
-      "Joel",
-      "Vladimir",
-      "Andrey",
+      { name: "Austin", rec: 1, td: 0, int: 0, sack: 0, safety: 0 },
+      {
+        name: "Jason",
+        rec: 6,
+        td: 2,
+        int: 1,
+        sack: 0,
+        safety: 2,
+      },
     ],
-  },
-];
-
-export const season: Week[] = [
-  {
-    date: "Oct 26",
-    Chargers: {
-      time: "3:00",
-      opponent: "Broncos",
-      home: false,
-      score: "19-40",
-    },
-    Browns: {
-      time: "12:00",
-      opponent: "Dolphins",
-      home: true,
-      score: "52-32",
-    },
-  },
-  {
-    date: "Nov 2",
-    Chargers: {
-      time: "4:00",
-      opponent: "Bengals",
-      home: true,
-      score: "18-38",
-    },
-    Browns: {
-      time: "1:00",
-      opponent: "Raiders",
-      home: false,
-      score: "32-30",
-    },
-  },
-  {
-    date: "Nov 9",
-    Chargers: {
-      time: "3:00",
-      opponent: "Steelers",
-      home: false,
-      score: "19-28",
-    },
-    Browns: {
-      time: "2:00",
-      opponent: "Broncos",
-      home: true,
-      score: "4-28",
-    },
-  },
-  {
-    date: "Nov 16",
-    Chargers: {
-      time: "12:00",
-      opponent: "Steelers",
-      home: true,
-      score: "15-46",
-    },
-    Browns: {
-      time: "1:00",
-      opponent: "Bills",
-      home: false,
-      score: "41-25",
-    },
-  },
-  {
-    date: "Nov 23",
-    Chargers: {
-      time: "5:00",
-      opponent: "Ravens",
-      home: true,
-    },
-    Browns: {
-      time: "12:00",
-      opponent: "Steelers",
-      home: false,
-    },
-  },
-  {
-    date: "Dec 7",
-    Chargers: {
-      time: "3:00",
-      opponent: "Browns",
-      home: true,
-    },
-    Browns: {
-      time: "3:00",
-      opponent: "Chargers",
-      home: false,
-    },
-  },
-  {
-    date: "Dec 14",
-    Chargers: {
-      time: "4:00",
-      opponent: "Bills",
-      home: true,
-    },
-    Browns: {
-      time: "3:00",
-      opponent: "Chiefs",
-      home: false,
-    },
-  },
-  {
-    date: "Dec 21",
-    Chargers: {
-      time: "5:00",
-      opponent: "Broncos",
-      home: true,
-    },
-    Browns: {
-      time: "4:00",
-      opponent: "Patriots",
-      home: true,
-    },
-  },
-];
-
-export const players: Player[] = [
-  {
-    name: "Austin",
-    rec: 1,
-    td: 0,
-    int: 0,
-    sack: 0,
-    safety: 0,
-  },
-  {
-    name: "Jason",
-    rec: 6,
-    td: 2,
-    int: 1,
-    sack: 0,
-    safety: 2,
+    weeks: [
+      {
+        date: "Oct 26 2024",
+        teams: [
+          {
+            team: "Chargers",
+            time: "3:00",
+            opponent: "Broncos",
+            home: false,
+            score: "19-40",
+          },
+          {
+            team: "Browns",
+            time: "12:00",
+            opponent: "Dolphins",
+            home: true,
+            score: "52-32",
+          },
+        ],
+      },
+      {
+        date: "Nov 2 2024",
+        teams: [
+          {
+            team: "Chargers",
+            time: "4:00",
+            opponent: "Bengals",
+            home: true,
+            score: "18-38",
+          },
+          {
+            team: "Browns",
+            time: "1:00",
+            opponent: "Raiders",
+            home: false,
+            score: "32-30",
+          },
+        ],
+      },
+      {
+        date: "Nov 9 2024",
+        teams: [
+          {
+            team: "Chargers",
+            time: "3:00",
+            opponent: "Steelers",
+            home: false,
+            score: "19-28",
+          },
+          {
+            team: "Browns",
+            time: "2:00",
+            opponent: "Broncos",
+            home: true,
+            score: "4-28",
+          },
+        ],
+      },
+      {
+        date: "Nov 16 2024",
+        teams: [
+          {
+            team: "Chargers",
+            time: "12:00",
+            opponent: "Steelers",
+            home: true,
+            score: "15-46",
+          },
+          {
+            team: "Browns",
+            time: "1:00",
+            opponent: "Bills",
+            home: false,
+            score: "41-25",
+          },
+        ],
+      },
+      {
+        date: "Nov 23 2024",
+        teams: [
+          {
+            team: "Chargers",
+            time: "5:00",
+            opponent: "Ravens",
+            home: true,
+          },
+          {
+            team: "Browns",
+            time: "12:00",
+            opponent: "Steelers",
+            home: false,
+          },
+        ],
+      },
+      {
+        date: "Dec 7 2024",
+        teams: [
+          {
+            team: "Chargers",
+            time: "3:00",
+            opponent: "Browns",
+            home: true,
+          },
+          {
+            team: "Browns",
+            time: "3:00",
+            opponent: "Chargers",
+            home: false,
+          },
+        ],
+      },
+      {
+        date: "Dec 14 2024",
+        teams: [
+          {
+            team: "Chargers",
+            time: "4:00",
+            opponent: "Bills",
+            home: true,
+          },
+          {
+            team: "Browns",
+            time: "3:00",
+            opponent: "Chiefs",
+            home: false,
+          },
+        ],
+      },
+      {
+        date: "Dec 21 2024",
+        teams: [
+          {
+            team: "Chargers",
+            time: "5:00",
+            opponent: "Broncos",
+            home: true,
+          },
+          {
+            team: "Browns",
+            time: "4:00",
+            opponent: "Patriots",
+            home: true,
+          },
+        ],
+      },
+    ],
   },
 ];
 

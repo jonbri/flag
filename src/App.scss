@@ -7,13 +7,16 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
   margin: 0;
   padding: 0;
   display: inline;
 }
 
 h1 {
+  display: none;
   font-size: 1em;
   letter-spacing: 0.2em;
   font-style: italic;
@@ -24,9 +27,15 @@ h1 {
   }
 }
 h2 {
-  font-size: 1.2em;
+  font-size: 1em;
+  letter-spacing: 0.2em;
   font-style: italic;
-  font-weight: bold;
+  font-weight: bolder;
+}
+h3 {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bolder;
 }
 
 #layout {
@@ -42,7 +51,13 @@ table {
   background-color: white;
 }
 
-#schedule {
+.season {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.schedule {
   table {
     border-spacing: 3px;
     thead {
@@ -102,7 +117,6 @@ table {
     tbody {
       th {
         text-align: left;
-        /* all caps */
         text-transform: uppercase;
       }
       tr:nth-child(odd) {
@@ -112,13 +126,13 @@ table {
   }
 }
 
-#team-stats,
-#player-stats,
-#rosters {
+.team-stats,
+.player-stats,
+.rosters {
   font-size: 0.85em;
 }
 
-#team-stats {
+.team-stats {
   thead {
     th:first-child {
       width: 10%;
@@ -129,9 +143,9 @@ table {
   }
 }
 
-#rosters {
+.rosters {
   display: flex;
-  h2 {
+  h3 {
     margin-right: 10px;
   }
   ul {
@@ -140,7 +154,7 @@ table {
     margin: 0;
   }
   li {
-    padding-right: 20px;
+    padding-right: 35px;
   }
   .brink {
     font-style: italic;
@@ -160,9 +174,8 @@ table {
     display: inline;
     padding-right: 10px;
   }
-}
-
-#login {
-  font-size: 0.8em;
-  color: #333;
+  #login {
+    font-size: 0.8em;
+    color: #333;
+  }
 }

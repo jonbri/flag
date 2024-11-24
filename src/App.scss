@@ -98,11 +98,25 @@ table {
   color: inherit;
 }
 
-.future {
-  font-style: bold;
+.today {
+  th,
+  td {
+    border: 1px solid #ccc;
+  }
 }
 .past {
-  font-weight: normal;
+  th {
+    font-weight: normal;
+    font-style: italic;
+  }
+  td {
+    strong {
+      color: #333;
+    }
+  }
+}
+.future {
+  background-color: inherit;
 }
 
 .stats {

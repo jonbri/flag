@@ -163,20 +163,27 @@ table {
 
 .rosters {
   display: flex;
-  margin-top: 10px;
-  h3 {
-    margin-right: 10px;
-  }
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  li {
-    padding-right: 35px;
-  }
-  .brink {
-    font-style: italic;
+  flex-direction: column;
+  > div {
+    margin: auto;
+    margin-left: 0;
+    padding: 5px;
+    background-color: white;
+    display: flex;
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      padding-right: 35px;
+    }
+    h4 {
+      border-bottom: 1px solid #ccc;
+    }
+    .brink {
+      font-style: italic;
+    }
   }
 }
 

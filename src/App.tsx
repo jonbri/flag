@@ -14,7 +14,7 @@ const App = () => {
             const teamData = teams.map((team) => {
               const scores = weeks
                 .map(({ teams }) =>
-                  teams.find(({ team: teamName }) => teamName === team.name)
+                  teams.find(({ team: teamName }) => teamName === team.name),
                 )
                 .map((team) => team?.score);
               return {
@@ -44,7 +44,7 @@ const App = () => {
                             >
                               {name} <span className="record">({record})</span>
                             </th>
-                          )
+                          ),
                         )}
                       </tr>
                     </thead>
@@ -102,7 +102,7 @@ const App = () => {
                                     )}
                                   </td>
                                 );
-                              }
+                              },
                             )}
                           </tr>
                         );
@@ -142,7 +142,7 @@ const App = () => {
                               <td className={strkClassName}>{strk}</td>
                             </tr>
                           );
-                        }
+                        },
                       )}
                     </tbody>
                   </table>
@@ -179,7 +179,7 @@ const App = () => {
                               </td>
                             </tr>
                           );
-                        }
+                        },
                       )}
                     </tbody>
                   </table>
@@ -214,21 +214,24 @@ const App = () => {
                 </div>
 
                 <div className="rosters">
-                  {teams.map(({ name, players, brink }) => (
-                    <div key={name}>
-                      <h4>{name}</h4>
-                      <ul>
-                        {players.map((player) => (
-                          <li
-                            key={player}
-                            className={player === brink ? "brink" : ""}
-                          >
-                            {player}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
+                  <h3>Rosters</h3>
+                  <div>
+                    {teams.map(({ name, players, brink }) => (
+                      <div key={name}>
+                        <h4>{name}</h4>
+                        <ul>
+                          {players.map((player) => (
+                            <li
+                              key={player}
+                              className={player === brink ? "brink" : ""}
+                            >
+                              {player}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             );

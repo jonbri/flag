@@ -32,6 +32,7 @@ const App = () => {
                     <thead>
                       <tr>
                         <th></th>
+                        <th></th>
                         {teamData.map(
                           ({ name, city, record, color, secondaryColor }) => (
                             <th
@@ -49,7 +50,7 @@ const App = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {weeks.map(({ date, teams }) => {
+                      {weeks.map(({ date, teams }, i) => {
                         const gameDate = new Date(date);
                         const isDateInPast = gameDate < new Date();
                         const isToday =
@@ -72,6 +73,7 @@ const App = () => {
                                     : "future"
                             }
                           >
+                            <th>{i + 1}</th>
                             <th>{date.split(" ").slice(0, 2).join(" ")}</th>
                             {teams.map(
                               ({ score = "1000-0", home, opponent, time }) => {
@@ -103,8 +105,8 @@ const App = () => {
                                     {score === "1000-0" ? (
                                       <span>{`${time}pm`}</span>
                                     ) : (
-                                      <span className={wlClassName}>
-                                        {wlt} {score}
+                                      <span className={`score ${wlClassName}`}>
+                                        {`${wlt} ${score}`}
                                       </span>
                                     )}
                                   </td>

@@ -63,12 +63,16 @@ table {
 
 .schedule {
   table {
-    border-spacing: 3px;
+    border-spacing: 2px;
     thead {
       th {
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
           sans-serif;
         font-size: 1.3em;
+        .record {
+          font-size: 0.8em;
+          font-weight: normal;
+        }
       }
     }
     tbody {
@@ -85,6 +89,9 @@ table {
           font-style: italic;
           font-size: 0.8em;
           float: right;
+        }
+        .score {
+          font-size: 0.75em;
         }
       }
     }

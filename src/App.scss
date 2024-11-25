@@ -105,13 +105,15 @@ table {
 .today {
   th,
   td {
-    border: 1px solid #ccc;
+    background-color: gold;
+    border: 1px solid black;
   }
 }
 .thisweek {
   th,
   td {
-    border: 1px solid green;
+    background-color: silver;
+    border: 1px solid black;
   }
 }
 .past {

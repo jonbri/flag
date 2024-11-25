@@ -14,7 +14,7 @@ const App = () => {
             const teamData = teams.map((team) => {
               const scores = weeks
                 .map(({ teams }) =>
-                  teams.find(({ team: teamName }) => teamName === team.name)
+                  teams.find(({ team: teamName }) => teamName === team.name),
                 )
                 .map((team) => team?.score);
               return {
@@ -44,7 +44,7 @@ const App = () => {
                             >
                               {name} <span className="record">({record})</span>
                             </th>
-                          )
+                          ),
                         )}
                       </tr>
                     </thead>
@@ -54,18 +54,18 @@ const App = () => {
                         const isDateInPast = gameDate < new Date();
                         const isToday =
                           gameDate.toDateString() === new Date().toDateString();
-                        const isWithin7Days =
-                          gameDate <
-                          new Date(
-                            new Date().getTime() + 7 * 24 * 60 * 60 * 1000
-                          );
+                        const isWithin7DaysFromToday =
+                          Math.abs(gameDate.getTime() - new Date().getTime()) <
+                          1000 * 60 * 60 * 24 * 7;
+                        const isGameWeek =
+                          !isDateInPast && isWithin7DaysFromToday;
                         return (
                           <tr
                             key={date}
                             className={
                               isToday
                                 ? "today"
-                                : isWithin7Days
+                                : isGameWeek
                                   ? "thisweek"
                                   : isDateInPast
                                     ? "past"
@@ -109,7 +109,7 @@ const App = () => {
                                     )}
                                   </td>
                                 );
-                              }
+                              },
                             )}
                           </tr>
                         );
@@ -149,7 +149,7 @@ const App = () => {
                               <td className={strkClassName}>{strk}</td>
                             </tr>
                           );
-                        }
+                        },
                       )}
                     </tbody>
                   </table>
@@ -186,7 +186,7 @@ const App = () => {
                               </td>
                             </tr>
                           );
-                        }
+                        },
                       )}
                     </tbody>
                   </table>

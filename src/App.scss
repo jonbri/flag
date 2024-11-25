@@ -12,7 +12,6 @@ h3,
 h4 {
   margin: 0;
   padding: 0;
-  display: inline;
 }
 
 h1 {
@@ -29,8 +28,11 @@ h1 {
 h2 {
   font-size: 1em;
   letter-spacing: 0.2em;
-  font-style: italic;
   font-weight: bolder;
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
 h3 {
   font-size: 1em;
@@ -54,7 +56,9 @@ table {
 .season {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  h3 {
+    margin-top: 10px;
+  }
 }
 
 .schedule {
@@ -159,6 +163,7 @@ table {
 
 .rosters {
   display: flex;
+  margin-top: 10px;
   h3 {
     margin-right: 10px;
   }

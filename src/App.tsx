@@ -24,7 +24,9 @@ const App = () => {
             });
             return (
               <div className="season">
-                <h2>{name}</h2>
+                <h2>
+                  <a href="./">{name}</a>
+                </h2>
                 <div className="schedule">
                   <table>
                     <thead>

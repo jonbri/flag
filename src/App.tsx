@@ -14,7 +14,7 @@ const App = () => {
             const teamData = teams.map((team) => {
               const scores = weeks
                 .map(({ teams }) =>
-                  teams.find(({ team: teamName }) => teamName === team.name),
+                  teams.find(({ team: teamName }) => teamName === team.name)
                 )
                 .map((team) => team?.score);
               return {
@@ -44,25 +44,32 @@ const App = () => {
                             >
                               {name} <span className="record">({record})</span>
                             </th>
-                          ),
+                          )
                         )}
                       </tr>
                     </thead>
                     <tbody>
                       {weeks.map(({ date, teams }) => {
-                        const isDateInPast = new Date(date) < new Date();
+                        const gameDate = new Date(date);
+                        const isDateInPast = gameDate < new Date();
                         const isToday =
-                          new Date(date).toDateString() ===
-                          new Date().toDateString();
+                          gameDate.toDateString() === new Date().toDateString();
+                        const isWithin7Days =
+                          gameDate <
+                          new Date(
+                            new Date().getTime() + 7 * 24 * 60 * 60 * 1000
+                          );
                         return (
                           <tr
                             key={date}
                             className={
                               isToday
                                 ? "today"
-                                : isDateInPast
-                                  ? "past"
-                                  : "future"
+                                : isWithin7Days
+                                  ? "thisweek"
+                                  : isDateInPast
+                                    ? "past"
+                                    : "future"
                             }
                           >
                             <th>{date.split(" ").slice(0, 2).join(" ")}</th>
@@ -102,7 +109,7 @@ const App = () => {
                                     )}
                                   </td>
                                 );
-                              },
+                              }
                             )}
                           </tr>
                         );
@@ -142,7 +149,7 @@ const App = () => {
                               <td className={strkClassName}>{strk}</td>
                             </tr>
                           );
-                        },
+                        }
                       )}
                     </tbody>
                   </table>
@@ -179,7 +186,7 @@ const App = () => {
                               </td>
                             </tr>
                           );
-                        },
+                        }
                       )}
                     </tbody>
                   </table>

@@ -108,6 +108,12 @@ table {
     border: 1px solid #ccc;
   }
 }
+.thisweek {
+  th,
+  td {
+    border: 1px solid green;
+  }
+}
 .past {
   th {
     font-weight: normal;

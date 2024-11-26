@@ -45,6 +45,10 @@ h3 {
   flex-direction: column;
   gap: 20px;
   width: 350px;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 }
 
 table {

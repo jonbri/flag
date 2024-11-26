@@ -76,6 +76,13 @@ table {
       }
     }
     tbody {
+      th:first-child {
+        font-family: "Courier New", Courier, monospace;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 0.8em;
+        color: gray;
+      }
       th {
         text-align: left;
         font-size: 0.9em;

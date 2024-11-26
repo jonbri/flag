@@ -51,11 +51,22 @@ h3 {
   }
 }
 
-table {
+%panel {
   border: 1px solid #ccc;
+  border-radius: 5px;
   padding: 2px;
   background-color: white;
   width: 100%;
+}
+
+table {
+  @extend %panel;
+  border-spacing: 0;
+  tbody {
+    tr:nth-child(odd) {
+      background-color: #f0f0f0;
+    }
+  }
 }
 
 .season {
@@ -68,12 +79,13 @@ table {
 
 .schedule {
   table {
-    border-spacing: 2px;
     thead {
       th {
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
           sans-serif;
         font-size: 1.3em;
+        border: 1px solid white;
+        border-radius: 5px 5px 0 0;
         .record {
           font-size: 0.8em;
           font-weight: normal;
@@ -91,9 +103,6 @@ table {
       th {
         text-align: left;
         font-size: 0.9em;
-      }
-      tr:nth-child(odd) {
-        background-color: #f0f0f0;
       }
       td {
         padding: 4px;
@@ -164,9 +173,6 @@ table {
         text-align: left;
         text-transform: uppercase;
       }
-      tr:nth-child(odd) {
-        background-color: #f0f0f0;
-      }
     }
   }
 }
@@ -192,6 +198,8 @@ table {
   display: flex;
   flex-direction: column;
   > div {
+    @extend %panel;
+    width: inherit;
     margin: auto;
     margin-left: 0;
     padding: 5px;

@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 10;
   padding: 0;
+  margin: 5px;
   background: linear-gradient(to bottom, #f0e68c, #90ee90);
   min-height: 100vh;
 }
@@ -43,7 +43,7 @@ h3 {
 #layout {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 5px;
   width: 350px;
 
   @media (max-width: 600px) {
@@ -184,6 +184,11 @@ table {
 }
 
 .team-stats {
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
   thead {
     th:first-child {
       width: 10%;

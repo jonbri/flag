@@ -32,7 +32,11 @@ const App = () => {
                     <thead>
                       <tr>
                         <th></th>
-                        <th></th>
+                        <th
+                          style={{
+                            width: "45px",
+                          }}
+                        ></th>
                         {teamData.map(
                           ({ name, city, record, color, secondaryColor }) => (
                             <th

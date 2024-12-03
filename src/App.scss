@@ -103,6 +103,7 @@ table {
       th {
         text-align: left;
         font-size: 0.9em;
+        font-weight: normal;
       }
       td {
         padding: 4px;
@@ -141,7 +142,6 @@ table {
   th,
   td {
     background-color: silver;
-    border: 1px solid black;
   }
 }
 .past {
@@ -156,6 +156,9 @@ table {
   }
 }
 .future {
+  th {
+    font-weight: normal;
+  }
   background-color: inherit;
 }
 

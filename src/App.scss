@@ -145,9 +145,11 @@ table {
   }
 }
 .past {
+  opacity: 0.95;
   th {
     font-weight: normal;
     font-style: italic;
+    opacity: 0.5;
   }
   td {
     strong {

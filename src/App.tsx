@@ -14,7 +14,7 @@ const App = () => {
             const teamData = teams.map((team) => {
               const scores = weeks
                 .map(({ teams }) =>
-                  teams.find(({ team: teamName }) => teamName === team.name),
+                  teams.find(({ team: teamName }) => teamName === team.name)
                 )
                 .map((team) => team?.score);
               return {
@@ -24,7 +24,7 @@ const App = () => {
             });
             const hasToday = weeks.some(
               ({ date }) =>
-                new Date(date).toDateString() === new Date().toDateString(),
+                new Date(date).toDateString() === new Date().toDateString()
             );
             return (
               <div key={name} className="season hasToday">
@@ -53,7 +53,7 @@ const App = () => {
                             >
                               {name} <span className="record">({record})</span>
                             </th>
-                          ),
+                          )
                         )}
                       </tr>
                     </thead>
@@ -69,10 +69,13 @@ const App = () => {
                         const isGameWeek =
                           !isDateInPast && isWithin6DaysFromToday;
                         let className = "";
+                        const haveAllTeamsPlayedToday = teams.every(
+                          ({ score }) => score !== undefined
+                        );
 
-                        if (isToday) {
+                        if (isToday && !haveAllTeamsPlayedToday) {
                           className = "today";
-                        } else if (!hasToday) {
+                        } else if (!hasToday || haveAllTeamsPlayedToday) {
                           if (isGameWeek) {
                             className = "thisweek";
                           } else if (isDateInPast) {
@@ -121,7 +124,7 @@ const App = () => {
                                     )}
                                   </td>
                                 );
-                              },
+                              }
                             )}
                           </tr>
                         );
@@ -163,7 +166,7 @@ const App = () => {
                                 <td className={strkClassName}>{strk}</td>
                               </tr>
                             );
-                          },
+                          }
                         )}
                       </tbody>
                     </table>
@@ -200,7 +203,7 @@ const App = () => {
                                 </td>
                               </tr>
                             );
-                          },
+                          }
                         )}
                       </tbody>
                     </table>

@@ -69,11 +69,45 @@ table {
   }
 }
 
+@keyframes flashTable {
+  0% {
+    opacity: 0.7;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  75% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flashToday {
+  0% {
+    background-color: gold;
+  }
+  50% {
+    background-color: inherit;
+  }
+  100% {
+    background-color: gold;
+  }
+}
+
 .season {
   display: flex;
   flex-direction: column;
   h3 {
     margin-top: 10px;
+  }
+  &.hasToday {
+    table {
+      animation: flashTable 3s infinite alternate;
+    }
   }
 }
 
@@ -134,8 +168,8 @@ table {
 .today {
   th,
   td {
+    animation: flashToday 2s infinite;
     background-color: gold;
-    border: 1px solid black;
   }
 }
 .thisweek {

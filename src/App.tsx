@@ -22,8 +22,12 @@ const App = () => {
                 ...generateStats(scores),
               };
             });
+            const hasToday = weeks.some(
+              ({ date }) =>
+                new Date(date).toDateString() === new Date().toDateString(),
+            );
             return (
-              <div key={name} className="season">
+              <div key={name} className="season hasToday">
                 <h2>
                   <a href="./">{name}</a>
                 </h2>
@@ -59,24 +63,26 @@ const App = () => {
                         const isDateInPast = gameDate < new Date();
                         const isToday =
                           gameDate.toDateString() === new Date().toDateString();
-                        const isWithin7DaysFromToday =
+                        const isWithin6DaysFromToday =
                           Math.abs(gameDate.getTime() - new Date().getTime()) <
-                          1000 * 60 * 60 * 24 * 7;
+                          1000 * 60 * 60 * 24 * 6;
                         const isGameWeek =
-                          !isDateInPast && isWithin7DaysFromToday;
+                          !isDateInPast && isWithin6DaysFromToday;
+                        let className = "";
+
+                        if (isToday) {
+                          className = "today";
+                        } else if (!hasToday) {
+                          if (isGameWeek) {
+                            className = "thisweek";
+                          } else if (isDateInPast) {
+                            className = "past";
+                          } else {
+                            className = "future";
+                          }
+                        }
                         return (
-                          <tr
-                            key={date}
-                            className={
-                              isToday
-                                ? "today"
-                                : isGameWeek
-                                  ? "thisweek"
-                                  : isDateInPast
-                                    ? "past"
-                                    : "future"
-                            }
-                          >
+                          <tr key={date} className={className}>
                             <th>{i + 1}</th>
                             <th>{date.split(" ").slice(0, 2).join(" ")}</th>
                             {teams.map(

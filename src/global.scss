@@ -61,6 +61,7 @@ h3 {
 
 table {
   @extend %panel;
+  user-select: none;
   border-spacing: 0;
   tbody {
     tr:nth-child(odd) {

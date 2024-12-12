@@ -8,31 +8,27 @@ export interface Team {
   players: string[];
 }
 
-export type TeamResult = {
-  team: string;
-  opponent: string;
-  home: boolean;
-  score?: string;
-  time: string;
-};
-export type Season = {
-  name: string;
-  teams: Team[];
-  players: Player[];
-  weeks: Week[];
-};
-export type Week = {
-  date: string;
-  teams: TeamResult[];
-};
-
-export interface Stats {
+export type GameStats = {
   rec: number;
   td: number;
   int: number;
   sack: number;
   safety: number;
-}
-export interface Player extends Stats {
+};
+export type Game = {
+  team: string;
+  opponent: string;
+  home: boolean;
+  score?: string;
+  time: string;
+  stats?: { [index: string]: GameStats };
+};
+export type Season = {
   name: string;
-}
+  teams: Team[];
+  weeks: Week[];
+};
+export type Week = {
+  date: string;
+  teams: Game[];
+};

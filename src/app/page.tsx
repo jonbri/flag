@@ -1,3 +1,4 @@
+import { GameStats } from "@/types";
 import { links, seasons } from "../data";
 import { generateStats } from "../generateStats";
 import "../global.scss";
@@ -10,11 +11,39 @@ export default function Page() {
       </h1>
       <div id="layout">
         <div>
-          {seasons.map(({ name, teams, players, weeks }) => {
+          {seasons.map(({ name, teams, weeks }) => {
+            const weekStats = weeks.map(({ teams }) => {
+              const scores = teams.reduce<{ [index: string]: GameStats }>(
+                (acc, { stats }) => {
+                  if (!stats) return acc;
+                  const re = { ...acc, ...stats };
+                  return re;
+                },
+                {}
+              );
+              return scores;
+            });
+            const playerStats: { [index: string]: GameStats } =
+              weekStats.reduce((acc, stats) => {
+                for (const [name, stat] of Object.entries(stats)) {
+                  if (!acc[name]) {
+                    acc[name] = { rec: 0, td: 0, int: 0, sack: 0, safety: 0 };
+                  }
+                  acc[name] = {
+                    rec: acc[name].rec + stat.rec,
+                    td: acc[name].td + stat.td,
+                    int: acc[name].int + stat.int,
+                    sack: acc[name].sack + stat.sack,
+                    safety: acc[name].safety + stat.safety,
+                  };
+                }
+                return acc;
+              }, {});
+
             const teamData = teams.map((team) => {
               const scores = weeks
                 .map(({ teams }) =>
-                  teams.find(({ team: teamName }) => teamName === team.name),
+                  teams.find(({ team: teamName }) => teamName === team.name)
                 )
                 .map((team) => team?.score);
               return {
@@ -24,7 +53,7 @@ export default function Page() {
             });
             const hasToday = weeks.some(
               ({ date }) =>
-                new Date(date).toDateString() === new Date().toDateString(),
+                new Date(date).toDateString() === new Date().toDateString()
             );
             return (
               <div key={name} className="season hasToday">
@@ -53,7 +82,7 @@ export default function Page() {
                             >
                               {name} <span className="record">({record})</span>
                             </th>
-                          ),
+                          )
                         )}
                       </tr>
                     </thead>
@@ -70,7 +99,7 @@ export default function Page() {
                           !isDateInPast && isWithin6DaysFromToday;
                         let className = "";
                         const haveAllTeamsPlayedToday = teams.every(
-                          ({ score }) => score !== undefined,
+                          ({ score }) => score !== undefined
                         );
 
                         if (isToday && !haveAllTeamsPlayedToday) {
@@ -124,7 +153,7 @@ export default function Page() {
                                     )}
                                   </td>
                                 );
-                              },
+                              }
                             )}
                           </tr>
                         );
@@ -166,7 +195,7 @@ export default function Page() {
                                 <td className={strkClassName}>{strk}</td>
                               </tr>
                             );
-                          },
+                          }
                         )}
                       </tbody>
                     </table>
@@ -203,7 +232,7 @@ export default function Page() {
                                 </td>
                               </tr>
                             );
-                          },
+                          }
                         )}
                       </tbody>
                     </table>
@@ -224,16 +253,19 @@ export default function Page() {
                       </tr>
                     </thead>
                     <tbody>
-                      {players.map(({ name, rec, td, int, sack, safety }) => (
-                        <tr key={name}>
-                          <th>{name}</th>
-                          <td>{rec}</td>
-                          <td>{td}</td>
-                          <td>{int}</td>
-                          <td>{sack}</td>
-                          <td>{safety}</td>
-                        </tr>
-                      ))}
+                      {Object.entries(playerStats).map(([name, stats]) => {
+                        const { rec, td, int, sack, safety } = stats;
+                        return (
+                          <tr key={name}>
+                            <th>{name}</th>
+                            <td>{rec}</td>
+                            <td>{td}</td>
+                            <td>{int}</td>
+                            <td>{sack}</td>
+                            <td>{safety}</td>
+                          </tr>
+                        );
+                      })}
                     </tbody>
                   </table>
                 </div>

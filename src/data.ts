@@ -49,17 +49,6 @@ export const seasons: Season[] = [
         ],
       },
     ],
-    players: [
-      { name: "Austin", rec: 3, td: 0, int: 0, sack: 0, safety: 0 },
-      {
-        name: "Jason",
-        rec: 12,
-        td: 4,
-        int: 1,
-        sack: 0,
-        safety: 2,
-      },
-    ],
     weeks: [
       {
         date: "Oct 26 2024",
@@ -70,6 +59,9 @@ export const seasons: Season[] = [
             opponent: "Broncos",
             home: false,
             score: "19-40",
+            stats: {
+              Austin: { rec: 1, td: 0, int: 0, sack: 0, safety: 0 },
+            },
           },
           {
             team: "Browns",
@@ -77,6 +69,9 @@ export const seasons: Season[] = [
             opponent: "Dolphins",
             home: true,
             score: "52-32",
+            stats: {
+              Jason: { rec: 2, td: 1, int: 1, sack: 0, safety: 0 },
+            },
           },
         ],
       },
@@ -89,6 +84,9 @@ export const seasons: Season[] = [
             opponent: "Bengals",
             home: true,
             score: "18-38",
+            stats: {
+              Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
+            },
           },
           {
             team: "Browns",
@@ -96,6 +94,9 @@ export const seasons: Season[] = [
             opponent: "Raiders",
             home: false,
             score: "32-30",
+            stats: {
+              Jason: { rec: 2, td: 1, int: 0, sack: 0, safety: 0 },
+            },
           },
         ],
       },
@@ -108,6 +109,9 @@ export const seasons: Season[] = [
             opponent: "Steelers",
             home: false,
             score: "19-28",
+            stats: {
+              Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
+            },
           },
           {
             team: "Browns",
@@ -115,6 +119,9 @@ export const seasons: Season[] = [
             opponent: "Broncos",
             home: true,
             score: "4-28",
+            stats: {
+              Jason: { rec: 2, td: 0, int: 0, sack: 0, safety: 2 },
+            },
           },
         ],
       },
@@ -127,6 +134,9 @@ export const seasons: Season[] = [
             opponent: "Steelers",
             home: true,
             score: "15-46",
+            stats: {
+              Austin: { rec: 1, td: 0, int: 0, sack: 0, safety: 0 },
+            },
           },
           {
             team: "Browns",
@@ -134,6 +144,9 @@ export const seasons: Season[] = [
             opponent: "Bills",
             home: false,
             score: "41-25",
+            stats: {
+              Jason: { rec: 2, td: 0, int: 0, sack: 0, safety: 0 },
+            },
           },
         ],
       },
@@ -146,6 +159,9 @@ export const seasons: Season[] = [
             opponent: "Ravens",
             home: true,
             score: "28-34",
+            stats: {
+              Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
+            },
           },
           {
             team: "Browns",
@@ -153,6 +169,9 @@ export const seasons: Season[] = [
             opponent: "Steelers",
             home: false,
             score: "31-30",
+            stats: {
+              Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0 },
+            },
           },
         ],
       },
@@ -165,6 +184,9 @@ export const seasons: Season[] = [
             opponent: "Browns",
             home: true,
             score: "34-21",
+            stats: {
+              Austin: { rec: 1, td: 0, int: 0, sack: 0, safety: 0 },
+            },
           },
           {
             team: "Browns",
@@ -172,6 +194,9 @@ export const seasons: Season[] = [
             opponent: "Chargers",
             home: false,
             score: "21-34",
+            stats: {
+              Jason: { rec: 3, td: 1, int: 0, sack: 0, safety: 0 },
+            },
           },
         ],
       },
@@ -183,12 +208,14 @@ export const seasons: Season[] = [
             time: "4:00",
             opponent: "Bills",
             home: true,
+            stats: {},
           },
           {
             team: "Browns",
             time: "3:00",
             opponent: "Chiefs",
             home: false,
+            stats: {},
           },
         ],
       },

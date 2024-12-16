@@ -1,7 +1,7 @@
 import { GameStats } from "@/types";
-import { links, seasons } from "../data";
-import { generateStats } from "../generateStats";
-import "../global.scss";
+import { links, seasons } from "@/data";
+import { generateStats } from "@/generateStats";
+import "@/global.scss";
 
 export default function Page() {
   return (

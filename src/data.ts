@@ -1,4 +1,4 @@
-import { Season } from "./types";
+import { Season } from "@/types";
 
 const colors = {
   powderBlue: "#0080C6",

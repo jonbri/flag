@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { generateStats } from "./generateStats";
+import { generateStats } from "@/generateStats";
 
 test("empty array", () => {
   const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } = generateStats(

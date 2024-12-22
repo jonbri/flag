@@ -233,12 +233,20 @@ export const seasons: Season[] = [
             time: "5:00",
             opponent: "Broncos",
             home: true,
+            score: "12-35",
+            stats: {
+              Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
+            },
           },
           {
             team: "Browns",
             time: "4:00",
             opponent: "Patriots",
             home: true,
+            score: "46-32",
+            stats: {
+              Jason: { rec: 3, td: 3, int: 0, sack: 0, safety: 0 },
+            },
           },
         ],
       },

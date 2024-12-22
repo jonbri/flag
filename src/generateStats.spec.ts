@@ -3,7 +3,7 @@ import { generateStats } from "./generateStats";
 
 test("empty array", () => {
   const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } = generateStats(
-    []
+    [],
   );
   expect(w).toEqual(0);
   expect(l).toEqual(0);
@@ -20,7 +20,7 @@ test("empty array", () => {
 
 test("one score", () => {
   const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } = generateStats(
-    ["1-0"]
+    ["1-0"],
   );
   expect(w).toEqual(1);
   expect(l).toEqual(0);
@@ -37,7 +37,7 @@ test("one score", () => {
 
 test("one win and one loss", () => {
   const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } = generateStats(
-    ["10-0", "0-10"]
+    ["10-0", "0-10"],
   );
   expect(w).toEqual(1);
   expect(l).toEqual(1);
@@ -54,7 +54,7 @@ test("one win and one loss", () => {
 
 test("two wins and one loss", () => {
   const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } = generateStats(
-    ["10-0", "0-10", "20-0"]
+    ["10-0", "0-10", "20-0"],
   );
   expect(w).toEqual(2);
   expect(l).toEqual(1);
@@ -71,7 +71,7 @@ test("two wins and one loss", () => {
 
 test("three wins and one loss", () => {
   const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } = generateStats(
-    ["10-0", "0-10", "20-0", "5-0"]
+    ["10-0", "0-10", "20-0", "5-0"],
   );
   expect(w).toEqual(3);
   expect(l).toEqual(1);
@@ -88,7 +88,7 @@ test("three wins and one loss", () => {
 
 test("many scores ending in wins", () => {
   const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } = generateStats(
-    ["10-20", "20-40", "30-60", "2-2", "80-0"]
+    ["10-20", "20-40", "30-60", "2-2", "80-0"],
   );
   expect(w).toEqual(1);
   expect(l).toEqual(3);
@@ -105,7 +105,7 @@ test("many scores ending in wins", () => {
 
 test("many scores ending in losses", () => {
   const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } = generateStats(
-    ["6-2", "2-2", "2-2", "10-12", "15-20"]
+    ["6-2", "2-2", "2-2", "10-12", "15-20"],
   );
   expect(w).toEqual(1);
   expect(l).toEqual(2);
@@ -122,7 +122,7 @@ test("many scores ending in losses", () => {
 
 test("ties", () => {
   const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } = generateStats(
-    ["0-0", "5-5", "100-100"]
+    ["0-0", "5-5", "100-100"],
   );
   expect(w).toEqual(0);
   expect(l).toEqual(0);

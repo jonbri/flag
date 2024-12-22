@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { GameStats } from "@/types";
 import { links, seasons } from "@/data";
 import { generateStats } from "@/generateStats";
@@ -19,7 +20,7 @@ export default function Page() {
                   const re = { ...acc, ...stats };
                   return re;
                 },
-                {},
+                {}
               );
               return scores;
             });
@@ -43,7 +44,7 @@ export default function Page() {
             const teamData = teams.map((team) => {
               const scores = weeks
                 .map(({ teams }) =>
-                  teams.find(({ team: teamName }) => teamName === team.name),
+                  teams.find(({ team: teamName }) => teamName === team.name)
                 )
                 .map((team) => team?.score);
               return {
@@ -53,7 +54,7 @@ export default function Page() {
             });
             const hasToday = weeks.some(
               ({ date }) =>
-                new Date(date).toDateString() === new Date().toDateString(),
+                new Date(date).toDateString() === new Date().toDateString()
             );
             return (
               <div key={name} className="season hasToday">
@@ -82,7 +83,7 @@ export default function Page() {
                             >
                               {name} <span className="record">({record})</span>
                             </th>
-                          ),
+                          )
                         )}
                       </tr>
                     </thead>
@@ -99,7 +100,7 @@ export default function Page() {
                           !isDateInPast && isWithin6DaysFromToday;
                         let className = "";
                         const haveAllTeamsPlayedToday = teams.every(
-                          ({ score }) => score !== undefined,
+                          ({ score }) => score !== undefined
                         );
 
                         if (isToday && !haveAllTeamsPlayedToday) {
@@ -153,7 +154,7 @@ export default function Page() {
                                     )}
                                   </td>
                                 );
-                              },
+                              }
                             )}
                           </tr>
                         );
@@ -195,7 +196,7 @@ export default function Page() {
                                 <td className={strkClassName}>{strk}</td>
                               </tr>
                             );
-                          },
+                          }
                         )}
                       </tbody>
                     </table>
@@ -232,7 +233,7 @@ export default function Page() {
                                 </td>
                               </tr>
                             );
-                          },
+                          }
                         )}
                       </tbody>
                     </table>
@@ -293,6 +294,21 @@ export default function Page() {
               </div>
             );
           })}
+        </div>
+
+        <div>
+          <Image
+            src="./chargers2024.jpg"
+            width={500}
+            height={500}
+            alt="Chargers 2024"
+          />
+          <Image
+            src="./browns2024.jpg"
+            width={500}
+            height={500}
+            alt="Browns 2024"
+          />
         </div>
 
         <div id="footer">

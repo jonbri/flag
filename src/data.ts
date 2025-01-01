@@ -23,7 +23,18 @@ export const seasons: Season[] = [
         color: colors.chiefsRed,
         secondaryColor: colors.chiefsGold,
         brink: "Austin",
-        players: ["Austin"],
+        players: [
+          "Austin",
+          "Storm",
+          "Mason",
+          "Colton",
+          "Graham",
+          "Jack",
+          "Jonny",
+          "Luke",
+          "Daksh",
+          "Wells",
+        ],
       },
       {
         name: "Raiders",
@@ -32,10 +43,158 @@ export const seasons: Season[] = [
         color: colors.raidersBlack,
         secondaryColor: colors.raidersSilver,
         brink: "Jason",
-        players: ["Jason"],
+        players: [
+          "Jason",
+          "Marco",
+          "Owen",
+          "Armaan",
+          "Beckett",
+          "Hunter",
+          "Camden",
+          "Brooks",
+          "Jameson",
+          "Mateo",
+        ],
       },
     ],
-    weeks: [],
+    weeks: [
+      {
+        date: "Jan 4 2025",
+        teams: [
+          {
+            team: "Chiefs",
+            time: "3:30",
+            opponent: "Jaguars",
+            home: false,
+          },
+          {
+            team: "Raiders",
+            time: "12:30",
+            opponent: "Broncos",
+            home: false,
+          },
+        ],
+      },
+      {
+        date: "Jan 11 2025",
+        teams: [
+          {
+            team: "Chiefs",
+            time: "2:30",
+            opponent: "Browns",
+            home: true,
+          },
+          {
+            team: "Bengals",
+            time: "3:30",
+            opponent: "",
+            home: true,
+          },
+        ],
+      },
+      {
+        date: "Jan 18 2025",
+        teams: [
+          {
+            team: "Chiefs",
+            time: "12:30",
+            opponent: "Steelers",
+            home: false,
+          },
+          {
+            team: "Raiders",
+            time: "3:30",
+            opponent: "Dolphins",
+            home: false,
+          },
+        ],
+      },
+      {
+        date: "Jan 25 2025",
+        teams: [
+          {
+            team: "Chiefs",
+            time: "11:30",
+            opponent: "Chargers",
+            home: false,
+          },
+          {
+            team: "Raiders",
+            time: "1:30",
+            opponent: "Broncos",
+            home: true,
+          },
+        ],
+      },
+      {
+        date: "Feb 1 2025",
+        teams: [
+          {
+            team: "Chiefs",
+            time: "1:30",
+            opponent: "Ravens",
+            home: true,
+          },
+          {
+            team: "Raiders",
+            time: "12:30",
+            opponent: "Jaguars",
+            home: true,
+          },
+        ],
+      },
+      {
+        date: "Feb 8 2025",
+        teams: [
+          {
+            team: "Chiefs",
+            time: "3:30",
+            opponent: "Browns",
+            home: true,
+          },
+          {
+            team: "Raiders",
+            time: "2:30",
+            opponent: "Ravens",
+            home: true,
+          },
+        ],
+      },
+      {
+        date: "Feb 15 2025",
+        teams: [
+          {
+            team: "Chiefs",
+            time: "2:30",
+            opponent: "Bengals",
+            home: true,
+          },
+          {
+            team: "Raiders",
+            time: "11:30",
+            opponent: "Dolphins",
+            home: true,
+          },
+        ],
+      },
+      {
+        date: "Feb 22 2025",
+        teams: [
+          {
+            team: "Chiefs",
+            time: "11:30",
+            opponent: "Steelers",
+            home: true,
+          },
+          {
+            team: "Raiders",
+            time: "2:30",
+            opponent: "Chargers",
+            home: true,
+          },
+        ],
+      },
+    ],
   },
   {
     name: "Fall 2024",

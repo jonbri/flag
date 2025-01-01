@@ -293,6 +293,7 @@ export default function Page() {
                 </div>
                 <br />
                 <br />
+                <hr />
               </div>
             );
           })}

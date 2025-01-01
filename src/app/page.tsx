@@ -56,6 +56,11 @@ export default function Page() {
               ({ date }) =>
                 new Date(date).toDateString() === new Date().toDateString(),
             );
+
+            const haveAnyGamesBeenPlayedYet = weeks.some(({ teams }) =>
+              teams.some(({ score }) => score !== undefined),
+            );
+
             return (
               <div key={name} className="season hasToday">
                 <h2>
@@ -163,113 +168,117 @@ export default function Page() {
                   </table>
                 </div>
 
-                <div className="stats team-stats">
-                  <h3>Team Stats</h3>
-                  <div>
-                    <table>
-                      <thead>
-                        <tr>
-                          <th></th>
-                          <th title="Wins">W</th>
-                          <th title="Losses">L</th>
-                          <th title="Ties">T</th>
-                          <th title="Winning Percentage">PCT</th>
-                          <th title="Current Streak">STRK</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {teamData.map(
-                          ({ shortName, w, l, t, pct, diff, strk }, i) => {
-                            let strkClassName = "neutral";
-                            if (strk.toLowerCase().startsWith("w")) {
-                              strkClassName = "positive";
-                            } else if (strk.toLowerCase().startsWith("l")) {
-                              strkClassName = "negative";
-                            }
-                            return (
-                              <tr key={`${diff}-${i}`}>
-                                <th>{shortName}</th>
-                                <td>{w}</td>
-                                <td>{l}</td>
-                                <td>{t}</td>
-                                <td>{pct}</td>
-                                <td className={strkClassName}>{strk}</td>
-                              </tr>
-                            );
-                          },
-                        )}
-                      </tbody>
-                    </table>
+                {haveAnyGamesBeenPlayedYet ? (
+                  <div className="stats team-stats">
+                    <h3>Team Stats</h3>
+                    <div>
+                      <table>
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th title="Wins">W</th>
+                            <th title="Losses">L</th>
+                            <th title="Ties">T</th>
+                            <th title="Winning Percentage">PCT</th>
+                            <th title="Current Streak">STRK</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {teamData.map(
+                            ({ shortName, w, l, t, pct, diff, strk }, i) => {
+                              let strkClassName = "neutral";
+                              if (strk.toLowerCase().startsWith("w")) {
+                                strkClassName = "positive";
+                              } else if (strk.toLowerCase().startsWith("l")) {
+                                strkClassName = "negative";
+                              }
+                              return (
+                                <tr key={`${diff}-${i}`}>
+                                  <th>{shortName}</th>
+                                  <td>{w}</td>
+                                  <td>{l}</td>
+                                  <td>{t}</td>
+                                  <td>{pct}</td>
+                                  <td className={strkClassName}>{strk}</td>
+                                </tr>
+                              );
+                            },
+                          )}
+                        </tbody>
+                      </table>
 
+                      <table>
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th title="Total Points For">PF</th>
+                            <th title="Total Points Against">PA</th>
+                            <th title="Points Per Game">PPG</th>
+                            <th title="Points Against Per Game">PAPG</th>
+                            <th title="Point Differential">DIFF</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {teamData.map(
+                            ({ shortName, pf, pa, ppg, papg, diff }, i) => {
+                              let diffClassName = "neutral";
+                              if (diff > 0) {
+                                diffClassName = "positive";
+                              } else if (diff < 0) {
+                                diffClassName = "negative";
+                              }
+                              return (
+                                <tr key={`${diff}-${i}`}>
+                                  <th>{shortName}</th>
+                                  <td>{pf}</td>
+                                  <td>{pa}</td>
+                                  <td>{ppg}</td>
+                                  <td>{papg}</td>
+                                  <td className={diffClassName}>
+                                    {diff > 0 ? `+${diff}` : diff}
+                                  </td>
+                                </tr>
+                              );
+                            },
+                          )}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                ) : null}
+
+                {haveAnyGamesBeenPlayedYet ? (
+                  <div className="stats player-stats">
+                    <h3>Player Stats</h3>
                     <table>
                       <thead>
                         <tr>
                           <th></th>
-                          <th title="Total Points For">PF</th>
-                          <th title="Total Points Against">PA</th>
-                          <th title="Points Per Game">PPG</th>
-                          <th title="Points Against Per Game">PAPG</th>
-                          <th title="Point Differential">DIFF</th>
+                          <th title="Receptions (catches)">REC</th>
+                          <th title="Touchdowns">TD</th>
+                          <th title="Interceptions">INT</th>
+                          <th title="Sacks">SACK</th>
+                          <th title="Safeties">SFTY</th>
                         </tr>
                       </thead>
                       <tbody>
-                        {teamData.map(
-                          ({ shortName, pf, pa, ppg, papg, diff }, i) => {
-                            let diffClassName = "neutral";
-                            if (diff > 0) {
-                              diffClassName = "positive";
-                            } else if (diff < 0) {
-                              diffClassName = "negative";
-                            }
-                            return (
-                              <tr key={`${diff}-${i}`}>
-                                <th>{shortName}</th>
-                                <td>{pf}</td>
-                                <td>{pa}</td>
-                                <td>{ppg}</td>
-                                <td>{papg}</td>
-                                <td className={diffClassName}>
-                                  {diff > 0 ? `+${diff}` : diff}
-                                </td>
-                              </tr>
-                            );
-                          },
-                        )}
+                        {Object.entries(playerStats).map(([name, stats]) => {
+                          const { rec, td, int, sack, safety } = stats;
+                          return (
+                            <tr key={name}>
+                              <th>{name}</th>
+                              <td>{rec}</td>
+                              <td>{td}</td>
+                              <td>{int}</td>
+                              <td>{sack}</td>
+                              <td>{safety}</td>
+                            </tr>
+                          );
+                        })}
                       </tbody>
                     </table>
                   </div>
-                </div>
-
-                <div className="stats player-stats">
-                  <h3>Player Stats</h3>
-                  <table>
-                    <thead>
-                      <tr>
-                        <th></th>
-                        <th title="Receptions (catches)">REC</th>
-                        <th title="Touchdowns">TD</th>
-                        <th title="Interceptions">INT</th>
-                        <th title="Sacks">SACK</th>
-                        <th title="Safeties">SFTY</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {Object.entries(playerStats).map(([name, stats]) => {
-                        const { rec, td, int, sack, safety } = stats;
-                        return (
-                          <tr key={name}>
-                            <th>{name}</th>
-                            <td>{rec}</td>
-                            <td>{td}</td>
-                            <td>{int}</td>
-                            <td>{sack}</td>
-                            <td>{safety}</td>
-                          </tr>
-                        );
-                      })}
-                    </tbody>
-                  </table>
-                </div>
+                ) : null}
 
                 <div className="rosters">
                   <h3>Rosters</h3>

@@ -6,9 +6,37 @@ const colors = {
   darkBrown: "#311D00",
   orange: "#FF3C00",
   white: "#FFFFFF",
+  chiefsRed: "#E31837",
+  chiefsGold: "#FFB612",
+  raidersBlack: "#000000",
+  raidersSilver: "#A5ACAF",
 };
 
 export const seasons: Season[] = [
+  {
+    name: "Winter 2025",
+    teams: [
+      {
+        name: "Chiefs",
+        shortName: "KC",
+        city: "Kansas City",
+        color: colors.chiefsRed,
+        secondaryColor: colors.chiefsGold,
+        brink: "Austin",
+        players: ["Austin"],
+      },
+      {
+        name: "Raiders",
+        shortName: "LA",
+        city: "Los Angeles",
+        color: colors.raidersBlack,
+        secondaryColor: colors.raidersSilver,
+        brink: "Jason",
+        players: ["Jason"],
+      },
+    ],
+    weeks: [],
+  },
   {
     name: "Fall 2024",
     teams: [
@@ -263,4 +291,6 @@ export const links = [
     name: "Browns",
     url: "https://en.wikipedia.org/wiki/Cleveland_Browns",
   },
+  { name: "Chiefs", url: "https://en.wikipedia.org/wiki/Kansas_City_Chiefs" },
+  { name: "Raiders", url: "https://en.wikipedia.org/wiki/Las_Vegas_Raiders" },
 ];

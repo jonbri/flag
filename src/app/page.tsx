@@ -336,7 +336,12 @@ export default function Page() {
               <a href="https://www.xlapex.com/">xlapex.com</a>
             </li>
           </ul>
-          <div id="login">tracysss@yahoo.com-1414Du</div>
+          <ul>
+            <li>
+              <a href="https://github.com/jonbri/flag/">GitHub</a>
+            </li>
+          </ul>
+          <div id="login">tracysss@y*hoo.com-1414Du</div>
         </div>
       </div>
     </div>

@@ -14,7 +14,7 @@ const colors = {
 
 export const seasons: Season[] = [
   {
-    name: "Winter 2025",
+    name: "Winter 2 2025",
     teams: [
       {
         name: "Chiefs",
@@ -87,7 +87,7 @@ export const seasons: Season[] = [
           {
             team: "Bengals",
             time: "3:30",
-            opponent: "",
+            opponent: "Bengals",
             home: true,
           },
         ],
@@ -197,7 +197,7 @@ export const seasons: Season[] = [
     ],
   },
   {
-    name: "Fall 2024",
+    name: "Winter 1 2024",
     teams: [
       {
         name: "Chargers",

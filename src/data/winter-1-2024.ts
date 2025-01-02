@@ -244,11 +244,11 @@ export const data: Season = {
   ],
   images: [
     {
-      src: "../../chargers2024.jpg",
+      src: "../chargers2024.jpg",
       alt: "Chargers 2024",
     },
     {
-      src: "../../browns2024.jpg",
+      src: "../browns2024.jpg",
       alt: "Browns 2024",
     },
   ],

@@ -12,7 +12,7 @@ export default function Page() {
       </h1>
       <div id="layout">
         <div>
-          {seasons.map(({ name, teams, weeks }) => {
+          {seasons.map(({ id, name, teams, weeks }) => {
             const weekStats = weeks.map(({ teams }) => {
               const scores = teams.reduce<{ [index: string]: GameStats }>(
                 (acc, { stats }) => {
@@ -64,7 +64,7 @@ export default function Page() {
             return (
               <div key={name} className="season hasToday">
                 <h2>
-                  <a href="./">{name}</a>
+                  <a href={`./season/${id}`}>{name}</a>
                 </h2>
                 <div className="schedule">
                   <table>

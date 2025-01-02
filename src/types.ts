@@ -24,6 +24,7 @@ export type Game = {
   stats?: { [index: string]: GameStats };
 };
 export type Season = {
+  id: string;
   name: string;
   teams: Team[];
   weeks: Week[];

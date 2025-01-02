@@ -1,27 +1,29 @@
 import { Season } from "@/types";
 
 const colors = {
-  powderBlue: "#0080C6",
-  sunshineGold: "#FFC20E",
-  darkBrown: "#311D00",
-  orange: "#FF3C00",
-  white: "#FFFFFF",
-  chiefsRed: "#E31837",
-  chiefsGold: "#FFB612",
-  raidersBlack: "#000000",
-  raidersSilver: "#A5ACAF",
+  chiefRed: "#E31837",
+  chiefGold: "#FFB612",
+  raiderBlack: "#000000",
+  raiderSilver: "#A5ACAF",
+  chargerBlue: "#0073E6",
+  chargerGold: "#FFB612",
+  brownsOrange: "#FF3C00",
+  brownsBrown: "#311D00",
+  dolphinAqua: "#008E97",
+  dolphinOrange: "#FC4C02",
 };
 
 export const seasons: Season[] = [
   {
+    id: "Winter-2-2025",
     name: "Winter 2 2025",
     teams: [
       {
         name: "Chiefs",
         shortName: "KC",
         city: "Kansas City",
-        color: colors.chiefsRed,
-        secondaryColor: colors.chiefsGold,
+        color: colors.chiefRed,
+        secondaryColor: colors.chiefGold,
         brink: "Austin",
         players: [
           "Austin",
@@ -40,8 +42,8 @@ export const seasons: Season[] = [
         name: "Raiders",
         shortName: "LA",
         city: "Los Angeles",
-        color: colors.raidersBlack,
-        secondaryColor: colors.raidersSilver,
+        color: colors.raiderBlack,
+        secondaryColor: colors.raiderSilver,
         brink: "Jason",
         players: [
           "Jason",
@@ -197,14 +199,15 @@ export const seasons: Season[] = [
     ],
   },
   {
+    id: "Winter-1-2024",
     name: "Winter 1 2024",
     teams: [
       {
         name: "Chargers",
         shortName: "LA",
         city: "Los Angeles",
-        color: colors.powderBlue,
-        secondaryColor: colors.sunshineGold,
+        color: colors.chargerBlue,
+        secondaryColor: colors.chargerGold,
         brink: "Austin",
         players: [
           "Austin",
@@ -220,8 +223,8 @@ export const seasons: Season[] = [
         name: "Browns",
         shortName: "CLE",
         city: "Cleveland",
-        color: colors.darkBrown,
-        secondaryColor: colors.orange,
+        color: colors.brownsBrown,
+        secondaryColor: colors.brownsOrange,
         brink: "Jason",
         players: [
           "Jason",
@@ -438,6 +441,22 @@ export const seasons: Season[] = [
         ],
       },
     ],
+  },
+  {
+    id: "Fall-2024",
+    name: "Fall 2024",
+    teams: [
+      {
+        name: "Dolphins",
+        shortName: "MIA",
+        city: "Miami",
+        color: colors.dolphinAqua,
+        secondaryColor: colors.dolphinOrange,
+        brink: "Jason",
+        players: ["Jason", "Murphy", "Banks", "Taz", "Arthur", "Will"],
+      },
+    ],
+    weeks: [],
   },
 ];
 

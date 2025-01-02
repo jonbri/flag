@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { GameStats } from "@/types";
 import { links, seasons } from "@/data";
@@ -64,7 +65,7 @@ export default function Page() {
             return (
               <div key={name} className="season hasToday">
                 <h2>
-                  <a href={`./season/${id}`}>{name}</a>
+                  <Link href={`./season/${id}`}>{name}</Link>
                 </h2>
                 <div className="schedule">
                   <table>
@@ -266,7 +267,9 @@ export default function Page() {
                           const { rec, td, int, sack, safety } = stats;
                           return (
                             <tr key={name}>
-                              <th>{name}</th>
+                              <th>
+                                <Link href={`./player/${name}`}>{name}</Link>
+                              </th>
                               <td>{rec}</td>
                               <td>{td}</td>
                               <td>{int}</td>

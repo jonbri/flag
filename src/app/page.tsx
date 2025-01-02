@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { GameStats } from "@/types";
 import { links, seasons } from "@/data";
 import { generateStats } from "@/generateStats";
@@ -78,13 +77,18 @@ export default function Page() {
                           }}
                         ></th>
                         {teamData.map(
-                          ({ name, city, record, color, secondaryColor }) => (
+                          ({
+                            name,
+                            city,
+                            record,
+                            colors: { primary, secondary },
+                          }) => (
                             <th
                               key={name}
                               title={`${city} ${name}`}
                               style={{
-                                backgroundColor: color,
-                                color: secondaryColor,
+                                backgroundColor: primary,
+                                color: secondary,
                               }}
                             >
                               {name} <span className="record">({record})</span>
@@ -311,21 +315,6 @@ export default function Page() {
           })}
         </div>
 
-        <div>
-          <Image
-            src="./chargers2024.jpg"
-            width={500}
-            height={500}
-            alt="Chargers 2024"
-          />
-          <Image
-            src="./browns2024.jpg"
-            width={500}
-            height={500}
-            alt="Browns 2024"
-          />
-        </div>
-
         <div id="footer">
           <ul>
             {links.map(({ name, url }) => (
@@ -342,6 +331,11 @@ export default function Page() {
           <ul>
             <li>
               <a href="https://github.com/jonbri/flag/">GitHub</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://jonbri.github.io/keep/">Keep</a>
             </li>
           </ul>
           <div id="login">tracysss@y*hoo.com-1414Du</div>

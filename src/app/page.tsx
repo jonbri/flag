@@ -148,6 +148,14 @@ export default function Page() {
                                 } else if (loss) {
                                   wlt = "L";
                                 }
+
+                                let formattedTime = `${time}pm`;
+                                if (
+                                  parseInt(time) === 11 ||
+                                  parseInt(time) === 10
+                                ) {
+                                  formattedTime = `${time}am`;
+                                }
                                 return (
                                   <td key={`${opponent}-${time}-${score}`}>
                                     {home ? (
@@ -156,7 +164,7 @@ export default function Page() {
                                       opponent
                                     )}{" "}
                                     {score === "1000-0" ? (
-                                      <span>{`${time}pm`}</span>
+                                      <span>{formattedTime}</span>
                                     ) : (
                                       <span className={`score ${wlClassName}`}>
                                         {`${wlt} ${score}`}

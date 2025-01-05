@@ -26,7 +26,7 @@ export const data: Season = {
     },
     {
       name: "Raiders",
-      shortName: "LA",
+      shortName: "LV",
       city: "Los Angeles",
       brink: "Jason",
       players: [

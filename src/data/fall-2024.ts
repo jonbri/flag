@@ -10,7 +10,7 @@ export const data: Season = {
       shortName: "MIA",
       city: "Miami",
       brink: "Jason",
-      players: ["Jason", "Murphy", "Banks", "Taz", "Arthur", "Will"],
+      players: ["Jason", "Murphy", "Banks", "Taz", "Arthur", "Will", "Harvey"],
       colors: colors.dolphins,
     },
   ],

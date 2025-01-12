@@ -296,7 +296,7 @@ export default function Page() {
                 ) : null}
 
                 <div className="rosters">
-                  <h3>Rosters</h3>
+                  <h3>Roster</h3>
                   <div>
                     {teams.map(({ name, players, brink }) => (
                       <div key={name}>
@@ -315,9 +315,7 @@ export default function Page() {
                     ))}
                   </div>
                 </div>
-                <br />
-                <br />
-                <hr />
+                <div className="separator" />
               </div>
             );
           })}

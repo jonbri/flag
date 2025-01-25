@@ -5,6 +5,30 @@ import { generateStats } from "@/generateStats";
 import "@/global.scss";
 
 export default function Page() {
+  const playerAllTimeStats = Object.entries(
+    seasons.reduce(
+      (acc, { weeks }) => {
+        weeks.forEach(({ teams }) => {
+          teams.forEach(({ stats }) => {
+            if (!stats) return;
+            for (const [name, stat] of Object.entries(stats)) {
+              if (!acc[name]) {
+                acc[name] = { rec: 0, td: 0, int: 0, sack: 0, safety: 0 };
+              }
+              acc[name].rec += stat.rec;
+              acc[name].td += stat.td;
+              acc[name].int += stat.int;
+              acc[name].sack += stat.sack;
+              acc[name].safety += stat.safety;
+            }
+          });
+        });
+        return acc;
+      },
+      {} as { [index: string]: GameStats },
+    ),
+  ).sort((a, b) => b[1].td - a[1].td);
+
   return (
     <div>
       <h1>
@@ -319,6 +343,39 @@ export default function Page() {
               </div>
             );
           })}
+
+          <div className="stats player-alltime-stats">
+            <h3>Player All-Time Stats</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th title="Receptions (catches)">REC</th>
+                  <th title="Touchdowns">TD</th>
+                  <th title="Interceptions">INT</th>
+                  <th title="Sacks">SACK</th>
+                  <th title="Safeties">SFTY</th>
+                </tr>
+              </thead>
+              <tbody>
+                {playerAllTimeStats.map(([name, stats]) => {
+                  const { rec, td, int, sack, safety } = stats;
+                  return (
+                    <tr key={name}>
+                      <th>
+                        <Link href={`./player/${name}`}>{name}</Link>
+                      </th>
+                      <td>{rec}</td>
+                      <td>{td}</td>
+                      <td>{int}</td>
+                      <td>{sack}</td>
+                      <td>{safety}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <div id="footer">

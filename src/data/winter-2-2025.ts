@@ -128,6 +128,10 @@ export const data: Season = {
           time: "11:30",
           opponent: "Chargers",
           home: false,
+          score: "31-25",
+          stats: {
+            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
+          },
         },
         {
           team: "Raiders",

@@ -1,10 +1,9 @@
 import { expect, test } from "vitest";
-import { generateStats } from "./generateStats";
+import { generateTeamStats } from "./generateTeamStats";
 
 test("empty array", () => {
-  const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } = generateStats(
-    [],
-  );
+  const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } =
+    generateTeamStats([]);
   expect(w).toEqual(0);
   expect(l).toEqual(0);
   expect(t).toEqual(0);
@@ -19,9 +18,8 @@ test("empty array", () => {
 });
 
 test("one score", () => {
-  const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } = generateStats(
-    ["1-0"],
-  );
+  const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } =
+    generateTeamStats(["1-0"]);
   expect(w).toEqual(1);
   expect(l).toEqual(0);
   expect(t).toEqual(0);
@@ -36,9 +34,8 @@ test("one score", () => {
 });
 
 test("one win and one loss", () => {
-  const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } = generateStats(
-    ["10-0", "0-10"],
-  );
+  const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } =
+    generateTeamStats(["10-0", "0-10"]);
   expect(w).toEqual(1);
   expect(l).toEqual(1);
   expect(t).toEqual(0);
@@ -53,9 +50,8 @@ test("one win and one loss", () => {
 });
 
 test("two wins and one loss", () => {
-  const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } = generateStats(
-    ["10-0", "0-10", "20-0"],
-  );
+  const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } =
+    generateTeamStats(["10-0", "0-10", "20-0"]);
   expect(w).toEqual(2);
   expect(l).toEqual(1);
   expect(t).toEqual(0);
@@ -70,9 +66,8 @@ test("two wins and one loss", () => {
 });
 
 test("three wins and one loss", () => {
-  const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } = generateStats(
-    ["10-0", "0-10", "20-0", "5-0"],
-  );
+  const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } =
+    generateTeamStats(["10-0", "0-10", "20-0", "5-0"]);
   expect(w).toEqual(3);
   expect(l).toEqual(1);
   expect(t).toEqual(0);
@@ -87,9 +82,8 @@ test("three wins and one loss", () => {
 });
 
 test("many scores ending in wins", () => {
-  const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } = generateStats(
-    ["10-20", "20-40", "30-60", "2-2", "80-0"],
-  );
+  const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } =
+    generateTeamStats(["10-20", "20-40", "30-60", "2-2", "80-0"]);
   expect(w).toEqual(1);
   expect(l).toEqual(3);
   expect(t).toEqual(1);
@@ -104,9 +98,8 @@ test("many scores ending in wins", () => {
 });
 
 test("many scores ending in losses", () => {
-  const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } = generateStats(
-    ["6-2", "2-2", "2-2", "10-12", "15-20"],
-  );
+  const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } =
+    generateTeamStats(["6-2", "2-2", "2-2", "10-12", "15-20"]);
   expect(w).toEqual(1);
   expect(l).toEqual(2);
   expect(t).toEqual(2);
@@ -121,9 +114,8 @@ test("many scores ending in losses", () => {
 });
 
 test("ties", () => {
-  const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } = generateStats(
-    ["0-0", "5-5", "100-100"],
-  );
+  const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } =
+    generateTeamStats(["0-0", "5-5", "100-100"]);
   expect(w).toEqual(0);
   expect(l).toEqual(0);
   expect(t).toEqual(3);

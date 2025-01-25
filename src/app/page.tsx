@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { GameStats } from "@/types";
 import { links, seasons } from "@/data";
-import { generateStats } from "@/generateStats";
+import { generateTeamStats } from "@/generateTeamStats";
 import "@/global.scss";
 
 export default function Page() {
@@ -73,7 +73,7 @@ export default function Page() {
                 .map((team) => team?.score);
               return {
                 ...team,
-                ...generateStats(scores),
+                ...generateTeamStats(scores),
               };
             });
             const hasToday = weeks.some(

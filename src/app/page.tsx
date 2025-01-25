@@ -27,7 +27,7 @@ export default function Page() {
       },
       {} as { [index: string]: GameStats },
     ),
-  ).sort((a, b) => b[1].td - a[1].td);
+  );
 
   return (
     <div>

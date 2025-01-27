@@ -2,33 +2,11 @@ import Link from "next/link";
 import { GameStats } from "@/types";
 import { links, seasons } from "@/data";
 import { generateTeamStats } from "@/generateTeamStats";
+import { generateAllTimePlayerStats } from "@/generateAllTimePlayerStats";
 import "@/global.scss";
 
 export default function Page() {
-  const playerAllTimeStats = Object.entries(
-    seasons.reduce(
-      (acc, { weeks }) => {
-        weeks.forEach(({ teams }) => {
-          teams.forEach(({ stats }) => {
-            if (!stats) return;
-            for (const [name, stat] of Object.entries(stats)) {
-              if (!acc[name]) {
-                acc[name] = { rec: 0, td: 0, int: 0, sack: 0, safety: 0 };
-              }
-              acc[name].rec += stat.rec;
-              acc[name].td += stat.td;
-              acc[name].int += stat.int;
-              acc[name].sack += stat.sack;
-              acc[name].safety += stat.safety;
-            }
-          });
-        });
-        return acc;
-      },
-      {} as { [index: string]: GameStats },
-    ),
-  );
-
+  const playerAllTimeStats = generateAllTimePlayerStats(seasons);
   return (
     <div>
       <h1>

@@ -18,13 +18,16 @@ export type GameStats = {
   sack: number;
   safety: number;
 };
+export type GameStatsInstance = {
+  [index: string]: GameStats;
+};
 export type Game = {
   team: string;
   opponent: string;
   home: boolean;
   score?: string;
   time: string;
-  stats?: { [index: string]: GameStats };
+  stats?: GameStatsInstance;
 };
 
 export interface Image {

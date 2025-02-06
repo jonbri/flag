@@ -105,11 +105,12 @@ export default function Page() {
                         const isDateInPast = gameDate < new Date();
                         const isToday =
                           gameDate.toDateString() === new Date().toDateString();
-                        const isWithin6DaysFromToday =
-                          Math.abs(gameDate.getTime() - new Date().getTime()) <
-                          1000 * 60 * 60 * 24 * 6;
-                        const isGameWeek =
-                          !isDateInPast && isWithin6DaysFromToday;
+                        const isNextGame =
+                          gameDate <
+                          new Date(
+                            new Date().getTime() + 6 * 24 * 60 * 60 * 1000,
+                          );
+                        const isGameWeek = !isDateInPast && isNextGame;
                         let className = "";
                         const haveAllTeamsPlayedToday = teams.every(
                           ({ score }) => score !== undefined,

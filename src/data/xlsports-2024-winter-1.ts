@@ -2,8 +2,8 @@ import { colors } from "@/constants";
 import { Season } from "@/types";
 
 export const data: Season = {
-  id: "Winter-1-2024",
-  name: "Winter 1 2024",
+  id: "xlsports-2024-winter-1",
+  name: "XL Sports Winter 1 2024",
   teams: [
     {
       name: "Chargers",

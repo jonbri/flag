@@ -240,4 +240,14 @@ export const data: Season = {
       ],
     },
   ],
+  images: [
+    {
+      src: "../chiefs2025.jpg",
+      alt: "Chiefs 2025",
+    },
+    {
+      src: "../raiders2025.jpg",
+      alt: "Raiders 2025",
+    },
+  ],
 };

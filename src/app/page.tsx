@@ -132,7 +132,10 @@ export default function Page() {
                             <th>{i + 1}</th>
                             <th>{date.split(" ").slice(0, 2).join(" ")}</th>
                             {teams.map(
-                              ({ score = "1000-0", home, opponent, time }) => {
+                              (
+                                { score = "1000-0", home, opponent, time },
+                                j,
+                              ) => {
                                 const [forPoints, againstPoints] =
                                   score.split("-");
                                 const win =
@@ -160,7 +163,9 @@ export default function Page() {
                                   formattedTime = `${time}am`;
                                 }
                                 return (
-                                  <td key={`${opponent}-${time}-${score}`}>
+                                  <td
+                                    key={`${opponent}-${time}-${score}-${i}-${j}`}
+                                  >
                                     {home ? (
                                       <strong>{opponent}</strong>
                                     ) : (

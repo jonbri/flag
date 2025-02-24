@@ -21,4 +21,12 @@ export const colors: { [key: string]: TeamColors } = {
     primary: "#008E97",
     secondary: "#FC4C02",
   },
+  ravens: {
+    primary: "#241773",
+    secondary: "#9E7C0C",
+  },
+  bengals: {
+    primary: "#FB4F14",
+    secondary: "#000000",
+  },
 };

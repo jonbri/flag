@@ -19,18 +19,50 @@ test("empty array", () => {
 
 test("one score", () => {
   const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } =
+    generateTeamStats(["2-0"]);
+  expect(w).toEqual(1);
+  expect(l).toEqual(0);
+  expect(t).toEqual(0);
+  expect(pct).toEqual("1.000");
+  expect(record).toEqual("1-0");
+  expect(pf).toEqual(2);
+  expect(pa).toEqual(0);
+  expect(ppg).toEqual(2);
+  expect(papg).toEqual(0);
+  expect(diff).toEqual(2);
+  expect(strk).toEqual("W1");
+});
+
+test("generic win", () => {
+  const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } =
     generateTeamStats(["1-0"]);
   expect(w).toEqual(1);
   expect(l).toEqual(0);
   expect(t).toEqual(0);
   expect(pct).toEqual("1.000");
   expect(record).toEqual("1-0");
-  expect(pf).toEqual(1);
+  expect(pf).toEqual(0);
   expect(pa).toEqual(0);
-  expect(ppg).toEqual(1);
+  expect(ppg).toEqual(0);
   expect(papg).toEqual(0);
-  expect(diff).toEqual(1);
+  expect(diff).toEqual(0);
   expect(strk).toEqual("W1");
+});
+
+test("generic loss", () => {
+  const { w, l, t, pct, record, pf, pa, ppg, papg, diff, strk } =
+    generateTeamStats(["0-1"]);
+  expect(w).toEqual(0);
+  expect(l).toEqual(1);
+  expect(t).toEqual(0);
+  expect(pct).toEqual(".000");
+  expect(record).toEqual("0-1");
+  expect(pf).toEqual(0);
+  expect(pa).toEqual(0);
+  expect(ppg).toEqual(0);
+  expect(papg).toEqual(0);
+  expect(diff).toEqual(0);
+  expect(strk).toEqual("L1");
 });
 
 test("one win and one loss", () => {

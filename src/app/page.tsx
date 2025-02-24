@@ -170,6 +170,12 @@ export default function Page() {
                                     formattedTime = `${time}am`;
                                   }
                                 }
+
+                                let formattedScore = score;
+                                if (score === "1-0" || score === "0-1") {
+                                  formattedScore = "";
+                                }
+
                                 return (
                                   <td
                                     key={`${opponent}-${time}-${score}-${i}-${j}`}
@@ -183,7 +189,7 @@ export default function Page() {
                                       <span>{formattedTime}</span>
                                     ) : (
                                       <span className={`score ${wlClassName}`}>
-                                        {`${wlt} ${score}`}
+                                        {`${wlt} ${formattedScore}`}
                                       </span>
                                     )}
                                   </td>

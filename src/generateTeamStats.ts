@@ -15,16 +15,18 @@ export const generateTeamStats = (scores: (string | undefined)[]) => {
     [0, 0, 0],
   );
 
-  const [forPoints, againstPoints] = scores.reduce(
-    ([forPoints, againstPoints], score) =>
-      score
-        ? [
-            forPoints + parseInt(score.split("-")[0]),
-            againstPoints + parseInt(score.split("-")[1]),
-          ]
-        : [forPoints, againstPoints],
-    [0, 0],
-  );
+  const [forPoints, againstPoints] = scores
+    .filter((score) => score !== "1-0" && score !== "0-1")
+    .reduce(
+      ([forPoints, againstPoints], score) =>
+        score
+          ? [
+              forPoints + parseInt(score.split("-")[0]),
+              againstPoints + parseInt(score.split("-")[1]),
+            ]
+          : [forPoints, againstPoints],
+      [0, 0],
+    );
 
   const reversedScores = scores.slice().reverse().filter(Boolean);
   let strk = "";

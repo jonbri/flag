@@ -374,6 +374,34 @@ export default function Page() {
               </tbody>
             </table>
           </div>
+
+          <br />
+
+          <div className="stats player-alltime-stats">
+            <h3>Team All-Time Stats</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th title="Wins">W</th>
+                  <th title="Losses">L</th>
+                  <th title="Ties">T</th>
+                  <th title="Winning Percentage">PCT</th>
+                  <th title="Current Streak">STRK</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>TODO</th>
+                  <td>.</td>
+                  <td>.</td>
+                  <td>.</td>
+                  <td>.</td>
+                  <td>.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <div id="footer">

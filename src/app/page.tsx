@@ -133,7 +133,12 @@ export default function Page() {
                             <th>{date.split(" ").slice(0, 2).join(" ")}</th>
                             {teams.map(
                               (
-                                { score = "1000-0", home, opponent, time },
+                                {
+                                  score = "1000-0",
+                                  home = false,
+                                  opponent = "Unknown",
+                                  time = "UNK",
+                                },
                                 j,
                               ) => {
                                 const [forPoints, againstPoints] =
@@ -155,12 +160,15 @@ export default function Page() {
                                   wlt = "L";
                                 }
 
-                                let formattedTime = `${time}pm`;
-                                if (
-                                  parseInt(time) === 11 ||
-                                  parseInt(time) === 10
-                                ) {
-                                  formattedTime = `${time}am`;
+                                let formattedTime = "";
+                                if (time !== "UNK") {
+                                  formattedTime = `${time}pm`;
+                                  if (
+                                    parseInt(time) === 11 ||
+                                    parseInt(time) === 10
+                                  ) {
+                                    formattedTime = `${time}am`;
+                                  }
                                 }
                                 return (
                                   <td

@@ -23,10 +23,10 @@ export type GameStatsInstance = {
 };
 export type Game = {
   team: string;
-  opponent: string;
-  home: boolean;
+  opponent?: string;
+  home?: boolean;
   score?: string;
-  time: string;
+  time?: string;
   stats?: GameStatsInstance;
 };
 

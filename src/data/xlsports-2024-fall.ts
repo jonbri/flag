@@ -20,9 +20,6 @@ export const data: Season = {
       teams: [
         {
           team: "Dolphins",
-          time: "UNK",
-          opponent: "UNK",
-          home: false,
           score: "0-1",
           stats: {
             Jason: { rec: 1, td: 1, int: 0, sack: 1, safety: 0 },
@@ -35,9 +32,6 @@ export const data: Season = {
       teams: [
         {
           team: "Dolphins",
-          time: "UNK",
-          opponent: "UNK",
-          home: false,
           score: "0-1",
           stats: {
             Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0 },
@@ -50,9 +44,6 @@ export const data: Season = {
       teams: [
         {
           team: "Dolphins",
-          time: "UNK",
-          opponent: "UNK",
-          home: false,
           score: "0-1",
           stats: {
             Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0 },
@@ -65,9 +56,6 @@ export const data: Season = {
       teams: [
         {
           team: "Dolphins",
-          time: "UNK",
-          opponent: "UNK",
-          home: false,
           score: "1-0",
           stats: {
             Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0 },
@@ -80,9 +68,6 @@ export const data: Season = {
       teams: [
         {
           team: "Dolphins",
-          time: "UNK",
-          opponent: "UNK",
-          home: false,
           score: "0-1",
           stats: {
             Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0 },
@@ -95,9 +80,6 @@ export const data: Season = {
       teams: [
         {
           team: "Dolphins",
-          time: "UNK",
-          opponent: "UNK",
-          home: false,
           score: "0-1",
           stats: {
             Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0 },
@@ -110,9 +92,6 @@ export const data: Season = {
       teams: [
         {
           team: "Dolphins",
-          time: "UNK",
-          opponent: "UNK",
-          home: false,
           score: "0-1",
           stats: {
             Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0 },
@@ -125,9 +104,6 @@ export const data: Season = {
       teams: [
         {
           team: "Dolphins",
-          time: "UNK",
-          opponent: "UNK",
-          home: false,
           score: "0-1",
           stats: {
             Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0 },

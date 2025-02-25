@@ -3,10 +3,12 @@ import { GameStats } from "@/types";
 import { links, seasons } from "@/data";
 import { generateTeamStats } from "@/generateTeamStats";
 import { generateAllTimePlayerStats } from "@/generateAllTimePlayerStats";
+import { generateAllTimeTeamStats } from "@/generateAllTimeTeamStats";
 import "@/global.scss";
 
 export default function Page() {
   const playerAllTimeStats = generateAllTimePlayerStats(seasons);
+  const teamAllTimeStats = generateAllTimeTeamStats();
   return (
     <div>
       <h1>
@@ -391,14 +393,21 @@ export default function Page() {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th>TODO</th>
-                  <td>.</td>
-                  <td>.</td>
-                  <td>.</td>
-                  <td>.</td>
-                  <td>.</td>
-                </tr>
+                {teamAllTimeStats.map(({ name, stats }) => {
+                  const { wins } = stats;
+                  return (
+                    <tr key={name}>
+                      <th>
+                        <Link href={`./player/${name}`}>{name}</Link>
+                      </th>
+                      <td>{wins}</td>
+                      <td>-1</td>
+                      <td>-1</td>
+                      <td>-1</td>
+                      <td>-1</td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>

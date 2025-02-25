@@ -262,4 +262,10 @@ table {
     font-size: 0.8em;
     color: #333;
   }
+  .links {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
 }

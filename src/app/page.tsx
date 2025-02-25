@@ -405,13 +405,15 @@ export default function Page() {
         </div>
 
         <div id="footer">
-          <ul>
-            {links.map(({ name, url }) => (
-              <li key={name}>
-                <a href={url}>{name}</a>
-              </li>
-            ))}
-          </ul>
+          <div className="links">
+            <ul>
+              {links.map(({ name, url }) => (
+                <li key={name}>
+                  <a href={url}>{name}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
           <ul>
             <li>
               <a href="https://www.xlapex.com/">xlapex.com</a>

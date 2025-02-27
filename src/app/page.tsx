@@ -8,7 +8,7 @@ import "@/global.scss";
 
 export default function Page() {
   const playerAllTimeStats = generateAllTimePlayerStats(seasons);
-  const teamAllTimeStats = generateAllTimeTeamStats();
+  const teamAllTimeStats = generateAllTimeTeamStats(seasons);
   return (
     <div>
       <h1>
@@ -394,15 +394,15 @@ export default function Page() {
               </thead>
               <tbody>
                 {teamAllTimeStats.map(({ name, stats }) => {
-                  const { wins } = stats;
+                  const { w, l, t } = stats;
                   return (
                     <tr key={name}>
                       <th>
                         <Link href={`./player/${name}`}>{name}</Link>
                       </th>
-                      <td>{wins}</td>
-                      <td>-1</td>
-                      <td>-1</td>
+                      <td>{w}</td>
+                      <td>{l}</td>
+                      <td>{t}</td>
                       <td>-1</td>
                       <td>-1</td>
                     </tr>

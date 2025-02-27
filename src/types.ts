@@ -47,3 +47,9 @@ export type Week = {
   date: string;
   teams: Game[];
 };
+
+export interface AllTimeSeasonStats {
+  w: number;
+  l: number;
+  t: number;
+}

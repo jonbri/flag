@@ -36,18 +36,18 @@ export const data: Season = {
       teams: [
         {
           team: "Ravens",
-          time: "7:00",
-          opponent: "TBD",
-          home: false,
+          time: "12:30",
+          opponent: "Steelers",
+          home: true,
           stats: {
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
           },
         },
         {
           team: "Bengals",
-          time: "7:00",
-          opponent: "TBD",
-          home: false,
+          time: "2:30",
+          opponent: "Chargers",
+          home: true,
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
           },
@@ -59,8 +59,8 @@ export const data: Season = {
       teams: [
         {
           team: "Ravens",
-          time: "7:00",
-          opponent: "TBD",
+          time: "1:30",
+          opponent: "Chargers",
           home: false,
           stats: {
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
@@ -68,8 +68,8 @@ export const data: Season = {
         },
         {
           team: "Bengals",
-          time: "7:00",
-          opponent: "TBD",
+          time: "12:30",
+          opponent: "Chiefs",
           home: false,
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
@@ -82,8 +82,8 @@ export const data: Season = {
       teams: [
         {
           team: "Ravens",
-          time: "7:00",
-          opponent: "TBD",
+          time: "2:30",
+          opponent: "Raiders",
           home: false,
           stats: {
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
@@ -91,9 +91,9 @@ export const data: Season = {
         },
         {
           team: "Bengals",
-          time: "7:00",
-          opponent: "TBD",
-          home: false,
+          time: "12:30",
+          opponent: "Browns",
+          home: true,
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
           },
@@ -105,17 +105,17 @@ export const data: Season = {
       teams: [
         {
           team: "Ravens",
-          time: "7:00",
-          opponent: "TBD",
-          home: false,
+          time: "11:30",
+          opponent: "Chiefs",
+          home: true,
           stats: {
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
           },
         },
         {
           team: "Bengals",
-          time: "7:00",
-          opponent: "TBD",
+          time: "12:30",
+          opponent: "Steelers",
           home: false,
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
@@ -128,8 +128,8 @@ export const data: Season = {
       teams: [
         {
           team: "Ravens",
-          time: "7:00",
-          opponent: "TBD",
+          time: "1:30",
+          opponent: "Broncos",
           home: false,
           stats: {
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
@@ -137,8 +137,8 @@ export const data: Season = {
         },
         {
           team: "Bengals",
-          time: "7:00",
-          opponent: "TBD",
+          time: "2:30",
+          opponent: "Raiders",
           home: false,
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
@@ -151,17 +151,17 @@ export const data: Season = {
       teams: [
         {
           team: "Ravens",
-          time: "7:00",
-          opponent: "TBD",
-          home: false,
+          time: "11:30",
+          opponent: "Browns",
+          home: true,
           stats: {
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
           },
         },
         {
-          team: "Benagls",
-          time: "7:00",
-          opponent: "TBD",
+          team: "Bengals",
+          time: "2:30",
+          opponent: "Broncos",
           home: false,
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
@@ -174,8 +174,8 @@ export const data: Season = {
       teams: [
         {
           team: "Ravens",
-          time: "7:00",
-          opponent: "TBD",
+          time: "12:30",
+          opponent: "Bengals",
           home: false,
           stats: {
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
@@ -183,9 +183,9 @@ export const data: Season = {
         },
         {
           team: "Bengals",
-          time: "7:00",
-          opponent: "TBD",
-          home: false,
+          time: "12:30",
+          opponent: "Ravens",
+          home: true,
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
           },
@@ -193,22 +193,22 @@ export const data: Season = {
       ],
     },
     {
-      date: "Apr 19 2025",
+      date: "Apr 26 2025",
       teams: [
         {
           team: "Ravens",
-          time: "7:00",
-          opponent: "TBD",
-          home: false,
+          time: "2:30",
+          opponent: "Steelers",
+          home: true,
           stats: {
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
           },
         },
         {
           team: "Bengals",
-          time: "7:00",
-          opponent: "TBD",
-          home: false,
+          time: "1:30",
+          opponent: "Chargers",
+          home: true,
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
           },

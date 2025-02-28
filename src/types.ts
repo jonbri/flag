@@ -30,6 +30,20 @@ export type Game = {
   stats?: GameStatsInstance;
 };
 
+export type TeamStats = {
+  w: number;
+  l: number;
+  t: number;
+  pct: string;
+  pf: number;
+  pa: number;
+  ppg: number;
+  papg: number;
+  record: string;
+  diff: number;
+  strk: string;
+};
+
 export interface Image {
   src: string;
   alt: string;

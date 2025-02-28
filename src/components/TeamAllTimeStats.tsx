@@ -14,26 +14,30 @@ export const TeamAllTimeStats = ({ seasons }: PlayerAllTimeStatsProps) => {
         <thead>
           <tr>
             <th></th>
-            <th title="Wins">W</th>
-            <th title="Losses">L</th>
-            <th title="Ties">T</th>
+            <th title="Record"></th>
             <th title="Winning Percentage">PCT</th>
-            <th title="Current Streak">STRK</th>
+            <th title="Points for">PF</th>
+            <th title="Points against">PA</th>
+            <th title="Points-per-game ">PPG</th>
+            <th title="Points against per-game">PAPG</th>
+            <th title="Point differential">DIFF</th>
           </tr>
         </thead>
         <tbody>
           {teamAllTimeStats.map(({ name, stats }) => {
-            const { wins } = stats;
+            const { pct, pf, pa, ppg, papg, record, diff } = stats;
             return (
               <tr key={name}>
                 <th>
                   <Link href={`./player/${name}`}>{name}</Link>
                 </th>
-                <td>{wins}</td>
-                <td>-1</td>
-                <td>-1</td>
-                <td>-1</td>
-                <td>-1</td>
+                <td>{record}</td>
+                <td>{pct}</td>
+                <td>{pf}</td>
+                <td>{pa}</td>
+                <td>{ppg}</td>
+                <td>{papg}</td>
+                <td>{diff}</td>
               </tr>
             );
           })}

@@ -10,7 +10,7 @@ export const Season = ({ id, name, teams, weeks }: SeasonType) => {
         const re = { ...acc, ...stats };
         return re;
       },
-      {}
+      {},
     );
     return scores;
   });
@@ -30,13 +30,13 @@ export const Season = ({ id, name, teams, weeks }: SeasonType) => {
       }
       return acc;
     },
-    {}
+    {},
   );
 
   const teamData = teams.map((team) => {
     const scores = weeks
       .map(({ teams }) =>
-        teams.find(({ team: teamName }) => teamName === team.name)
+        teams.find(({ team: teamName }) => teamName === team.name),
       )
       .map((team) => team?.score);
     return {
@@ -45,11 +45,11 @@ export const Season = ({ id, name, teams, weeks }: SeasonType) => {
     };
   });
   const hasToday = weeks.some(
-    ({ date }) => new Date(date).toDateString() === new Date().toDateString()
+    ({ date }) => new Date(date).toDateString() === new Date().toDateString(),
   );
 
   const haveAnyGamesBeenPlayedYet = weeks.some(({ teams }) =>
-    teams.some(({ score }) => score !== undefined)
+    teams.some(({ score }) => score !== undefined),
   );
   return (
     <div key={name} className="season hasToday">
@@ -78,7 +78,7 @@ export const Season = ({ id, name, teams, weeks }: SeasonType) => {
                   >
                     {name} <span className="record">({record})</span>
                   </th>
-                )
+                ),
               )}
             </tr>
           </thead>
@@ -94,7 +94,7 @@ export const Season = ({ id, name, teams, weeks }: SeasonType) => {
               const isGameWeek = !isDateInPast && isNextGame;
               let className = "";
               const haveAllTeamsPlayedToday = teams.every(
-                ({ score }) => score !== undefined
+                ({ score }) => score !== undefined,
               );
 
               if (isToday && !haveAllTeamsPlayedToday) {
@@ -120,7 +120,7 @@ export const Season = ({ id, name, teams, weeks }: SeasonType) => {
                         opponent = "Unknown",
                         time = "UNK",
                       },
-                      j
+                      j,
                     ) => {
                       const [forPoints, againstPoints] = score.split("-");
                       const win = parseInt(forPoints) > parseInt(againstPoints);
@@ -164,7 +164,7 @@ export const Season = ({ id, name, teams, weeks }: SeasonType) => {
                           )}
                         </td>
                       );
-                    }
+                    },
                   )}
                 </tr>
               );

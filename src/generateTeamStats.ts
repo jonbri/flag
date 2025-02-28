@@ -1,7 +1,7 @@
 import { TeamStats } from "./types";
 
 export const generateTeamStats = (
-  scores: (string | undefined)[]
+  scores: (string | undefined)[],
 ): TeamStats => {
   const [wins, losses, ties] = scores.reduce(
     ([wins, losses, ties], score) => {
@@ -16,7 +16,7 @@ export const generateTeamStats = (
           ]
         : [wins, losses, ties];
     },
-    [0, 0, 0]
+    [0, 0, 0],
   );
 
   const [forPoints, againstPoints] = scores
@@ -29,7 +29,7 @@ export const generateTeamStats = (
               againstPoints + parseInt(score.split("-")[1]),
             ]
           : [forPoints, againstPoints],
-      [0, 0]
+      [0, 0],
     );
 
   const reversedScores = scores.slice().reverse().filter(Boolean);

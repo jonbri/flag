@@ -2,14 +2,15 @@ import { generateTeamStats } from "./generateTeamStats";
 import { Game, Season, TeamStats } from "./types";
 
 export const generateAllTimeTeamStats = (
-  seasons: Season[],
+  seasons: Season[]
 ): { name: string; stats: TeamStats }[] => {
-  const allGames: Game[] = seasons.reduce((games, season) => {
-    const seasonGames: Game[] = season.weeks.reduce((g, week) => {
-      return g.concat(week.teams);
-    }, [] as Game[]);
-    return games.concat(seasonGames);
-  }, [] as Game[]);
+  const allGames: Game[] = seasons.reduce(
+    (games, { weeks }) =>
+      games.concat(
+        weeks.reduce((games, { teams }) => games.concat(teams), [] as Game[])
+      ),
+    [] as Game[]
+  );
 
   const getGamesPerAthlete = (name: string) => {
     return allGames.filter((game) => game.stats && game.stats[name]);

@@ -1,31 +1,28 @@
-import { Season, TeamStats } from "./types";
+import { generateTeamStats } from "./generateTeamStats";
+import { Game, Season, TeamStats } from "./types";
 
 export const generateAllTimeTeamStats = (
   seasons: Season[],
 ): { name: string; stats: TeamStats }[] => {
-  const totalGames = seasons.reduce((acc, season) => {
-    return (
-      acc +
-      season.weeks.reduce((acc, week) => {
-        return acc + week.teams.length;
-      }, 0)
-    );
-  }, 0);
-  const stats: TeamStats = {
-    w: 0,
-    l: 0,
-    t: totalGames,
-    pct: "0.000",
-    pf: 0,
-    pa: 0,
-    ppg: 0,
-    papg: 0,
-    record: "0-0",
-    diff: 0,
-    strk: "",
+  const allGames: Game[] = seasons.reduce((games, season) => {
+    const seasonGames: Game[] = season.weeks.reduce((g, week) => {
+      return g.concat(week.teams);
+    }, [] as Game[]);
+    return games.concat(seasonGames);
+  }, [] as Game[]);
+
+  const getGamesPerAthlete = (name: string) => {
+    return allGames.filter((game) => game.stats && game.stats[name]);
   };
+
+  const austinGames = getGamesPerAthlete("Austin");
+  const jasonGames = getGamesPerAthlete("Jason");
+
+  const austinStats = generateTeamStats(austinGames.map((game) => game.score));
+  const jasonStats = generateTeamStats(jasonGames.map((game) => game.score));
+
   return [
-    { name: "Austin", stats },
-    { name: "Jason", stats },
+    { name: "Austin", stats: austinStats },
+    { name: "Jason", stats: jasonStats },
   ];
 };

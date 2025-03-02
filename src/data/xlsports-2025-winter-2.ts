@@ -204,6 +204,9 @@ export const data: Season = {
           opponent: "Bengals",
           home: true,
           score: "1-0",
+          stats: {
+            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
+          },
         },
         {
           team: "Raiders",
@@ -211,6 +214,9 @@ export const data: Season = {
           opponent: "Dolphins",
           home: true,
           score: "0-1",
+          stats: {
+            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
+          },
         },
       ],
     },
@@ -224,7 +230,7 @@ export const data: Season = {
           home: true,
           score: "33-18",
           stats: {
-            Jason: { rec: 4, td: 1, int: 0, sack: 0, safety: 0 },
+            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
           },
         },
         {
@@ -234,7 +240,7 @@ export const data: Season = {
           home: true,
           score: "20-12",
           stats: {
-            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
+            Jason: { rec: 4, td: 1, int: 0, sack: 0, safety: 0 },
           },
         },
       ],

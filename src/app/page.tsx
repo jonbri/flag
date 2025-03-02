@@ -10,9 +10,9 @@ export default function Page() {
       {seasons.map((season) => (
         <Season key={season.id} {...season} />
       ))}
-      <PlayerAllTimeStats seasons={seasons} />
+      <PlayerAllTimeStats seasons={seasons} athletes={["Austin", "Jason"]} />
       <br />
-      <TeamAllTimeStats seasons={seasons} />
+      <TeamAllTimeStats seasons={seasons} athletes={["Austin", "Jason"]} />
     </div>
   );
 }

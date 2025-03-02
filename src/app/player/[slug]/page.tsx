@@ -1,4 +1,7 @@
 import Link from "next/link";
+import { PlayerAllTimeStats } from "@/components/PlayerAllTimeStats";
+import { seasons } from "@/data";
+import { TeamAllTimeStats } from "@/components/TeamAllTimeStats";
 
 export async function generateStaticParams() {
   const players = ["Austin", "Jason", "Lisa"];
@@ -23,7 +26,9 @@ export default async function Page(props: {
       <Link href="/">Home</Link>
       <h2>{name}</h2>
       <br />
-      <p>data here</p>
+      <PlayerAllTimeStats seasons={seasons} athletes={[name]} />
+      <br />
+      <TeamAllTimeStats seasons={seasons} athletes={[name]} />
     </div>
   );
 }

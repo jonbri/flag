@@ -4,12 +4,13 @@ import Link from "next/link";
 
 interface PlayerAllTimeStatsProps {
   seasons: Season[];
+  athletes: string[];
 }
-export const TeamAllTimeStats = ({ seasons }: PlayerAllTimeStatsProps) => {
-  const teamAllTimeStats = generateAllTimeTeamStats(seasons, [
-    "Austin",
-    "Jason",
-  ]);
+export const TeamAllTimeStats = ({
+  seasons,
+  athletes,
+}: PlayerAllTimeStatsProps) => {
+  const teamAllTimeStats = generateAllTimeTeamStats(seasons, athletes);
   return (
     <div className="stats player-alltime-stats">
       <h3>Team All-Time Stats</h3>

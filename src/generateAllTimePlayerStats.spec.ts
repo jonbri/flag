@@ -46,7 +46,7 @@ test("smoke", () => {
       ],
     },
   ];
-  const stats = generateAllTimePlayerStats(seasons);
+  const stats = generateAllTimePlayerStats(seasons, ["Austin"]);
   expect(stats).toStrictEqual([
     ["Austin", { rec: 1, td: 1, int: 0, sack: 0, safety: 0 }],
   ]);
@@ -94,7 +94,7 @@ test("multiple seasons", () => {
       ],
     },
   ];
-  const stats = generateAllTimePlayerStats(seasons);
+  const stats = generateAllTimePlayerStats(seasons, ["Austin", "Jason"]);
   expect(stats).toStrictEqual([
     ["Austin", { rec: 1, td: 1, int: 5, sack: 0, safety: 0 }],
     ["Jason", { rec: 5, td: 2, int: 0, sack: 0, safety: 1 }],

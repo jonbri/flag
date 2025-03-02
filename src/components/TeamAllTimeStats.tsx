@@ -6,7 +6,10 @@ interface PlayerAllTimeStatsProps {
   seasons: Season[];
 }
 export const TeamAllTimeStats = ({ seasons }: PlayerAllTimeStatsProps) => {
-  const teamAllTimeStats = generateAllTimeTeamStats(seasons);
+  const teamAllTimeStats = generateAllTimeTeamStats(seasons, [
+    "Austin",
+    "Jason",
+  ]);
   return (
     <div className="stats player-alltime-stats">
       <h3>Team All-Time Stats</h3>

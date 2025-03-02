@@ -22,7 +22,7 @@ export const data: Season = {
           team: "Dolphins",
           score: "0-1",
           stats: {
-            Jason: { rec: 1, td: 1, int: 0, sack: 1, safety: 0 },
+            Jason: { rec: 3, td: 1, int: 0, sack: 1, safety: 0 },
           },
         },
       ],

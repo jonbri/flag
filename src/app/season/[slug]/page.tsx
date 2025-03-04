@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { seasons } from "@/data";
+import { Season } from "@/components/Season";
 
 export async function generateStaticParams() {
   const paths = seasons.map(({ id }) => ({
@@ -25,12 +26,12 @@ export default async function Page(props: {
     return <div>Season not found</div>;
   }
 
-  const { name, teams, images = [] } = season;
+  const { teams, images = [] } = season;
 
   return (
     <div>
       <Link href="/">Home</Link>
-      <h2>{name}</h2>
+      <Season {...season} />
       <br />
       {teams.map(({ name, colors: { primary, secondary } }) => (
         <div

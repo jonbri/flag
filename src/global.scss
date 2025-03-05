@@ -184,6 +184,7 @@ table {
 
 .team-stats,
 .player-stats,
+.player-alltime-stats,
 .rosters {
   font-size: 0.85em;
 }
@@ -204,10 +205,11 @@ table {
   }
 }
 
-.player-stats {
+.player-stats,
+.player-alltime-stats {
   a {
     text-decoration: none;
-    color: black;
+    color: darkblue;
   }
 }
 

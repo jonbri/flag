@@ -1,6 +1,6 @@
+import Link from "next/link";
 import { generateAllTimePlayerStats } from "@/generateAllTimePlayerStats";
 import { Season } from "@/types";
-import Link from "next/link";
 
 interface PlayerAllTimeStatsProps {
   seasons: Season[];

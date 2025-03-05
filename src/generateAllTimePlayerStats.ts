@@ -13,13 +13,21 @@ export const generateAllTimePlayerStats = (
             if (!athletes.includes(Object.keys(stats)[0])) return;
             for (const [name, stat] of Object.entries(stats)) {
               if (!acc[name]) {
-                acc[name] = { rec: 0, td: 0, int: 0, sack: 0, safety: 0 };
+                acc[name] = {
+                  rec: 0,
+                  td: 0,
+                  int: 0,
+                  sack: 0,
+                  safety: 0,
+                  picksix: 0,
+                };
               }
               acc[name].rec += stat.rec;
               acc[name].td += stat.td;
               acc[name].int += stat.int;
               acc[name].sack += stat.sack;
               acc[name].safety += stat.safety;
+              acc[name].picksix += stat.picksix;
             }
           });
         });

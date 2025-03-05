@@ -55,7 +55,7 @@ export const data: Season = {
           home: false,
           score: "47-35",
           stats: {
-            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
+            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
         {
@@ -65,7 +65,7 @@ export const data: Season = {
           home: false,
           score: "18-27",
           stats: {
-            Jason: { rec: 1, td: 0, int: 0, sack: 0, safety: 0 },
+            Jason: { rec: 1, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
       ],
@@ -80,7 +80,7 @@ export const data: Season = {
           home: true,
           score: "26-27",
           stats: {
-            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
+            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
         {
@@ -90,7 +90,7 @@ export const data: Season = {
           home: true,
           score: "20-21",
           stats: {
-            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
+            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
       ],
@@ -105,7 +105,7 @@ export const data: Season = {
           home: false,
           score: "12-32",
           stats: {
-            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
+            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
         {
@@ -115,7 +115,7 @@ export const data: Season = {
           home: false,
           score: "16-30",
           stats: {
-            Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0 },
+            Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0, picksix: 1 },
           },
         },
       ],
@@ -130,7 +130,7 @@ export const data: Season = {
           home: false,
           score: "31-25",
           stats: {
-            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
+            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
         {
@@ -140,7 +140,7 @@ export const data: Season = {
           home: true,
           score: "37-23",
           stats: {
-            Jason: { rec: 0, td: 2, int: 1, sack: 0, safety: 0 },
+            Jason: { rec: 0, td: 2, int: 1, sack: 0, safety: 0, picksix: 0 },
           },
         },
       ],
@@ -155,7 +155,7 @@ export const data: Season = {
           home: true,
           score: "22-18",
           stats: {
-            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
+            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
         {
@@ -165,7 +165,7 @@ export const data: Season = {
           home: true,
           score: "54-0",
           stats: {
-            Jason: { rec: 0, td: 1, int: 1, sack: 0, safety: 0 },
+            Jason: { rec: 0, td: 1, int: 1, sack: 0, safety: 0, picksix: 0 },
           },
         },
       ],
@@ -180,7 +180,7 @@ export const data: Season = {
           home: true,
           score: "37-18",
           stats: {
-            Austin: { rec: 1, td: 0, int: 0, sack: 0, safety: 0 },
+            Austin: { rec: 1, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
         {
@@ -190,7 +190,7 @@ export const data: Season = {
           home: true,
           score: "35-14",
           stats: {
-            Jason: { rec: 1, td: 0, int: 0, sack: 0, safety: 0 },
+            Jason: { rec: 1, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
       ],
@@ -205,7 +205,7 @@ export const data: Season = {
           home: true,
           score: "1-0",
           stats: {
-            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
+            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
         {
@@ -215,7 +215,7 @@ export const data: Season = {
           home: true,
           score: "0-1",
           stats: {
-            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
+            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
       ],
@@ -230,7 +230,7 @@ export const data: Season = {
           home: true,
           score: "33-18",
           stats: {
-            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0 },
+            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
         {
@@ -240,7 +240,7 @@ export const data: Season = {
           home: true,
           score: "20-12",
           stats: {
-            Jason: { rec: 4, td: 1, int: 0, sack: 0, safety: 0 },
+            Jason: { rec: 4, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
       ],

@@ -17,6 +17,7 @@ export type GameStats = {
   int: number;
   sack: number;
   safety: number;
+  picksix: number;
 };
 export type GameStatsInstance = {
   [index: string]: GameStats;

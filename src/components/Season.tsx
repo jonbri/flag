@@ -18,7 +18,7 @@ export const Season = ({ id, name, teams, weeks }: SeasonType) => {
     (acc, stats) => {
       for (const [name, stat] of Object.entries(stats)) {
         if (!acc[name]) {
-          acc[name] = { rec: 0, td: 0, int: 0, sack: 0, safety: 0 };
+          acc[name] = { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 };
         }
         acc[name] = {
           rec: acc[name].rec + stat.rec,
@@ -26,6 +26,7 @@ export const Season = ({ id, name, teams, weeks }: SeasonType) => {
           int: acc[name].int + stat.int,
           sack: acc[name].sack + stat.sack,
           safety: acc[name].safety + stat.safety,
+          picksix: acc[name].picksix + stat.picksix,
         };
       }
       return acc;
@@ -260,11 +261,12 @@ export const Season = ({ id, name, teams, weeks }: SeasonType) => {
                 <th title="Interceptions">INT</th>
                 <th title="Sacks">SACK</th>
                 <th title="Safeties">SFTY</th>
+                <th title="Pick Six">P6</th>
               </tr>
             </thead>
             <tbody>
               {Object.entries(playerStats).map(([name, stats]) => {
-                const { rec, td, int, sack, safety } = stats;
+                const { rec, td, int, sack, safety, picksix } = stats;
                 return (
                   <tr key={name}>
                     <th>
@@ -275,6 +277,7 @@ export const Season = ({ id, name, teams, weeks }: SeasonType) => {
                     <td>{int}</td>
                     <td>{sack}</td>
                     <td>{safety}</td>
+                    <td>{picksix}</td>
                   </tr>
                 );
               })}

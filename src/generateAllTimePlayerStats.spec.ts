@@ -39,7 +39,7 @@ test("smoke", () => {
           date: "2023-10-01",
           teams: [
             game({
-              Austin: { rec: 1, td: 1, int: 0, sack: 0, safety: 0 },
+              Austin: { rec: 1, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
             }),
           ],
         },
@@ -48,7 +48,7 @@ test("smoke", () => {
   ];
   const stats = generateAllTimePlayerStats(seasons, ["Austin"]);
   expect(stats).toStrictEqual([
-    ["Austin", { rec: 1, td: 1, int: 0, sack: 0, safety: 0 }],
+    ["Austin", { rec: 1, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 }],
   ]);
 });
 
@@ -63,8 +63,8 @@ test("multiple seasons", () => {
           date: "2023-10-01",
           teams: [
             game({
-              Austin: { rec: 1, td: 1, int: 0, sack: 0, safety: 0 },
-              Jason: { rec: 3, td: 0, int: 0, sack: 0, safety: 1 },
+              Austin: { rec: 1, td: 1, int: 0, sack: 0, safety: 0, picksix: 2 },
+              Jason: { rec: 3, td: 0, int: 0, sack: 0, safety: 1, picksix: 0 },
             }),
           ],
         },
@@ -79,7 +79,7 @@ test("multiple seasons", () => {
           date: "2024-10-01",
           teams: [
             game({
-              Austin: { rec: 0, td: 0, int: 5, sack: 0, safety: 0 },
+              Austin: { rec: 0, td: 0, int: 5, sack: 0, safety: 0, picksix: 1 },
             }),
           ],
         },
@@ -87,7 +87,7 @@ test("multiple seasons", () => {
           date: "2024-10-01",
           teams: [
             game({
-              Jason: { rec: 2, td: 2, int: 0, sack: 0, safety: 0 },
+              Jason: { rec: 2, td: 2, int: 0, sack: 0, safety: 0, picksix: 0 },
             }),
           ],
         },
@@ -96,7 +96,7 @@ test("multiple seasons", () => {
   ];
   const stats = generateAllTimePlayerStats(seasons, ["Austin", "Jason"]);
   expect(stats).toStrictEqual([
-    ["Austin", { rec: 1, td: 1, int: 5, sack: 0, safety: 0 }],
-    ["Jason", { rec: 5, td: 2, int: 0, sack: 0, safety: 1 }],
+    ["Austin", { rec: 1, td: 1, int: 5, sack: 0, safety: 0, picksix: 3 }],
+    ["Jason", { rec: 5, td: 2, int: 0, sack: 0, safety: 1, picksix: 0 }],
   ]);
 });

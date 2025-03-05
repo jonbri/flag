@@ -23,11 +23,12 @@ export const PlayerAllTimeStats = ({
             <th title="Interceptions">INT</th>
             <th title="Sacks">SACK</th>
             <th title="Safeties">SFTY</th>
+            <th title="Pick Six">P6</th>
           </tr>
         </thead>
         <tbody>
           {playerAllTimeStats.map(([name, stats]) => {
-            const { rec, td, int, sack, safety } = stats;
+            const { rec, td, int, sack, safety, picksix } = stats;
             return (
               <tr key={name}>
                 <th>
@@ -38,6 +39,7 @@ export const PlayerAllTimeStats = ({
                 <td>{int}</td>
                 <td>{sack}</td>
                 <td>{safety}</td>
+                <td>{picksix}</td>
               </tr>
             );
           })}

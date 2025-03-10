@@ -29,4 +29,8 @@ export const colors: { [key: string]: TeamColors } = {
     primary: "#FB4F14",
     secondary: "#000000",
   },
+  vikings: {
+    primary: "#4F2683",
+    secondary: "#FFC62F",
+  },
 };

@@ -16,10 +16,11 @@ export const data: Season = {
   ],
   weeks: [
     {
-      date: "Oct 19 2024",
+      date: "Aug 24 2024",
       teams: [
         {
           team: "Dolphins",
+          opponent: "Patriots",
           score: "0-1",
           stats: {
             Jason: { rec: 3, td: 1, int: 0, sack: 2, safety: 0, picksix: 0 },
@@ -28,10 +29,11 @@ export const data: Season = {
       ],
     },
     {
-      date: "Oct 26 2024",
+      date: "Sep 7 2024",
       teams: [
         {
           team: "Dolphins",
+          opponent: "Bills",
           score: "0-1",
           stats: {
             Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
@@ -40,10 +42,11 @@ export const data: Season = {
       ],
     },
     {
-      date: "Nov 2 2024",
+      date: "Sep 14 2024",
       teams: [
         {
           team: "Dolphins",
+          opponent: "Patriots",
           score: "0-1",
           stats: {
             Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
@@ -52,10 +55,37 @@ export const data: Season = {
       ],
     },
     {
-      date: "Nov 9 2024",
+      date: "Sep 21 2024",
       teams: [
         {
           team: "Dolphins",
+          opponent: "Jets",
+          score: "0-1",
+          stats: {
+            Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
+          },
+        },
+      ],
+    },
+    {
+      date: "Sep 28 2024",
+      teams: [
+        {
+          team: "Dolphins",
+          opponent: "Bills",
+          score: "0-1",
+          stats: {
+            Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
+          },
+        },
+      ],
+    },
+    {
+      date: "Oct 5 2024",
+      teams: [
+        {
+          team: "Dolphins",
+          opponent: "Patriots",
           score: "1-0",
           stats: {
             Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
@@ -64,10 +94,11 @@ export const data: Season = {
       ],
     },
     {
-      date: "Nov 16 2024",
+      date: "Oct 12 2024",
       teams: [
         {
           team: "Dolphins",
+          opponent: "Jets",
           score: "0-1",
           stats: {
             Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
@@ -76,34 +107,11 @@ export const data: Season = {
       ],
     },
     {
-      date: "Nov 30 2024",
+      date: "Oct 19 2024",
       teams: [
         {
           team: "Dolphins",
-          score: "0-1",
-          stats: {
-            Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
-          },
-        },
-      ],
-    },
-    {
-      date: "Dec 7 2024",
-      teams: [
-        {
-          team: "Dolphins",
-          score: "0-1",
-          stats: {
-            Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
-          },
-        },
-      ],
-    },
-    {
-      date: "Dec 14 2024",
-      teams: [
-        {
-          team: "Dolphins",
+          opponent: "Jets",
           score: "0-1",
           stats: {
             Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },

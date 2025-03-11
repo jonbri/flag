@@ -18,10 +18,10 @@ export const TeamAllTimeStats = ({
         <thead>
           <tr>
             <th></th>
+            <th title="Total Games">G</th>
             <th title="Wins">W</th>
             <th title="Losses">L</th>
             <th title="Ties">T</th>
-            <th title="Total Games">TOT</th>
             <th title="Winning Percentage">PCT</th>
           </tr>
         </thead>
@@ -33,10 +33,10 @@ export const TeamAllTimeStats = ({
                 <th>
                   <Link href={`./player/${name}`}>{name}</Link>
                 </th>
+                <td>{w + l + t}</td>
                 <td>{w}</td>
                 <td>{l}</td>
                 <td>{t}</td>
-                <td>{w + l + t}</td>
                 <td>{pct}</td>
               </tr>
             );

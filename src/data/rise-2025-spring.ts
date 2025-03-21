@@ -13,12 +13,12 @@ export const data: Season = {
       players: [
         "Jason",
         "Alexander A.",
-        "Alexander Q.",
         "Bennett",
         "Franco",
         "Grayson",
         "James",
         "Liam",
+        "Marley",
         "Miles",
         "Thomas",
       ],
@@ -31,6 +31,8 @@ export const data: Season = {
       teams: [
         {
           team: "Vikings",
+          opponent: "Giants",
+          time: "5:30",
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
@@ -42,17 +44,8 @@ export const data: Season = {
       teams: [
         {
           team: "Vikings",
-          stats: {
-            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
-          },
-        },
-      ],
-    },
-    {
-      date: "Apr 18 2025",
-      teams: [
-        {
-          team: "Vikings",
+          opponent: "Saints",
+          time: "5:30",
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
@@ -64,6 +57,8 @@ export const data: Season = {
       teams: [
         {
           team: "Vikings",
+          opponent: "Chiefs",
+          time: "5:30",
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
@@ -75,6 +70,8 @@ export const data: Season = {
       teams: [
         {
           team: "Vikings",
+          opponent: "Bears",
+          time: "5:30",
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
@@ -86,17 +83,8 @@ export const data: Season = {
       teams: [
         {
           team: "Vikings",
-          stats: {
-            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
-          },
-        },
-      ],
-    },
-    {
-      date: "May 16 2025",
-      teams: [
-        {
-          team: "Vikings",
+          opponent: "Seahawks",
+          time: "5:30",
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
@@ -108,28 +96,8 @@ export const data: Season = {
       teams: [
         {
           team: "Vikings",
-          stats: {
-            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
-          },
-        },
-      ],
-    },
-    {
-      date: "May 30 2025",
-      teams: [
-        {
-          team: "Vikings",
-          stats: {
-            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
-          },
-        },
-      ],
-    },
-    {
-      date: "Jun 6 2025",
-      teams: [
-        {
-          team: "Vikings",
+          opponent: "Buccaneers",
+          time: "5:30",
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },

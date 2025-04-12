@@ -3,13 +3,12 @@ import { seasons } from "@/data";
 
 export default function Page() {
   return (
-    <div>
-      <Link href="/">Home</Link>
+    <div className="listpage">
       <h2>Seasons</h2>
       <ul>
-        {seasons.map(({ id }) => (
+        {seasons.map(({ id, name }) => (
           <li key={id}>
-            <a href={`/season/${id}`}>{id}</a>
+            <Link href={`/season/${id}`}>{name}</Link>
           </li>
         ))}
       </ul>

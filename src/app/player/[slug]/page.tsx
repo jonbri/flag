@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { PlayerAllTimeStats } from "@/components/PlayerAllTimeStats";
 import { seasons } from "@/data";
 import { TeamAllTimeStats } from "@/components/TeamAllTimeStats";
@@ -23,7 +22,6 @@ export default async function Page(props: {
 
   return (
     <div>
-      <Link href="/">Home</Link>
       <h2>{name}</h2>
       <br />
       <PlayerAllTimeStats seasons={seasons} athletes={[name]} />

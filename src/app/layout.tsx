@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Link from "next/link";
 import { Ubuntu as Font } from "next/font/google";
 import { links } from "@/data";
 import "@/global.scss";
@@ -19,6 +20,19 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <a href="./">Flag Football</a>
           </h1>
           <div id="layout">
+            <div id="header">
+              <ul>
+                <li>
+                  <Link href={`..`}>Home</Link>
+                </li>
+                <li>
+                  <Link href={`./season`}>Seasons</Link>
+                </li>
+                <li>
+                  <Link href={`./player`}>Players</Link>
+                </li>
+              </ul>
+            </div>
             {children}
             <div id="footer">
               <div className="links">

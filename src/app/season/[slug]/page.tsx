@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import { seasons } from "@/data";
 import { Season } from "@/components/Season";
@@ -30,7 +29,6 @@ export default async function Page(props: {
 
   return (
     <div>
-      <Link href="/">Home</Link>
       <Season {...season} />
       <br />
       {teams.map(({ name, colors: { primary, secondary } }) => (

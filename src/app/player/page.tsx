@@ -2,15 +2,14 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <div>
-      <Link href="/">Home</Link>
+    <div className="listpage">
       <h2>Players</h2>
       <ul>
         <li>
-          <a href={`/player/Austin`}>Austin</a>
+          <Link href={`/player/Austin`}>Austin</Link>
         </li>
         <li>
-          <a href={`/player/Jason`}>Jason</a>
+          <Link href={`/player/Jason`}>Jason</Link>
         </li>
       </ul>
     </div>

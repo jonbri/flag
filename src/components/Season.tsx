@@ -2,7 +2,7 @@ import Link from "next/link";
 import { GameStats, Season as SeasonType } from "@/types";
 import { generateTeamStats } from "@/generateTeamStats";
 
-export const Season = ({ id, name, teams, weeks }: SeasonType) => {
+export const Season = ({ id, name, teams, weeks, notes }: SeasonType) => {
   const weekStats = weeks.map(({ teams }) => {
     const scores = teams.reduce<{ [index: string]: GameStats }>(
       (acc, { stats }) => {
@@ -57,6 +57,7 @@ export const Season = ({ id, name, teams, weeks }: SeasonType) => {
       <h2>
         <Link href={`./season/${id}`}>{name}</Link>
       </h2>
+      <div>{notes}</div>
       <div className="schedule">
         <table>
           <thead>
@@ -173,6 +174,27 @@ export const Season = ({ id, name, teams, weeks }: SeasonType) => {
           </tbody>
         </table>
       </div>
+
+      {haveAnyGamesBeenPlayedYet ? (
+        <div className="stats team-stats">
+          <h3>Game notes</h3>
+          <div>
+            {weeks
+              .map(({ date, teams }) => {
+                const notes = teams.reduce((acc, { notes }) => {
+                  if (!notes) return acc;
+                  return `${acc} ${notes}`;
+                }, "");
+                const display = `${date}: ${notes}`;
+                return notes === "" ? null : display;
+              })
+              .filter((notes) => notes !== null)
+              .map((notes, i) => {
+                return <div key={i}>{notes}</div>;
+              })}
+          </div>
+        </div>
+      ) : null}
 
       {haveAnyGamesBeenPlayedYet ? (
         <div className="stats team-stats">

@@ -29,6 +29,7 @@ export type Game = {
   score?: string;
   time?: string;
   stats?: GameStatsInstance;
+  notes?: string;
 };
 
 export type TeamStats = {
@@ -57,6 +58,7 @@ export type Season = {
   teams: Team[];
   weeks: Week[];
   images?: Image[];
+  notes?: string;
 };
 export type Week = {
   date: string;

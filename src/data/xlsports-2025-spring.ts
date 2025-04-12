@@ -4,6 +4,8 @@ import { Season } from "@/types";
 export const data: Season = {
   id: "xlsports-2025-spring",
   name: "XL Sports Spring 2025",
+  notes:
+    "Jason's first season a true QB1. Jason's team with a lot of beginners. Austin got way better as a reciever.",
   teams: [
     {
       name: "Ravens",
@@ -187,6 +189,8 @@ export const data: Season = {
           stats: {
             Jason: { rec: 0, td: 2, int: 0, sack: 2, safety: 0, picksix: 0 },
           },
+          notes:
+            "Perhaps Jason's best overall game so far. He was the entire offense. Huge full-field qb scramble for td.",
         },
       ],
     },
@@ -212,6 +216,8 @@ export const data: Season = {
           stats: {
             Jason: { rec: 0, td: 2, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
+          notes:
+            "Jason qb whole game, just like all season. Myron missed an easy td catch. Austin with the extra point conversion.",
         },
       ],
     },

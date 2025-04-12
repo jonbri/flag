@@ -197,18 +197,20 @@ export const data: Season = {
           team: "Ravens",
           time: "12:30",
           opponent: "Bengals",
+          score: "26-13",
           home: false,
           stats: {
-            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Austin: { rec: 1, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
         {
           team: "Bengals",
           time: "12:30",
           opponent: "Ravens",
+          score: "13-26",
           home: true,
           stats: {
-            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Jason: { rec: 0, td: 2, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
       ],

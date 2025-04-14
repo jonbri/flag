@@ -4,6 +4,8 @@ import { Season } from "@/types";
 export const data: Season = {
   id: "xlsports-2025-winter-2",
   name: "XL Sports Winter 2 2025",
+  notes:
+    "Bunch of Rise kids on Jason's team, Owen and Hunter. Beckett caught Jason's first every pass TD.",
   teams: [
     {
       name: "Chiefs",

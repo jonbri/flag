@@ -190,7 +190,7 @@ export const data: Season = {
             Jason: { rec: 0, td: 2, int: 0, sack: 2, safety: 0, picksix: 0 },
           },
           notes:
-            "Perhaps Jason's best overall game so far. He was the entire offense. Huge full-field qb scramble for td.",
+            "Perhaps Jason's best overall game so far. He was the entire offense. Huge full-field qb scramble for td and big spike in the endzone.",
         },
       ],
     },

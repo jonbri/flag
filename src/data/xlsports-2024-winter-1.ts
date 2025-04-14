@@ -4,6 +4,7 @@ import { Season } from "@/types";
 export const data: Season = {
   id: "xlsports-2024-winter-1",
   name: "XL Sports Winter 1 2024",
+  notes: "Incredible to see Ben play each week. Aiden was QB.",
   teams: [
     {
       name: "Chargers",
@@ -110,6 +111,8 @@ export const data: Season = {
           opponent: "Broncos",
           home: true,
           score: "4-28",
+          notes:
+            "Most of the team was out, so it was Aiden and Jason running the show.",
           stats: {
             Jason: { rec: 2, td: 0, int: 0, sack: 0, safety: 2, picksix: 0 },
           },

@@ -4,6 +4,8 @@ import { Season } from "@/types";
 export const data: Season = {
   id: "xlsports-2024-fall",
   name: "XL Sports Fall 2024",
+  notes:
+    "Very fun season. Great friends with Murphy who was QB. Murph cried when they finally won a game. Jason mostly WR. Jason's first TD was a catch from Murphy.",
   teams: [
     {
       name: "Dolphins",

@@ -33,4 +33,12 @@ export const colors: { [key: string]: TeamColors } = {
     primary: "#4F2683",
     secondary: "#FFC62F",
   },
+  broncos: {
+    primary: "#F65B20",
+    secondary: "#002244",
+  },
+  steelers: {
+    primary: "#FFC62F",
+    secondary: "#000000",
+  },
 };

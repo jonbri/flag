@@ -229,7 +229,7 @@ export const data: Season = {
           time: "2:30",
           opponent: "Steelers",
           home: true,
-          score: "0-1",
+          score: "1-0",
           notes:
             "Steelers not enough players, so forfeited. They played a scrimmage and let Jason play QB for the Steelers. It was his best game so far with 6 pass tds and a sack, with an unofficial win 32-20.",
           stats: {

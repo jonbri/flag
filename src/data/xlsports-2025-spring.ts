@@ -251,5 +251,14 @@ export const data: Season = {
       ],
     },
   ],
-  images: [],
+  images: [
+    {
+      src: "../ravens2025.jpeg",
+      alt: "Ravens 2025",
+    },
+    {
+      src: "../bengals2025.jpeg",
+      alt: "Bengals 2025",
+    },
+  ],
 };

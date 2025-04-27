@@ -229,6 +229,9 @@ export const data: Season = {
           time: "2:30",
           opponent: "Steelers",
           home: true,
+          score: "0-1",
+          notes:
+            "Steelers not enough players, so forfeited. They played a scrimmage and let Jason play QB for the Steelers. It was his best game so far with 6 pass tds and a sack, with an unofficial win 32-20.",
           stats: {
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
@@ -238,8 +241,11 @@ export const data: Season = {
           time: "1:30",
           opponent: "Chargers",
           home: true,
+          score: "54-21",
+          notes:
+            "Jason started the game at qb with two straight pick-6s. He settled down though and made some great plays including a td run where he violently banged against the glass. Two scramble TDs, and one pass TD. At the end of the game the players all signed each-others jerseys",
           stats: {
-            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Jason: { rec: 1, td: 3, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
       ],

@@ -241,7 +241,7 @@ export const data: Season = {
           time: "1:30",
           opponent: "Chargers",
           home: true,
-          score: "54-21",
+          score: "21-54",
           notes:
             "Jason started the game at qb with two straight pick-6s. He settled down though and made some great plays including a td run where he violently banged against the glass. Two scramble TDs, and one pass TD. At the end of the game the players all signed each-others jerseys",
           stats: {

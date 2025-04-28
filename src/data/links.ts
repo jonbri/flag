@@ -21,8 +21,4 @@ export const links = [
   { name: "Bengals", url: "https://en.wikipedia.org/wiki/Cincinati_Bengals" },
   { name: "Vikings", url: "https://en.wikipedia.org/wiki/Minnesota_Vikings" },
   { name: "Broncos", url: "https://en.wikipedia.org/wiki/Denver_Broncos" },
-  {
-    name: "Steelers",
-    url: "https://en.wikipedia.org/wiki/Pittsburgh_Steelers",
-  },
 ];

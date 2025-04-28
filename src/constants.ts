@@ -37,8 +37,4 @@ export const colors: { [key: string]: TeamColors } = {
     primary: "#F65B20",
     secondary: "#002244",
   },
-  steelers: {
-    primary: "#FFC62F",
-    secondary: "#000000",
-  },
 };

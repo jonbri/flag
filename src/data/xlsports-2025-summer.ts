@@ -42,21 +42,21 @@ export const data: Season = {
   ],
   weeks: [
     {
-      date: "W1",
+      date: "May 3",
       teams: [
         {
           team: "Broncos",
-          time: "",
-          opponent: "",
-          home: false,
+          time: "12:30",
+          opponent: "Chiefs",
+          home: true,
           stats: {
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
         {
           team: "Chiefs",
-          time: "",
-          opponent: "",
+          time: "12:30",
+          opponent: "Broncos",
           home: false,
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
@@ -65,12 +65,12 @@ export const data: Season = {
       ],
     },
     {
-      date: "W2",
+      date: "May 10",
       teams: [
         {
           team: "Broncos",
-          time: "",
-          opponent: "",
+          time: "1:30",
+          opponent: "Browns",
           home: false,
           stats: {
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
@@ -78,8 +78,31 @@ export const data: Season = {
         },
         {
           team: "Chiefs",
-          time: "",
-          opponent: "",
+          time: "12:30",
+          opponent: "Bengals",
+          home: true,
+          stats: {
+            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+          },
+        },
+      ],
+    },
+    {
+      date: "May 17",
+      teams: [
+        {
+          team: "Broncos",
+          time: "2:30",
+          opponent: "Steelers",
+          home: false,
+          stats: {
+            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+          },
+        },
+        {
+          team: "Chiefs",
+          time: "12:30",
+          opponent: "Chargers",
           home: false,
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
@@ -88,22 +111,22 @@ export const data: Season = {
       ],
     },
     {
-      date: "W3",
+      date: "May 31",
       teams: [
         {
           team: "Broncos",
-          time: "",
-          opponent: "",
-          home: false,
+          time: "2:30",
+          opponent: "Ravens",
+          home: true,
           stats: {
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
         {
           team: "Chiefs",
-          time: "",
-          opponent: "",
-          home: false,
+          time: "11:30",
+          opponent: "Browns",
+          home: true,
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
@@ -111,22 +134,22 @@ export const data: Season = {
       ],
     },
     {
-      date: "W4",
+      date: "Jun 7",
       teams: [
         {
           team: "Broncos",
-          time: "",
-          opponent: "",
-          home: false,
+          time: "1:30",
+          opponent: "Bengals",
+          home: true,
           stats: {
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
         {
           team: "Chiefs",
-          time: "",
-          opponent: "",
-          home: false,
+          time: "2:30",
+          opponent: "Steelers",
+          home: true,
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
@@ -134,22 +157,22 @@ export const data: Season = {
       ],
     },
     {
-      date: "W5",
+      date: "Jun 14",
       teams: [
         {
           team: "Broncos",
-          time: "",
-          opponent: "",
-          home: false,
+          time: "2:30",
+          opponent: "Chargers",
+          home: true,
           stats: {
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
         {
           team: "Chiefs",
-          time: "",
-          opponent: "",
-          home: false,
+          time: "1:30",
+          opponent: "Raiders",
+          home: true,
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
@@ -157,12 +180,12 @@ export const data: Season = {
       ],
     },
     {
-      date: "W6",
+      date: "Jun 21",
       teams: [
         {
           team: "Broncos",
-          time: "",
-          opponent: "",
+          time: "2:30",
+          opponent: "Raiders",
           home: false,
           stats: {
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
@@ -170,31 +193,8 @@ export const data: Season = {
         },
         {
           team: "Chiefs",
-          time: "",
-          opponent: "",
-          home: false,
-          stats: {
-            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
-          },
-        },
-      ],
-    },
-    {
-      date: "W7",
-      teams: [
-        {
-          team: "Broncos",
-          time: "",
-          opponent: "",
-          home: false,
-          stats: {
-            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
-          },
-        },
-        {
-          team: "Chiefs",
-          time: "",
-          opponent: "",
+          time: "1:30",
+          opponent: "Ravens",
           home: false,
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },

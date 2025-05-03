@@ -48,18 +48,20 @@ export const data: Season = {
           team: "Broncos",
           time: "12:30",
           opponent: "Chiefs",
+          score: "50-15",
           home: true,
           stats: {
-            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Austin: { rec: 2, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
         {
           team: "Chiefs",
           time: "12:30",
           opponent: "Broncos",
+          score: "15-50",
           home: false,
           stats: {
-            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Jason: { rec: 6, td: 2, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
       ],

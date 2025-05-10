@@ -50,6 +50,7 @@ export const data: Season = {
           opponent: "Chiefs",
           score: "50-15",
           home: true,
+          notes: "Austin's first ever TD (a catch from Camden)!",
           stats: {
             Austin: { rec: 2, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
@@ -74,14 +75,19 @@ export const data: Season = {
           time: "1:30",
           opponent: "Browns",
           home: false,
+          notes: "Austin with a rec td from Owen. Crazy game.",
+          score: "24-23",
           stats: {
-            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Austin: { rec: 1, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
         {
           team: "Chiefs",
           time: "12:30",
           opponent: "Bengals",
+          notes:
+            "XLSports changed the schedule so we were late and Jason only played a few minutes. After the game he was very upset but played outside with James for a while.",
+          score: "12-26",
           home: true,
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },

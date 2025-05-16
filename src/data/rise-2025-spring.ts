@@ -90,6 +90,7 @@ export const data: Season = {
           team: "Vikings",
           opponent: "Bears",
           time: "5:30",
+          score: "0-27",
           notes:
             "Head coach was not present so I got to be asst. coach! I called the offense most of the game. It was so fun, and after a few plays basically gave up on the official plays and drew plays up in the sand.",
           stats: {

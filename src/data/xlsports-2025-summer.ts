@@ -30,6 +30,7 @@ export const data: Season = {
       players: [
         "Jason",
         "James",
+        "Arthur",
         "Colton",
         "Nolan",
         "Ford",

@@ -116,7 +116,21 @@ export const data: Season = {
       ],
     },
     {
-      date: "May 30 2025",
+      date: "June 6 2025",
+      teams: [
+        {
+          team: "Vikings",
+          opponent: "Chiefs",
+          time: "5:00",
+          score: "0-7",
+          stats: {
+            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+          },
+        },
+      ],
+    },
+    {
+      date: "June 13 2025",
       teams: [
         {
           team: "Vikings",

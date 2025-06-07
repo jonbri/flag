@@ -208,7 +208,7 @@ export const data: Season = {
         },
         {
           team: "Chiefs",
-          time: "1:30",
+          time: "12:30",
           opponent: "Raiders",
           home: true,
           stats: {

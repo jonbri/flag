@@ -154,7 +154,7 @@ export const data: Season = {
           time: "12:30",
           opponent: "Browns",
           home: false,
-          score="74-0"
+          score: "74-0",
           stats: {
             Austin: { rec: 1, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
@@ -164,7 +164,7 @@ export const data: Season = {
           time: "1:30",
           opponent: "Bengals",
           home: false,
-          score="35-0"
+          score: "35-0",
           stats: {
             Jason: { rec: 3, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
           },

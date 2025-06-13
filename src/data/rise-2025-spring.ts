@@ -134,10 +134,11 @@ export const data: Season = {
       teams: [
         {
           team: "Vikings",
-          opponent: "Panthers",
+          opponent: "Steelers",
           time: "5:30",
+          score: "6-18",
           stats: {
-            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Jason: { rec: 0, td: 1, int: 1, sack: 0, safety: 0, picksix: 0 },
           },
         },
       ],

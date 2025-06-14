@@ -179,6 +179,7 @@ export const data: Season = {
           time: "1:30",
           opponent: "Raiders",
           home: false,
+          score: "1-0",
           stats: {
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
@@ -188,8 +189,9 @@ export const data: Season = {
           time: "12:30",
           opponent: "Ravens",
           home: false,
+          score: "31-14",
           stats: {
-            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Jason: { rec: 4, td: 2, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
       ],

@@ -7,7 +7,7 @@ export interface Team {
   shortName: string;
   city: string;
   colors: TeamColors;
-  brink: "Austin" | "Jason";
+  brink: "Austin" | "Jason" | "Both";
   players: string[];
 }
 

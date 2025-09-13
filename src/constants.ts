@@ -1,6 +1,10 @@
 import { TeamColors } from "./types";
 
 export const colors: { [key: string]: TeamColors } = {
+  seahawks: {
+    primary: "#002244",
+    secondary: "#69BE28",
+  },
   chiefs: {
     primary: "#E31837",
     secondary: "#FFB612",

@@ -108,7 +108,7 @@ export const data: Season = {
           time: "5:30",
           score: "18-20",
           notes:
-            "Dave was at this game and saw one of Jason's best games so far.",
+            "Dave was at this game and saw one of Jason's best games so far, and had an incredible pick-six where he stepped in front of the reciever and was untouched to the endzone.",
           stats: {
             Jason: { rec: 8, td: 2, int: 1, sack: 0, safety: 0, picksix: 1 },
           },

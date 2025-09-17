@@ -18,7 +18,7 @@ export const data: Season = {
         "Aahil",
         "Arthur",
         "Avi",
-        "Bennett",
+        "Ben",
         "Ethan",
         "Grayson",
         "Maddox",

@@ -36,8 +36,11 @@ export const data: Season = {
           team: "Seahawks",
           opponent: "Jaguars",
           time: "7:10",
+          score: "13-18",
+          notes:
+            "Close game that went back and forth. On last play of game, I put Jason in as QB and he threw a Hail Mary (his only throw of the game) that was almost caught and would have possibly won us the game.",
           stats: {
-            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },

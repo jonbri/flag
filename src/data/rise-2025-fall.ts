@@ -67,6 +67,7 @@ export const data: Season = {
         {
           team: "Seahawks",
           opponent: "Ravens",
+          score: "7-30",
           time: "6:20",
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
@@ -81,9 +82,12 @@ export const data: Season = {
         {
           team: "Seahawks",
           opponent: "Dolphins",
+          score: "18-12",
           time: "6:20",
+          notes:
+            "First RISE win! Paxton with a Pick-6 and the ceramonial game ball. Ben with clutch TD pass. Grayson ripped an int away from a defender. Jason TD pass",
           stats: {
-            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Jason: { rec: 0, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },

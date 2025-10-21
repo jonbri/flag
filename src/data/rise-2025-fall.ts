@@ -5,7 +5,7 @@ export const data: Season = {
   id: "rise-2025-fall",
   name: "Rise Fall 2025",
   notes:
-    "At the first practice, the league commissioner informed us that there was no head coach, but called out my name because I had checked the 'asst. coach' box during signup. So, I became the head coach. Two other fathers, Joe and Richard joined as assistant coaches and helped out a lot. Coach Joe is Grayson's father.",
+    "At the first practice, the league commissioner informed us that there was no head coach, but called out my name because I had checked the 'asst. coach' box during signup. So, I became the head coach. Two other fathers, Joe (Grayson) and Richard (Arthur) joined as assistant coaches and helped out a lot.",
   teams: [
     {
       name: "Seahawks",
@@ -100,8 +100,11 @@ export const data: Season = {
           team: "Seahawks",
           opponent: "Panthers",
           time: "6:20",
+          score: "12-28",
+          notes:
+            "We kept it close. Ben with great TD catch from Jason. Jason with amazing TD run called back for flag-guarding. Avi with great catch.",
           stats: {
-            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Jason: { rec: 0, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },

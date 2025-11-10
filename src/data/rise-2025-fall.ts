@@ -143,5 +143,10 @@ export const data: Season = {
       ],
     },
   ],
-  images: [],
+  images: [
+    {
+      src: "../seahawks2025.PNG",
+      alt: "Seahawks 2025",
+    },
+  ],
 };

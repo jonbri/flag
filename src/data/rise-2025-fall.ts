@@ -142,6 +142,23 @@ export const data: Season = {
         },
       ],
     },
+    {
+      date: "Nov 14 2025",
+      teams: [
+        {
+          team: "Seahawks",
+          opponent: "Dolphins",
+          time: "5:05",
+          score: "1-1",
+          notes:
+            "Playoff game",
+          stats: {
+            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+          },
+        },
+      ],
+    },
   ],
   images: [
     {

@@ -134,7 +134,7 @@ export const data: Season = {
           time: "6:20",
           score: "14-16",
           notes:
-            "We were supposed to play against the undefeated Patriots but got moved to this game. It was back and forth with Ben making an amazing long TD catch and Maddox with a bit interception.",
+            "We were supposed to play against the undefeated Patriots but got moved to this game. It was back and forth with Ben making an amazing long TD catch and Maddox with a big interception.",
           stats: {
             Jason: { rec: 0, td: 2, int: 0, sack: 0, safety: 0, picksix: 0 },
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },

@@ -150,8 +150,7 @@ export const data: Season = {
           opponent: "Dolphins",
           time: "5:05",
           score: "1-1",
-          notes:
-            "Playoff game",
+          notes: "Playoff game",
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },

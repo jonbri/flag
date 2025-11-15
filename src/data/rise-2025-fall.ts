@@ -149,8 +149,24 @@ export const data: Season = {
           team: "Seahawks",
           opponent: "Dolphins",
           time: "5:05",
-          score: "1-1",
-          notes: "Playoff game",
+          score: "20-0",
+          notes: "First round playoff game. Ben with 2 tds",
+          stats: {
+            Jason: { rec: 0, td: 2, int: 1, sack: 0, safety: 0, picksix: 0 },
+            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+          },
+        },
+      ],
+    },
+    {
+      date: "Nov 14 2025",
+      teams: [
+        {
+          team: "Seahawks",
+          opponent: "Steelers",
+          time: "6:05",
+          score: "0-30",
+          notes: "Second round playoff game.",
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },

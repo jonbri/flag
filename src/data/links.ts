@@ -22,4 +22,5 @@ export const links = [
   { name: "Vikings", url: "https://en.wikipedia.org/wiki/Minnesota_Vikings" },
   { name: "Broncos", url: "https://en.wikipedia.org/wiki/Denver_Broncos" },
   { name: "Seahawks", url: "https://en.wikipedia.org/wiki/Seattle_Seahawks" },
+  { name: "Cowboys", url: "https://en.wikipedia.org/wiki/Dallas_Cowboys" },
 ];

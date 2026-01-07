@@ -41,4 +41,8 @@ export const colors: { [key: string]: TeamColors } = {
     primary: "#F65B20",
     secondary: "#002244",
   },
+  cowboys: {
+    primary: "#7F9695",
+    secondary: "#041E42",
+  },
 };

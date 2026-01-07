@@ -111,7 +111,7 @@ export const Season = ({ id, name, teams, weeks, notes }: SeasonType) => {
                 }
               }
               return (
-                <tr key={date} className={className}>
+                <tr key={`${date}-${i}`} className={className}>
                   <th>{i + 1}</th>
                   <th>{date.split(" ").slice(0, 2).join(" ")}</th>
                   {teams.map(

@@ -95,19 +95,5 @@ export const data: Season = {
         },
       ],
     },
-    {
-      date: "Jan 17 2026",
-      teams: [
-        {
-          team: "Cowboys",
-          opponent: "Jaguars",
-          time: "11:00",
-          stats: {
-            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
-            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
-          },
-        },
-      ],
-    },
   ],
 };

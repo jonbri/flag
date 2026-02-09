@@ -4,7 +4,7 @@ import { Season } from "@/types";
 export const data: Season = {
   id: "rise-2026-winter",
   name: "Rise Winter 2026",
-  notes: "",
+  notes: "Second season coaching with Coach Joe.",
   teams: [
     {
       name: "Cowboys",
@@ -33,34 +33,7 @@ export const data: Season = {
           opponent: "Patriots",
           time: "11:00",
           home: true,
-          stats: {
-            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
-            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
-          },
-        },
-      ],
-    },
-    {
-      date: "Jan 24 2026",
-      teams: [
-        {
-          team: "Cowboys",
-          opponent: "Dolphins",
-          time: "11:00",
-          stats: {
-            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
-            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
-          },
-        },
-      ],
-    },
-    {
-      date: "Jan 31 2026",
-      teams: [
-        {
-          team: "Cowboys",
-          opponent: "49ers",
-          time: "11:00",
+          score: "0-38",
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },

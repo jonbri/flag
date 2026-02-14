@@ -64,8 +64,24 @@ export const data: Season = {
           team: "Cowboys",
           opponent: "Bills",
           time: "11:00",
+          score: "13-40",
           stats: {
-            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+          },
+        },
+      ],
+    },
+    {
+      date: "Feb 14 2026",
+      teams: [
+        {
+          team: "Cowboys",
+          opponent: "Dolphins",
+          time: "11:00",
+          score: "13-40",
+          stats: {
+            Jason: { rec: 0, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },

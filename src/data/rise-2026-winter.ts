@@ -87,5 +87,20 @@ export const data: Season = {
         },
       ],
     },
+    {
+      date: "Feb 14 2026",
+      teams: [
+        {
+          team: "Cowboys",
+          opponent: "49ers",
+          time: "11:00",
+          score: "0-20",
+          stats: {
+            Jason: { rec: 1, td: 0, int: 3, sack: 0, safety: 0, picksix: 0 },
+            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+          },
+        },
+      ],
+    },
   ],
 };

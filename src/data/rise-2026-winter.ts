@@ -102,5 +102,28 @@ export const data: Season = {
         },
       ],
     },
+    {
+      date: "Jan 28 2026",
+      teams: [
+        {
+          team: "Cowboys",
+          opponent: "Lions",
+          time: "2:00",
+          score: "24-39",
+          notes:
+            "Even though we lost, it was a good way to end the season with an exciting game and plays on both sides of the ball",
+          stats: {
+            Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+          },
+        },
+      ],
+    },
+  ],
+  images: [
+    {
+      src: "../cowboys2026.jpg",
+      alt: "Cowboys 2026",
+    },
   ],
 };

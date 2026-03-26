@@ -7,8 +7,10 @@ import { data as xlsports_2025_summer } from "./xlsports-2025-summer";
 import { data as rise_2025_spring } from "./rise-2025-spring";
 import { data as rise_2025_fall } from "./rise-2025-fall";
 import { data as rise_2026_winter } from "./rise-2026-winter";
+import { data as rduflagfootball_2026_spring } from "./rduflagfootball-2026-spring";
 
 export const seasons: Season[] = [
+  rduflagfootball_2026_spring,
   rise_2026_winter,
   rise_2025_fall,
   xlsports_2025_summer,

@@ -45,4 +45,8 @@ export const colors: { [key: string]: TeamColors } = {
     primary: "#7F9695",
     secondary: "#041E42",
   },
+  cobras: {
+    primary: "#E9D298",
+    secondary: "#443333",
+  },
 };

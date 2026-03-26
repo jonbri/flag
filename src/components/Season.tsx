@@ -55,7 +55,7 @@ export const Season = ({ id, name, teams, weeks, notes }: SeasonType) => {
   return (
     <div key={name} className="season hasToday">
       <h2>
-        <Link href={`./season/${id}`}>{name}</Link>
+        <Link href={`/season/${id}`}>{name}</Link>
       </h2>
       <div>{notes}</div>
       <div className="schedule">
@@ -292,7 +292,7 @@ export const Season = ({ id, name, teams, weeks, notes }: SeasonType) => {
                 return (
                   <tr key={name}>
                     <th>
-                      <Link href={`./player/${name}`}>{name}</Link>
+                      <Link href={`/player/${name}`}>{name}</Link>
                     </th>
                     <td>{rec}</td>
                     <td>{td}</td>

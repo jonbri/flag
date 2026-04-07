@@ -12,7 +12,6 @@ export default function Page() {
         <Season key={season.id} {...season} />
       ))}
       <PlayerAllTimeStats seasons={seasons} athletes={athletes} />
-      <br />
       <TeamAllTimeStats seasons={seasons} athletes={athletes} />
     </div>
   );

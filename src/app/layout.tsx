@@ -11,6 +11,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <title>flag</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="og:title" content="flag" />
         <meta name="description" content="flag" />
       </head>

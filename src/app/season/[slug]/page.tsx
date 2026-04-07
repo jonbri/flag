@@ -30,21 +30,20 @@ export default async function Page(props: {
   return (
     <div>
       <Season {...season} />
-      <br />
-      {teams.map(({ name, colors: { primary, secondary } }) => (
-        <div
-          style={{
-            backgroundColor: primary,
-            color: secondary,
-          }}
-          key={name}
-        >
-          {name}
+      {images.length > 0 && (
+        <div style={{ marginTop: 16 }}>
+          {images.map(({ src, alt, width = 500, height = 500 }) => (
+            <Image
+              src={src}
+              alt={alt}
+              key={src}
+              width={width}
+              height={height}
+              style={{ maxWidth: "100%", height: "auto", borderRadius: 8 }}
+            />
+          ))}
         </div>
-      ))}
-      {images.map(({ src, alt, width = 500, height = 500 }) => (
-        <Image src={src} alt={alt} key={src} width={width} height={height} />
-      ))}
+      )}
     </div>
   );
 }

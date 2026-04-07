@@ -1,9 +1,47 @@
+// ── Variables ──
+$color-bg: #f7f8fa;
+$color-surface: #ffffff;
+$color-border: #e0e3e8;
+$color-border-light: #eef0f3;
+$color-text: #1a1a2e;
+$color-text-muted: #6b7280;
+$color-text-light: #9ca3af;
+$color-accent: #2563eb;
+$color-accent-hover: #1d4ed8;
+$color-positive: #16a34a;
+$color-negative: #dc2626;
+$color-today: #fef3c7;
+$color-today-border: #f59e0b;
+$color-thisweek: #e0f2fe;
+$color-thisweek-border: #38bdf8;
+$radius: 8px;
+$radius-sm: 4px;
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow:
+  0 1px 3px rgba(0, 0, 0, 0.1),
+  0 1px 2px rgba(0, 0, 0, 0.06);
+$shadow-md:
+  0 4px 6px rgba(0, 0, 0, 0.07),
+  0 2px 4px rgba(0, 0, 0, 0.06);
+$max-width: 480px;
+$transition: 0.15s ease;
+
+// ── Reset & Base ──
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   padding: 0;
-  margin: 5px;
-  background: linear-gradient(to bottom, #f0e68c, #90ee90);
+  margin: 0;
+  background-color: $color-bg;
+  color: $color-text;
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -12,62 +50,94 @@ h3,
 h4 {
   margin: 0;
   padding: 0;
+  font-weight: 700;
+  color: $color-text;
 }
 
 h1 {
   display: none;
-  font-size: 1em;
-  letter-spacing: 0.2em;
-  font-style: italic;
-  font-weight: bolder;
-  a {
-    text-decoration: none;
-    color: black;
-  }
-}
-h2 {
-  font-size: 1.3em;
-  letter-spacing: 0.2em;
-  font-weight: bolder;
-  a {
-    text-decoration: none;
-    color: black;
-  }
-}
-h3 {
-  font-size: 1em;
-  font-style: italic;
-  font-weight: bolder;
 }
 
+h2 {
+  font-size: 1.25em;
+  letter-spacing: 0.05em;
+  a {
+    text-decoration: none;
+    color: $color-text;
+    transition: color $transition;
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}
+
+h3 {
+  font-size: 0.95em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $color-text-muted;
+  font-weight: 600;
+}
+
+a {
+  color: $color-accent;
+  text-decoration: none;
+  transition: color $transition;
+  &:hover {
+    color: $color-accent-hover;
+  }
+}
+
+// ── Layout ──
 #header {
+  background: $color-surface;
+  border-bottom: 1px solid $color-border;
+  padding: 12px 16px;
+  margin: 0 0 16px 0;
+  border-radius: $radius;
+  box-shadow: $shadow-sm;
+
   ul {
     margin: 0;
     padding: 0;
-    display: inline;
+    display: flex;
+    gap: 4px;
+    list-style: none;
   }
   li {
-    display: inline;
-    padding-right: 10px;
+    a {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.875em;
+      font-weight: 500;
+      color: $color-text-muted;
+      transition: all $transition;
+      &:hover {
+        background: $color-bg;
+        color: $color-accent;
+      }
+    }
   }
 }
 
 #layout {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  width: 350px;
-
-  @media (max-width: 600px) {
-    width: 100%;
-  }
+  gap: 12px;
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 12px 24px;
 }
 
+// ── Panel & Table ──
 %panel {
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid $color-border;
+  border-radius: $radius;
   padding: 2px;
-  background-color: white;
+  background-color: $color-surface;
+  box-shadow: $shadow-sm;
   width: 100%;
 }
 
@@ -75,132 +145,251 @@ table {
   @extend %panel;
   user-select: none;
   border-spacing: 0;
+  border-collapse: separate;
+  width: 100%;
+  overflow: hidden;
+
+  thead {
+    th {
+      font-size: 0.75em;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: $color-text-muted;
+      font-weight: 600;
+      padding: 8px 6px;
+      border-bottom: 2px solid $color-border;
+      background: $color-bg;
+    }
+  }
   tbody {
+    tr {
+      transition: background-color $transition;
+    }
     tr:nth-child(odd) {
-      background-color: #f0f0f0;
+      background-color: rgba(0, 0, 0, 0.015);
+    }
+    tr:hover {
+      background-color: rgba(37, 99, 235, 0.04);
+    }
+    td,
+    th {
+      padding: 6px;
+      border-bottom: 1px solid $color-border-light;
+    }
+    tr:last-child td,
+    tr:last-child th {
+      border-bottom: none;
     }
   }
 }
 
+// ── List pages ──
 .listpage {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  padding: 16px 20px;
+  box-shadow: $shadow-sm;
   ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 8px 0 0;
   }
   li {
-    padding-top: 5px;
+    padding: 8px 0;
+    border-bottom: 1px solid $color-border-light;
+    &:last-child {
+      border-bottom: none;
+    }
+    a {
+      font-weight: 500;
+    }
   }
 }
 
+// ── Season ──
 .season {
   display: flex;
   flex-direction: column;
+  gap: 8px;
+
+  > h2 {
+    margin-bottom: 2px;
+  }
+
+  > div:first-of-type:not(.schedule):not(.stats):not(.rosters):not(.separator) {
+    font-size: 0.85em;
+    color: $color-text-muted;
+    font-style: italic;
+  }
+
   h3 {
-    margin-top: 10px;
+    margin-top: 12px;
+    margin-bottom: 4px;
   }
 }
 
+// ── Schedule ──
 .schedule {
   table {
     thead {
       th {
-        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-          sans-serif;
-        font-size: 1.3em;
-        border: 1px solid white;
-        border-radius: 5px 5px 0 0;
+        font-size: 1em;
+        text-transform: none;
+        letter-spacing: 0.02em;
+        color: white;
+        font-weight: 700;
+        border-bottom: none;
+        padding: 10px 8px;
         .record {
-          font-size: 0.8em;
-          font-weight: normal;
+          font-size: 0.7em;
+          font-weight: 400;
+          opacity: 0.85;
         }
       }
     }
     tbody {
       th:first-child {
         font-family: "Courier New", Courier, monospace;
-        font-weight: normal;
+        font-weight: 400;
         font-style: normal;
-        font-size: 0.8em;
-        color: gray;
+        font-size: 0.75em;
+        color: $color-text-light;
+        text-align: center;
+        width: 24px;
       }
       th {
         text-align: left;
-        font-size: 0.9em;
-        font-weight: normal;
+        font-size: 0.8em;
+        font-weight: 500;
+        color: $color-text-muted;
+        white-space: nowrap;
       }
       td {
-        padding: 4px;
+        padding: 6px 8px;
+        font-size: 0.85em;
+        position: relative;
         > span {
-          font-style: italic;
+          font-style: normal;
           font-size: 0.8em;
           float: right;
+          color: $color-text-muted;
         }
         .score {
-          font-size: 0.75em;
+          font-size: 0.8em;
+          font-weight: 600;
+          float: right;
         }
       }
     }
   }
 }
 
-.positive {
-  color: green;
-  font-weight: bold;
-}
-.negative {
-  color: red;
-}
-.neutral {
-  color: inherit;
+// ── Score tooltip ──
+.score-cell {
+  position: relative;
+  cursor: default;
 }
 
+.score-tooltip {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: $color-text;
+  color: white;
+  font-size: 0.75em;
+  font-weight: 400;
+  font-style: normal;
+  padding: 6px 10px;
+  border-radius: $radius-sm;
+  white-space: nowrap;
+  z-index: 100;
+  box-shadow: $shadow-md;
+  pointer-events: none;
+  line-height: 1.4;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: $color-text;
+  }
+}
+
+.score-cell:hover .score-tooltip {
+  display: block;
+}
+
+// ── Win/Loss/Tie indicators ──
+.positive {
+  color: $color-positive;
+  font-weight: 700;
+}
+.negative {
+  color: $color-negative;
+  font-weight: 600;
+}
+.neutral {
+  color: $color-text-muted;
+}
+
+// ── Row states ──
 .today {
   th,
   td {
-    background-color: gold;
+    background-color: $color-today !important;
+    border-left: 3px solid $color-today-border;
   }
 }
 .thisweek {
   th,
   td {
-    background-color: silver;
+    background-color: $color-thisweek !important;
+    border-left: 3px solid $color-thisweek-border;
   }
 }
 .past {
-  opacity: 0.95;
+  opacity: 0.92;
   th {
-    font-weight: normal;
+    font-weight: 400;
     font-style: italic;
     opacity: 0.5;
   }
   td {
     strong {
-      color: #333;
-      font-weight: bold;
+      color: $color-text;
+      font-weight: 600;
     }
   }
 }
 .future {
   th {
-    font-weight: normal;
+    font-weight: 400;
   }
   background-color: inherit;
 }
 
+// ── Stats tables ──
 .stats {
   table {
     font-family: "Courier New", Courier, monospace;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 0.9em;
     th,
     td {
-      padding: 4px;
+      padding: 6px;
       text-align: center;
     }
     tbody {
       th {
         text-align: left;
         text-transform: uppercase;
+        font-size: 0.85em;
       }
     }
   }
@@ -217,7 +406,7 @@ table {
   > div {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
   }
   thead {
     th:first-child {
@@ -233,65 +422,189 @@ table {
 .player-alltime-stats {
   a {
     text-decoration: none;
-    color: darkblue;
+    color: $color-accent;
+    font-weight: 500;
+    &:hover {
+      color: $color-accent-hover;
+    }
   }
 }
 
+// ── Game notes ──
+.game-notes {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  padding: 12px 16px;
+  box-shadow: $shadow-sm;
+  > div {
+    font-size: 0.85em;
+    color: $color-text-muted;
+    padding: 4px 0;
+    border-bottom: 1px solid $color-border-light;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+// ── Rosters ──
 .rosters {
   display: flex;
   flex-direction: column;
+  gap: 4px;
   > div {
     @extend %panel;
     width: inherit;
-    margin: auto;
-    margin-left: 0;
-    padding: 5px;
-    background-color: white;
+    margin: 0;
+    padding: 10px 14px;
     display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
     ul {
       list-style-type: none;
       padding: 0;
       margin: 0;
     }
     li {
-      padding-right: 35px;
+      padding: 2px 0;
+      font-size: 0.9em;
     }
     h4 {
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid $color-border;
+      padding-bottom: 4px;
+      margin-bottom: 4px;
+      font-size: 0.9em;
     }
     .brink {
       font-style: italic;
+      color: $color-accent;
     }
   }
 }
 
+// ── Separator ──
 .separator {
-  border-top: 1px solid #ccc;
-  margin: 30px 0;
-  width: 350px;
+  border: none;
+  border-top: 1px solid $color-border;
+  margin: 24px 0;
+  width: 100%;
 }
 
+// ── Footer ──
 #footer {
-  margin-top: 5px;
-  border-top: 1px solid #ccc;
-  padding: 5px 0;
+  margin-top: 16px;
+  border-top: 1px solid $color-border;
+  padding: 16px 0 8px;
   ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 6px;
   }
   li {
     display: inline;
-    padding-right: 10px;
+    padding-right: 12px;
+    a {
+      font-size: 0.8em;
+      color: $color-text-muted;
+      &:hover {
+        color: $color-accent;
+      }
+    }
   }
   #login {
-    font-size: 0.8em;
-    color: #333;
+    font-size: 0.75em;
+    color: $color-text-light;
+    margin-top: 8px;
   }
   .links {
     ul {
       display: flex;
       flex-wrap: wrap;
+      gap: 2px;
+    }
+  }
+}
+
+// ── Mobile responsiveness ──
+@media (max-width: 600px) {
+  #layout {
+    max-width: 100%;
+    padding: 0 8px 16px;
+  }
+
+  #header {
+    border-radius: 0;
+    margin: 0 -8px 12px;
+    padding: 10px 12px;
+    ul {
+      gap: 2px;
+    }
+    li a {
+      padding: 6px 10px;
+      font-size: 0.82em;
+    }
+  }
+
+  h2 {
+    font-size: 1.1em;
+  }
+
+  .schedule table {
+    font-size: 0.85em;
+    thead th {
+      font-size: 0.85em;
+      padding: 8px 4px;
+    }
+    tbody {
+      th {
+        font-size: 0.7em;
+        padding: 4px 3px;
+      }
+      td {
+        padding: 5px 4px;
+        font-size: 0.78em;
+        .score {
+          font-size: 0.75em;
+        }
+      }
+    }
+  }
+
+  .score-tooltip {
+    font-size: 0.7em;
+    left: auto;
+    right: 0;
+    transform: none;
+    &::after {
+      left: auto;
+      right: 12px;
+      transform: none;
+    }
+  }
+
+  .stats table {
+    font-size: 0.8em;
+    th,
+    td {
+      padding: 4px 3px;
+    }
+  }
+
+  .rosters > div {
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 10px;
+  }
+
+  .separator {
+    margin: 16px 0;
+  }
+
+  #footer {
+    padding: 12px 0 6px;
+    li {
+      padding-right: 8px;
     }
   }
 }

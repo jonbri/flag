@@ -154,14 +154,29 @@ export const Season = ({ id, name, teams, weeks, notes }: SeasonType) => {
                         formattedScore = "";
                       }
 
+                      const gameEntry = teams[j];
+                      const gameNotes = gameEntry?.notes || "";
+                      const hasTooltipInfo =
+                        score !== "1000-0" && (formattedTime || gameNotes);
+
                       return (
-                        <td key={`${opponent}-${time}-${score}-${i}-${j}`}>
+                        <td
+                          key={`${opponent}-${time}-${score}-${i}-${j}`}
+                          className={hasTooltipInfo ? "score-cell" : undefined}
+                        >
                           {home ? <strong>{opponent}</strong> : opponent}{" "}
                           {score === "1000-0" ? (
                             <span>{formattedTime}</span>
                           ) : (
                             <span className={`score ${wlClassName}`}>
                               {`${wlt} ${formattedScore}`}
+                            </span>
+                          )}
+                          {hasTooltipInfo && (
+                            <span className="score-tooltip">
+                              {formattedTime && <span>{formattedTime}</span>}
+                              {formattedTime && gameNotes && " \u2014 "}
+                              {gameNotes && <span>{gameNotes}</span>}
                             </span>
                           )}
                         </td>
@@ -175,10 +190,11 @@ export const Season = ({ id, name, teams, weeks, notes }: SeasonType) => {
         </table>
       </div>
 
-      {haveAnyGamesBeenPlayedYet ? (
-        <div className="stats team-stats">
-          <h3>Game notes</h3>
-          <div>
+      {haveAnyGamesBeenPlayedYet &&
+      weeks.some(({ teams }) => teams.some(({ notes }) => !!notes)) ? (
+        <div>
+          <h3>Game Notes</h3>
+          <div className="game-notes">
             {weeks
               .map(({ date, teams }) => {
                 const notes = teams.reduce((acc, { notes }) => {

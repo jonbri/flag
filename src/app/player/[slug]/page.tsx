@@ -23,9 +23,7 @@ export default async function Page(props: {
   return (
     <div>
       <h2>{name}</h2>
-      <br />
       <PlayerAllTimeStats seasons={seasons} athletes={[name]} />
-      <br />
       <TeamAllTimeStats seasons={seasons} athletes={[name]} />
     </div>
   );

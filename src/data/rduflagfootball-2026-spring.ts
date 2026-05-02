@@ -82,5 +82,38 @@ export const data: Season = {
         },
       ],
     },
+    {
+      date: "Apr 25 2026",
+      teams: [
+        {
+          team: "Cobras",
+          opponent: "Pythons",
+          time: "2:00",
+          home: true,
+          score: "31-20",
+          notes: "Austin td throw",
+          stats: {
+            Jason: { rec: 5, td: 4, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Austin: { rec: 0, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
+          },
+        },
+      ],
+    },
+    {
+      date: "May 2 2026",
+      teams: [
+        {
+          team: "Cobras",
+          opponent: "Pythons",
+          time: "2:00",
+          home: true,
+          score: "32-26",
+          stats: {
+            Jason: { rec: 0, td: 2, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Austin: { rec: 4, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+          },
+        },
+      ],
+    },
   ],
 };

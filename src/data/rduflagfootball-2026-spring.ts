@@ -123,7 +123,8 @@ export const data: Season = {
           opponent: "Pythons",
           time: "2:00",
           home: true,
-          notes: "I got asked to play QB and had so much fun. Austin played center and had a td saving tackle",
+          notes:
+            "I got asked to play QB and was able to throw Austin a successful extra point conversion as well as a bomb TD to Ben who was filling in for our team. Austin played center and had a td saving tackle. Jason with some incredible runs.",
           score: "33-35",
           stats: {
             Jason: { rec: 1, td: 2, int: 0, sack: 0, safety: 0, picksix: 0 },

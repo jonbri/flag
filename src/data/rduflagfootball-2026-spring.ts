@@ -66,7 +66,7 @@ export const data: Season = {
       ],
     },
     {
-      date: "Apr 16 2026",
+      date: "Apr 18 2026",
       teams: [
         {
           team: "Cobras",
@@ -74,7 +74,8 @@ export const data: Season = {
           time: "2:00",
           home: true,
           score: "32-30",
-          notes: "They randomized the teams",
+          notes:
+            "They randomized the teams. Dave took Jason to this game (I was with Austin at the Hurricanes game).",
           stats: {
             Jason: { rec: 1, td: 4, int: 0, sack: 0, safety: 0, picksix: 0 },
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },

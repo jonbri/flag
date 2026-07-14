@@ -24,6 +24,8 @@ export const data: Season = {
           time: "1:00",
           home: true,
           score: "12-56",
+          notes:
+            "Jason was backup QB and had a nice drive culminating in a short TD pass. Austin played QB for a few snaps and had a completion.",
           stats: {
             Jason: { rec: 0, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },

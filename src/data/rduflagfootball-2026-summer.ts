@@ -1,0 +1,110 @@
+import { colors } from "@/constants";
+import { Season } from "@/types";
+
+export const data: Season = {
+  id: "rduflagfootball-2026-summer",
+  name: "RDU Flag Football 2026 Summer",
+  teams: [
+    {
+      name: "Green",
+      shortName: "GRE",
+      city: "Raleigh",
+      brink: "Both",
+      players: ["Austin", "Jason"],
+      colors: colors.green,
+    },
+  ],
+  weeks: [
+    {
+      date: "July 11 2026",
+      teams: [
+        {
+          team: "Green",
+          opponent: "Blue",
+          time: "1:00",
+          home: true,
+          score: "12-56",
+          stats: {
+            Jason: { rec: 0, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+          },
+        },
+      ],
+    },
+    {
+      date: "July 18 2026",
+      teams: [
+        {
+          team: "Green",
+          opponent: "Silver",
+          time: "1:00",
+          home: true,
+          stats: {
+            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+          },
+        },
+      ],
+    },
+    {
+      date: "July 25 2026",
+      teams: [
+        {
+          team: "Green",
+          opponent: "Blue",
+          time: "1:00",
+          home: true,
+          stats: {
+            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+          },
+        },
+      ],
+    },
+    {
+      date: "Aug 1 2026",
+      teams: [
+        {
+          team: "Green",
+          opponent: "Blue",
+          time: "1:00",
+          home: true,
+          stats: {
+            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+          },
+        },
+      ],
+    },
+    {
+      date: "Aug 8 2026",
+      teams: [
+        {
+          team: "Green",
+          opponent: "Silver",
+          time: "1:00",
+          home: true,
+          stats: {
+            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+          },
+        },
+      ],
+    },
+    {
+      date: "Aug 15 2026",
+      teams: [
+        {
+          team: "Green",
+          opponent: "Silver",
+          time: "1:00",
+          home: true,
+          stats: {
+            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+          },
+        },
+      ],
+    },
+  ],
+};

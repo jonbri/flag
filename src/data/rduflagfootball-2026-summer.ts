@@ -89,6 +89,7 @@ export const data: Season = {
           opponent: "Blue",
           time: "1:00",
           home: true,
+          score: "20-50",
           stats: {
             Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
             Austin: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },

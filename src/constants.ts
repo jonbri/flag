@@ -53,4 +53,8 @@ export const colors: { [key: string]: TeamColors } = {
     primary: "#98FF98",
     secondary: "#000000",
   },
+  bears: {
+    primary: "#0B162A",
+    secondary: "#C83803",
+  },
 };

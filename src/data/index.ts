@@ -9,8 +9,10 @@ import { data as rise_2025_fall } from "./rise-2025-fall";
 import { data as rise_2026_winter } from "./rise-2026-winter";
 import { data as rduflagfootball_2026_spring } from "./rduflagfootball-2026-spring";
 import { data as rduflagfootball_2026_summer } from "./rduflagfootball-2026-summer";
+import { data as rise_2026_fall } from "./rise-2026-fall";
 
 export const seasons: Season[] = [
+  rise_2026_fall,
   rduflagfootball_2026_summer,
   rduflagfootball_2026_spring,
   rise_2026_winter,

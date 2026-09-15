@@ -2,15 +2,15 @@ import { colors } from "@/constants";
 import { Season } from "@/types";
 
 export const data: Season = {
-  id: "rise-2025-fall",
-  name: "Rise Fall 2025",
+  id: "rise-2026-fall",
+  name: "Rise Fall 2026",
   notes:
     "Back with Joe as assistant coach. There are 4 total coaches, three named 'Jon'. There was a 'minicamp' with just a few kids at first, and then a team practice. At the first team practice Jason took a hard shot to the nose and was bleeding profusely. He got back on the field and promptly scored a TD during the flag-pull drill.",
   teams: [
     {
-      name: "Bears",
-      shortName: "CHI",
-      city: "Chicago",
+      name: "Vikings",
+      shortName: "MIN",
+      city: "Minnesota",
       brink: "Jason",
       players: [
         "Jason",
@@ -26,15 +26,15 @@ export const data: Season = {
         "Nolan",
         "Oaks",
       ],
-      colors: colors.bears,
+      colors: colors.vikings,
     },
   ],
   weeks: [
     {
-      date: "Sep 21 2026",
+      date: "Sep 18 2026",
       teams: [
         {
-          team: "Bears",
+          team: "Vikings",
           opponent: "TBD",
           time: "7:10",
           stats: {

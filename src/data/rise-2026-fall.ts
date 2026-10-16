@@ -98,8 +98,9 @@ export const data: Season = {
           opponent: "Buccaneers",
           time: "6:20",
           home: false,
+          score: "19-24"'
           stats: {
-            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Jason: { rec: 0, td: 3, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
       ],

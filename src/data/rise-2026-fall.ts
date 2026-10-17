@@ -39,6 +39,7 @@ export const data: Season = {
           time: "5:30",
           score: "28-6",
           home: false,
+          notes: "Jason leaping pick-6 with long Barry Sanders-like return.",
           stats: {
             Jason: { rec: 0, td: 2, int: 3, sack: 0, safety: 0, picksix: 1 },
           },
@@ -69,6 +70,7 @@ export const data: Season = {
           time: "5:30",
           home: true,
           score: "31-0",
+          notes: "Jason sweet pick-6 where he stepped in front of a pass",
           stats: {
             Jason: { rec: 1, td: 4, int: 1, sack: 0, safety: 0, picksix: 1 },
           },
@@ -98,7 +100,8 @@ export const data: Season = {
           opponent: "Buccaneers",
           time: "6:20",
           home: false,
-          score: "19-24"'
+          score: "19-24",
+          notes: "Incredible game, so many highlights. Jason threw a laser to Jake for a TD and a deep bomb to Kaden for TD. At the end of the game, down by a TD, Jason threw a perfect long ball piss-missle which was dropped, but was probably his best throw he has had so far.",
           stats: {
             Jason: { rec: 0, td: 3, int: 0, sack: 0, safety: 0, picksix: 0 },
           },

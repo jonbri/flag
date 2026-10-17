@@ -101,7 +101,8 @@ export const data: Season = {
           time: "6:20",
           home: false,
           score: "19-24",
-          notes: "Incredible game, so many highlights. Jason threw a laser to Jake for a TD and a deep bomb to Kaden for TD. At the end of the game, down by a TD, Jason threw a perfect long ball piss-missle which was dropped, but was probably his best throw he has had so far.",
+          notes:
+            "Incredible game, so many highlights. Jason threw a laser to Jake for a TD and a deep bomb to Kaden for TD. At the end of the game, down by a TD, Jason threw a perfect long ball piss-missle which was dropped, but was probably his best throw he has had so far.",
           stats: {
             Jason: { rec: 0, td: 3, int: 0, sack: 0, safety: 0, picksix: 0 },
           },

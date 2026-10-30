@@ -132,8 +132,9 @@ export const data: Season = {
           opponent: "Bills",
           time: "6:20",
           home: false,
+          score: "33-12",
           stats: {
-            Jason: { rec: 0, td: 0, int: 0, sack: 0, safety: 0, picksix: 0 },
+            Jason: { rec: 1, td: 1, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
       ],

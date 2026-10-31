@@ -54,7 +54,7 @@ export const data: Season = {
           opponent: "Falcons",
           time: "6:20",
           home: false,
-          score: "6-21",
+          score: "6-19",
           stats: {
             Jason: { rec: 0, td: 1, int: 1, sack: 0, safety: 0, picksix: 0 },
           },
@@ -100,7 +100,7 @@ export const data: Season = {
           opponent: "Buccaneers",
           time: "6:20",
           home: false,
-          score: "19-24",
+          score: "19-25",
           notes:
             "Incredible game, so many highlights. Jason threw a laser to Jake for a TD and a deep bomb to Kaden for TD. At the end of the game, down by a TD, Jason threw a perfect long ball piss-missle which was dropped, but was probably his best throw he has had so far.",
           stats: {

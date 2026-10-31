@@ -5,7 +5,7 @@ export const data: Season = {
   id: "rise-2026-fall",
   name: "Rise Fall 2026",
   notes:
-    "Back with Joe as assistant coach. There are 4 total coaches, three named 'Jon'. There was a 'minicamp' with just a few kids at first, and then a team practice. At the first team practice Jason took a hard shot to the nose and was bleeding profusely. He got back on the field and promptly scored a TD during the flag-pull drill.",
+    "Joe reached out to see if Jason would like to join this team, and I joined as assistant coach. There are 4 total coaches, Jon, Khari's dad, and another Jon, Dean's dad. There was an early summer 'minicamp' with just a few kids at first, and then summer team practices. At the first team practice Jason took a hard shot to the nose and was bleeding profusely. He got back on the field and promptly scored a TD during the flag-pull drill. The team is managed superbly by Joe. This season Jason took leaps and strides. He is the quiet team leader, and is a 'star quarterback', probably the best in the league. Most games we dominated offensively where Jason would throw bombs to mostly Jake or Kaden. Our team also dominated defensively with Jason and Grayson consistently causing turnovers. Joel is the energetic vocal leader. Brooks is the backup qb.",
   teams: [
     {
       name: "Vikings",

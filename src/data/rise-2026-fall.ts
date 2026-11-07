@@ -139,5 +139,20 @@ export const data: Season = {
         },
       ],
     },
+    {
+      date: "Nov 6 2026",
+      teams: [
+        {
+          team: "Vikings",
+          opponent: "Ravens",
+          time: "6:20",
+          home: false,
+          score: "37-18",
+          stats: {
+            Jason: { rec: 0, td: 4, int: 0, sack: 0, safety: 0, picksix: 1 },
+          },
+        },
+      ],
+    },
   ],
 };

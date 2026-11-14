@@ -148,8 +148,26 @@ export const data: Season = {
           time: "6:20",
           home: false,
           score: "37-18",
+          notes: "Round 2 playoff game (round 1 was bye)",
           stats: {
             Jason: { rec: 0, td: 4, int: 0, sack: 0, safety: 0, picksix: 1 },
+          },
+        },
+      ],
+    },
+    {
+      date: "Nov 13 2026",
+      teams: [
+        {
+          team: "Vikings",
+          opponent: "Buccaneers",
+          time: "6:20",
+          home: false,
+          score: "12-14",
+          notes:
+            "Round 3 playoff game. Defensive struggle with some highlight throws from Jason. Difference was a safety in 2nd half. At the end of the game we had a great defensive stop to get one last quick drive. Jason led the team down the field and a short pass to Jake that would won they the game, but his flag was pulled at the one yard line. Lots of tears but a great game to end the season. Afterwards we all went to a local bar to celebrate the season.",
+          stats: {
+            Jason: { rec: 0, td: 2, int: 0, sack: 0, safety: 0, picksix: 0 },
           },
         },
       ],
